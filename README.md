@@ -1,2 +1,2 @@
-#Group Project - Group 6 
-#Capitano Clothing
+# Group Project - Group 6 
+# Capitano Clothing
