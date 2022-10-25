@@ -1,4 +1,5 @@
 <!DOCTYPE html> 
+<html lang="en">
 <style>
   .column {
   float: left;
@@ -19,10 +20,13 @@ footer {
 <br>
 
 
-<header class="header">
-<h1> Capitano Clothing</h1>
+<head>
+<meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <h1> Capitano Clothing</h1>
   <img src="{{URL('images/drew-beamer-Vc1pJfvoQvY-unsplash.jpg')}}" alt="Banner Image" style="width:90%; height:300px"/>
-</header>
+</head>
 
 <body>
 
@@ -97,7 +101,8 @@ function displaySlides(n) {
    </div>
    <div class="column">
      <h2>Giving back to the community</h2>
-     <p>To celebrate its two year anniversary since opening, capitano clothing orgarnised a charity fair. The company raised £100 thousand pounds to support homeless people.</p>
+     <p>To celebrate its two year anniversary since opening, capitano clothing orgarnised a charity fair. The company raised £100 thousand pounds 
+      for the Youth Sport Trust which is the UK's leading charity, improving every young person's education and development through sport and play.</p>
    </div>
  </div>
 
