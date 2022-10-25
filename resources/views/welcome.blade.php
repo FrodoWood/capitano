@@ -26,33 +26,11 @@ footer {
 
 <body>
 
-
-<!--https://www.w3schools.com/howto/howto_js_slideshow.asp-->
-
-<!--
-<section class="ProductsSale">
-  <p>Products on sale</p>
-<img src="{{URL('images/sale.jpg')}}" alt="On Sale" style= "width: 50%; height:250px">
-  <p>These products are on sale. Have a picture on top for example. up to 50% off. marketing </p>
-  <div class= "row">
-    <div class="column">
-    <img src="{{URL('images/sale.jpg')}}" alt="On Sale" style= "width: 50%; height:250px" onclick="currentSlide(1)">
-    </div>
-   <div class="column">
-   <img src="{{URL('images/download.jpg')}}" alt="On Sale" style= "width: 50%; height:250px" onclick="currentSlide(2)">
-   </div>
-   <div class="column">
-   <img src="{{URL('images/copyright.jpg')}}" alt="On Sale" style= "width: 50%; height:250px" onclick="currentSlide(3)">
-   </div> 
-  </div>
-</section>
--->
-
 <section class="ProductsOnSale">
 
 <h2>Products on Sale</h2> 
 <div class="Products">
-  <img src="{{URL('images/sale1.jpg')}}"alt="On Sale" style= "width: 50%; height:250px">
+  <img src="{{url('images/sale1.jpg')}}"alt="On Sale" style= "width: 50%; height:250px">
     <div class="text">Hurry up and grab our products at a discounted price! For a limited time only. 
       Offering quality at an affordable price. Browse through to see our amazing collection </div>
   </div>
@@ -78,6 +56,7 @@ footer {
 
 
 <!-- put in a separate js file then link-->
+<!--it doesnt work when I put it in a separate page-->
 
 <script>
 let Index = 1;
@@ -102,18 +81,19 @@ function displaySlides(n) {
 }
 
 </script>
+
 </section>
 
 <br><br>
 <section class="companyNews">
   <div class="row">
    <div class="column">
-     <h2>News 1</h2>
-     <p>Details of news</p>
+     <h2>New Launch</h2>
+     <p>Capitano Clothing launches a brand new collection of leggins in collaboration with award winning designer Regina Geller.</p>
    </div>
    <div class="column">
-     <h2>News 2</h2>
-     <p>Details of news</p>
+     <h2>Giving back to the community</h2>
+     <p>To celebrate its two year anniversary since opening, capitano clothing orgarnised a charity fair. The company raised £100 thousand pounds to support homeless people.</p>
    </div>
  </div>
 
