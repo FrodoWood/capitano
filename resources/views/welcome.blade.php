@@ -30,21 +30,25 @@ footer {
 
 <h2>Products on Sale</h2> 
 <div class="Products">
-  <img src="{{url('images/sale1.jpg')}}"alt="On Sale" style= "width: 50%; height:250px">
+  <img src="{{url('images/sale.jpg')}}"alt="On Sale" style= "width: 50%; height:350px">
     <div class="text">Hurry up and grab our products at a discounted price! For a limited time only. 
       Offering quality at an affordable price. Browse through to see our amazing collection </div>
   </div>
 
   <div class="Products">
-    <img src="{{URL('images/download.jpg')}}" alt="On Sale" style= "width: 50%; height:250px">
-    <div class="text">Product Description</div>
+    <img src="{{URL('images/productWomen.jpg')}}" alt="On Sale" style= "width: 50%; height:450px">
+    <div class="text">Women's matching sports bra and leggins</div>
   </div>
 
   <div class="Products">
-    <img src="{{URL('images/sale.jpg')}}" alt="On Sale" style= "width: 50%; height:250px">
-    <div class="text">Product Description</div>
+    <img src="{{URL('images/productMen.jpg')}}" alt="On Sale" style= "width: 50%; height:450px">
+    <div class="text">Men's Joggers</div>
   </div>
 
+  <div class="Products">
+    <img src="{{URL('images/productWomen1.jpg')}}" alt="On Sale" style= "width: 50%; height:450px">
+    <div class="text">Women's crop top and leggins</div>
+  </div>
   <!-- Next and previous buttons -->
   <a class="previous" onclick="plusSlides(-1)">&#10094;</a>
   <a class="next" onclick="plusSlides(1)">&#10095;</a>
