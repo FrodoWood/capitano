@@ -1,0 +1,30 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+html{
+  height:100%
+}
+
+body{
+  background-color: #4ddDe1;
+  height: 100%;
+  overflow: auto;
+  overflow-y: scroll;
+  padding: 10px;
+}
+
+ul{
+  list-style: none;
+  margin-top: 25px;
+}
+
+h1{
+  text-align: center;
+  text-decoration: underline;
+}
+
+.container text-center {
+  justify-content: center;
+}
