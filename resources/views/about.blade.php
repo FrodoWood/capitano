@@ -1,15 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About</title>
-</head>
-<body>
-    LOGO!
+@extends('layouts.app')
 
- EXAMPLES: https://blog.hubspot.com/marketing/remarkable-about-us-page-examples
+@section('content')
     <h1>About us</h1>
      <p> ideas: use banners for vision/mission. Have pictures related to working out and motivating people.
         check other sport websites for  inspiration </p>
@@ -39,5 +30,4 @@
     <h3>Company History</h3>
 
     <h3>FAQs (optional)</h3>
-</body>
-</html>
+@endsection
