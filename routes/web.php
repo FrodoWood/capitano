@@ -30,5 +30,5 @@ Route::get('/contact', function () {
     return view('contact');
 });
 
-Route::get('/men', [ProductController::class, 'show']);
-Route::get('/women', [ProductController::class, 'show']);
+Route::get('/men', [ProductController::class, 'index']);
+Route::get('/women', [ProductController::class, 'index']);
