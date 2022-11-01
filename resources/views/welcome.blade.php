@@ -3,7 +3,7 @@
 @section('content')
 <head>
     <h1> Capitano Clothing</h1>
-  <img src="{{URL('images/drew-beamer-Vc1pJfvoQvY-unsplash.jpg')}}" alt="Banner Image" style="width:90%; height:300px"/>
+  <img src="{{URL('images/drew-beamer-Vc1pJfvoQvY-unsplash.jpg')}}"  alt="Banner Image" style="width:90%; height:300px"/>
 </head>
 
 <body>
@@ -71,18 +71,21 @@ function displaySlides(n) {
 </section>
 
 <br><br>
+
+<div class="container">
 <section class="companyNews">
   <div class="row">
-   <div class="column">
+   <div class="col-sm">
      <h2>New Launch</h2>
      <p>Capitano Clothing launches a brand new collection of leggins in collaboration with award winning designer Regina Geller.</p>
    </div>
-   <div class="column">
+   <div class="col-sm">
      <h2>Giving back to the community</h2>
      <p>To celebrate its two year anniversary since opening, capitano clothing orgarnised a charity fair. The company raised £100 thousand pounds 
       for the Youth Sport Trust which is the UK's leading charity, improving every young person's education and development through sport and play.</p>
    </div>
  </div>
+</div>
 
 </section>
 </body>
