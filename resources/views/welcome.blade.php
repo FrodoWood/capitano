@@ -1,29 +1,7 @@
-<!DOCTYPE html> 
-<html lang="en">
-<style>
-  .column {
-  float: left;
-  width:47%;
-  padding: 10px;
-}
+@extends('layouts.app')
 
-footer {
-  text-align: left;
-  padding: 3px;
-  /*position:fixed;*/
-  bottom:0;
-  width: 100;
-}
-
-</style>
-<nav>Navigation Bar will be here</nav>
-<br>
-
-
+@section('content')
 <head>
-<meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <h1> Capitano Clothing</h1>
   <img src="{{URL('images/drew-beamer-Vc1pJfvoQvY-unsplash.jpg')}}" alt="Banner Image" style="width:90%; height:300px"/>
 </head>
@@ -117,3 +95,5 @@ function displaySlides(n) {
   <a href="//twitter.com/CapitanoCloth"> Twitter </a>
    <img src="{{URL('images/copyright.jpg')}}"  alt="copyright" style="width:150px" /> 
 </footer>
+
+@endsection
