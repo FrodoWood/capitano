@@ -118,7 +118,10 @@ function displaySlides(n) {
 <img src="{{URL('images/barbell.jpg')}}" class="rounded float-left" alt="Shop" style= "width: 95%; height:450px">
 <div style="position: absolute;top: 8px;left: 60px;color:white; font-size:50px">Step Up Capitano</div>
 <div style="position: absolute;top: 70px;left: 60px;color:white; font-size:30px">Always providing the best!</div>
-<button type="button" class="btn btn-light"  style="position: absolute;top: 130px;left: 90px;">Shop</button>
+<button type="button" class="btn btn-light"  style="position: absolute;top: 130px;left: 90px;"> <a href="/men">Shop Men</a></button>
+<button type="button" class="btn btn-light"  style="position: absolute;top: 130px;left: 200px;"> <a href="/women">Shop Women</a></button>
+<!-- Delete before submitting
+  reason y I put those href: web.php line 33 + 34 -->
 </section>
 
 <footer>
