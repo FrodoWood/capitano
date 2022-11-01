@@ -3,7 +3,7 @@
 @section('content')
 <head>
     <h1> Capitano Clothing</h1>
-  <img src="{{URL('images/drew-beamer-Vc1pJfvoQvY-unsplash.jpg')}}"  alt="Banner Image" style="width:90%; height:300px"/>
+  <img src="{{URL('images/drew-beamer-Vc1pJfvoQvY-unsplash.jpg')}}"  alt="Banner Image" style="width:90%; height:300px" data-mdb-toggle="animation"/>
   
 </head>
 
@@ -58,8 +58,6 @@ PROB: Only previous button works-->
   <a class="next" onclick="plusSlides(1)">&#10095;</a> -->
 
   
-  <!--USE BOOTSTRAP-->
-
   
 
 
