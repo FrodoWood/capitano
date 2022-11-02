@@ -47,7 +47,18 @@
                             <li><a class="dropdown-item" href="{{ url('/about') }}">About us</a></li>
                         </ul>
                      </div>
+                    </li>
+                    
 
+                    <div class="input-group">
+                        <input type="search" class="form-control rounded" placeholder="Search" aria-label="Search" aria-describedby="search-addon" />
+                        <button type="button" class="btn btn-outline-primary">search</button>
+                    </div>      
+                   
+                    </ul>
+
+                    
+                   
                     
 
                     <!-- Right Side Of Navbar -->
