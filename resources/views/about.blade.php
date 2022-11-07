@@ -20,7 +20,7 @@
 
 <div class="col">
 
-<img src="{{URL('images/motivation2.jpg')}}"alt="motivation" style= "width: 110%; height:300px">
+<img src="{{URL('images/motivation2.jpg')}}"alt="motivation" style= "width: 110%; height:300px"  class="rounded float-left">
 </div>
 <div class="col">
         <h3 class="text-center" style="font-size:50px">Values</h3>
@@ -36,7 +36,7 @@
 
 <div class="col">
 
-<img src="{{URL('images/motivation3.jpg')}}"  alt="motivation" style= "width: 110%; height:300px">
+<img src="{{URL('images/motivation3.jpg')}}"  alt="motivation" style= "width: 110%; height:300px"  class="rounded float-right">
 </div>
 </div>
 <br><br>
@@ -68,31 +68,38 @@
      </p>
     </div>
     <div class="col">
-    <img src="{{URL('images/motivation1.jpg')}}"  alt="motivation" style= "width: 90%; height:340px">
+    <img src="{{URL('images/motivation1.jpg')}}"  alt="motivation" style= "width: 90%; height:340px;"  class="rounded float-right">
 </div>
     
 </div>
 
 <br><br>
 
-    <h3>Company History (can remove)</h3>
-    <p>Capitano clothing was launched in 2020Capitano Clothing sources all of its supplies from ethical suppliers. All of our products are enviromentally friendly</p>
-    
 
-    <h3>Our Founders</h3>
+
+    <h3 style="font-size:50px" class="text-center">Company History</h3>
+    <p style="font-size:20px">Capitano clothing was launched in 2018 from a basement in London, United Kingdom. Today, we have stores all over England. 
+        Capitano has over 10,000 employees. We have sold over 50,000 workout clothes to customers all over the world. </p>
+
+      <p style="font-size: 20px">  Capitano Clothing sources all of its supplies from ethical suppliers. All of our products are enviromentally friendly.<p>
+      <p style="font-size: 20px">  We have collaborated with multiple celebrities namely Serena William and Usain Bolt. Moreover, Capitano Clothing has teamed up with award-winning designers Molly Goddard and Regina Geller 
+        to launch collections. </p>
+    <br><br>
+
+    <h3 class="text-center" style="font-size:50px" >Our Founders</h3>
     <div class="container">
      <div class="row">
      <div class="col-sm">
-     <img  class="rounded-circle" src="{{url('images/founder1.jpg')}}" alt="our founder" style= "width: 20%; height:150px">
-    <p>Emily Rodriguez
-        Education: Masters Degree in Computer Science
+     <img  class="rounded-circle" src="{{url('images/founder1.jpg')}}" alt="our founder" style= "width: 50%; height:200px" >
+    <p style="font-size: 25px">Emily Rodriguez
+       <!-- Education: Masters Degree in Computer Science -->
 
     </p>
     </div>
    <div class="col-sm">
-    <img class="rounded-circle"  src="{{url('images/founder2.jpg')}}" alt="our founder" style= "width: 20%; height:150px">
-    <p>Jonas Rodriguez
-        Education: Bacherlors in Business Management </p>
+    <img class="rounded-circle"  src="{{url('images/founder2.jpg')}}" alt="our founder" style= "width: 50%; height:200px">
+    <p style="font-size: 25px">Jonas Rodriguez
+       <!-- Education: Bacherlors in Business Management --></p>
    </div>
 </div>
     <br> <br>
