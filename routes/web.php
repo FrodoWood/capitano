@@ -32,3 +32,13 @@ Route::get('/contact', function () {
 
 Route::get('/men', [ProductController::class, 'index']);
 Route::get('/women', [ProductController::class, 'index']);
+
+// Route::prefix('admin')->middleware('auth', 'isAdmin')->group(function () {
+//     Route::get('/admin', function () {
+//         return view('admin');
+//     });
+// });
+
+Route::get('/admin', function () {
+    return view('admin');
+})->middleware('auth', 'isAdmin');
