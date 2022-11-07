@@ -90,15 +90,21 @@
     <div class="container">
      <div class="row">
      <div class="col-sm">
-     <img  class="rounded-circle" src="{{url('images/founder1.jpg')}}" alt="our founder" style= "width: 50%; height:200px" >
+     <img  class="rounded-circle" src="{{url('images/founder.jpg')}}" alt="our founder" style= "width: 60%; height:200px" >
     <p style="font-size: 25px">Emily Rodriguez
        <!-- Education: Masters Degree in Computer Science -->
 
     </p>
     </div>
    <div class="col-sm">
-    <img class="rounded-circle"  src="{{url('images/founder2.jpg')}}" alt="our founder" style= "width: 50%; height:200px">
-    <p style="font-size: 25px">Jonas Rodriguez
+    <img class="rounded-circle"  src="{{url('images/founder1.jpg')}}" alt="our founder" style= "width: 60%; height:200px">
+    <p style="font-size: 25px">Fabian Louise
+       <!-- Education: Bacherlors in Business Management --></p>
+   </div>
+
+   <div class="col-sm">
+    <img class="rounded-circle"  src="{{url('images/founder3.jpg')}}" alt="our founder" style= "width: 60%; height:200px">
+    <p style="font-size: 25px">Rachel Greene
        <!-- Education: Bacherlors in Business Management --></p>
    </div>
 </div>
