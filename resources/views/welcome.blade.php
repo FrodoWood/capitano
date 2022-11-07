@@ -101,7 +101,7 @@ function displaySlides(n) {
    </div>
    <div class="col-sm">
      <h2>Giving back to the community</h2>
-     <p>To celebrate its two year anniversary since opening, capitano clothing orgarnised a charity fair. The company raised £100 thousand pounds 
+     <p>To celebrate its four year anniversary since opening, capitano clothing orgarnised a charity fair. The company raised £100 thousand pounds 
       for the Youth Sport Trust which is the UK's leading charity, improving every young person's education and development through sport and play.</p>
    </div>
  </div>
