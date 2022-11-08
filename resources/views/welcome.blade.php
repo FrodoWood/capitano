@@ -22,29 +22,29 @@
  <div class="carousel-item active">
  <div class="text-center">
   <img class="img-thumbnail" src="{{url('images/sale.jpg')}}" alt="On Sale" style= "width: 50%; height:350px">
-  <div class="text">Hurry up and grab our products at a discounted price! For a limited time only. 
-      Offering quality at an affordable price. Browse through to see our amazing collection </div>
+  <div class="text"><p>Hurry up and grab our products at a discounted price! For a limited time only. 
+      Offering quality at an affordable price. Browse through to see our amazing collection</p> </div>
 </div>
  </div>
 
   <div class="carousel-item">
   <div class="text-center">
     <img class="img-thumbnail" src="{{URL('images/productWomen.jpg')}}" alt="On Sale" style= "width: 50%; height:450px">
-    <div class="text">Women's matching sports bra and leggins</div>
+    <div class="text"><p>Women's matching sports bra and leggins-£30</p>NOTE: WHEN CUSTOMER CLICKS ON PRODUCT, IT LEADS TO THE SINGLE PRODUCT'S PAGE</div>
   </div>
 </div>
 
   <div class="carousel-item">
   <div class="text-center">
     <img class="img-thumbnail" src="{{URL('images/productMen.jpg')}}" alt="On Sale" style= "width: 50%; height:450px">
-    <div class="text">Men's Joggers</div>
+    <div class="text"><p>Men's Joggers-£15</p></div>
   </div>
 </div>
 
   <div class="carousel-item">
   <div class="text-center">
     <img class="img-thumbnail" src="{{URL('images/productWomen1.jpg')}}" alt="On Sale" style= "width: 50%; height:450px">
-    <div class="text">Women's crop top and leggins</div>
+    <div class="text"><p>Women's crop top and leggins-£30<p></div>
   </div>
   </div>
 
@@ -71,35 +71,7 @@ idea: change previous to scroll through. there'll b only one button-->
         </button> 
 
 
-        <!--
-        <a class="carousel-control-prev" href="#carouselProducts" role="button" data-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="sr-only">Previous</span>
-  </a>
-  <a class="carousel-control-next" href="#carouselProducts" role="button" data-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="sr-only">Next</span>
-  </a> -->
-
-        <!--
-        <a class="carousel-control right" href="#carouselProducts" data-slide="next">&rsaquo;</a> -->
-
-
-        <!--
-        <div class="carousel slide" style="width:450px">
-          
-    <a class="carousel-control left" href="#carouselProducts" data-slide="prev">&lsaquo;</a>
-    <a class="carousel-control right" href="#carouselProducts" data-slide="next">&rsaquo;</a>
-</div> -->
-        
-<!--
-<ul class="pager" data-bs-target="#carouselProducts" >
-    <li><a href="#carousel-item"  data-bs-slide="prev">Previous</a></li>
-    <li><a href="#">Next</a></li>
-  </ul> -->
-
-
-
+       
   <!-- Next and previous buttons 
   <a class="previous" onclick="plusSlides(-1)">&#10094;</a>
   <a class="next" onclick="plusSlides(1)">&#10095;</a> -->
@@ -146,22 +118,19 @@ function displaySlides(n) {
   <div class="row">
    <div class="col-md-6">
      <h3 class="text-center">New Launch</h3>
-     <p>Capitano Clothing launches a brand new collection of leggins in collaboration with award winning designer Regina Geller.</p>
-     
-     <!--
-     <div class = "vertical" style="  border-left: 6px solid black;
-            height: 200px;
-            position:absolute;
-            top:1000px;
-            left: 50%;
-            display: inline-block" ></div> -->
-
+     <p>Capitano Clothing launches a brand new collection in collaboration with award winning designer Regina Geller. 
+     Behind every design is an entire story and a purpose, and we love sharing what makes each one so special!
+     Our new collection added small touches to your favorite staples to make them even more special, while mixing in something new as well.
+     Additionally, YOU requested more leggings and neutrals, so we started there.
+     Our collection is designed to give you a luxurious workout experience.</p>
 
    </div>
    <div class="col-md-6">
      <h3 class="text-center">Giving back to the community</h3>
-     <p>To celebrate its four year anniversary since opening, capitano clothing orgarnised a charity fair. The company raised £100 thousand pounds 
-      for the Youth Sport Trust which is the UK's leading charity, improving every young person's education and development through sport and play.</p>
+     <p>To celebrate its four year anniversary since opening, Capitano Clothing orgarnised a charity fair. The company raised £100 thousand pounds 
+      for the Youth Sport Trust which is the UK's leading charity, improving every young person's education and development through sport and play.
+      In addition, Capitano Clothing gave out vouchers for people to spend on its website. We also hosted a free webinar. 
+    </p>
    </div>
  </div>
 </section>
