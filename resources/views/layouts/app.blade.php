@@ -107,4 +107,51 @@
         </main>
     </div>
 </body>
+<br><br>
+<footer class="text-bg-secondary p-3">
+<div class="container">
+ <div class="row">
+    <div class="col">
+    <h4>Navigate to other pages</h4>
+    <ul class="nav flex-column">
+     <li><a style="color:white; text-decoration: none" href="{{ url('/women') }}">Shop Women's Clothing</a></li>
+     <li><a style="color:white; text-decoration: none" href="{{ url('/women') }}">Shop Women's Clothing</a></li>
+     <li><a style="color:white; text-decoration: none" href="{{ url('/men') }}">Shop Men's Clothing</a></li>                   
+     <li><a style="color:white; text-decoration: none" href="{{ url('/contact') }}">Contact us</a></li>       
+     <li><a style="color:white; text-decoration: none" href="{{ url('/about') }}">About us</a></li>
+
+    </ul>
+ </div>
+ <div class="col">
+ <h5>  Subscribe to our mail list!</h5>
+    <h6>Be the first one to know when new product drops.</h6>
+    <h6> Get exclusive discounts.</h6>
+    <h6>And many more...</h6>
+    
+    <input type="email"  name="email" placeholder="Your email" style="border-radius: 10px; height:40px; width:350px;">
+    <button class="btn btn-primary" type="button">Subscribe</button>
+   
+ </div>
+ </div>
+ </div>
+
+ <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
+ <p>© 2022 Capitano Clothing, All rights reserved. </p>
+
+ NOTE: LOGO IN THE MIDDLE
+
+<ul class="list-unstyled d-flex">
+ <li class="ms-2"><a href="https://www.instagram.com/capitano.clothing_/" >
+        <i class="bi bi-instagram" style="font-size: 2rem;"></i>
+    </a>
+ </li>
+ <li class="ms-2"><a href="twitter.com/CapitanoCloth">
+    <i class="bi bi-twitter" style="font-size: 2rem;"></i>
+    </a>
+ </li>
+</ul>
+
+</div>
+
+</footer>
 </html>
