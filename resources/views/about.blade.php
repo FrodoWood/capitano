@@ -86,7 +86,7 @@
         to launch collections. </p>
     <br><br>
 
-    <h3 class="text-center" style="font-size:50px" >Our Founders</h3>
+    <h3 class="text-center" style="font-size:50px">Our Founders</h3>
     <div class="container">
      <div class="row">
      <div class="col-sm">
@@ -105,7 +105,7 @@
 </div>
     <br> <br>
     
-    
+
     <h3>FAQs (optional)</h3>
     </div>
 @endsection
