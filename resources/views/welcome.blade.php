@@ -3,9 +3,11 @@
 @section('content')
 <head>
     <h1> Capitano Clothing</h1>
-  <img src="{{URL('images/drew-beamer-Vc1pJfvoQvY-unsplash.jpg')}}"  alt="Banner Image" style="width:90%; height:300px" data-mdb-toggle="animation"/>
+  <img src="{{URL('images/banner.gif')}}"  alt="Banner Image" style="width:100%; height:400px" data-mdb-toggle="animation"/>
+  
   
 </head>
+<br> <br>
 
 <body>
 
@@ -14,44 +16,80 @@
 <h2>Products on Sale</h2> 
 
 
-<div  id="carouselExampleCaptions"  class="carousel slide">
+<div  id="carouselProducts"  class="carousel slide">
 <div class="carousel-inner">
  <div class="carousel-item active">
-  <img src="{{url('images/sale.jpg')}}" alt="On Sale" style= "width: 50%; height:350px">
+  <img class="img-thumbnail" src="{{url('images/sale.jpg')}}" alt="On Sale" style= "width: 90%; height:350px">
   <div class="text">Hurry up and grab our products at a discounted price! For a limited time only. 
       Offering quality at an affordable price. Browse through to see our amazing collection </div>
 </div>
 
   <div class="carousel-item">
-    <img src="{{URL('images/productWomen.jpg')}}" alt="On Sale" style= "width: 50%; height:450px">
+    <img class="img-thumbnail" src="{{URL('images/productWomen.jpg')}}" alt="On Sale" style= "width: 50%; height:450px">
     <div class="text">Women's matching sports bra and leggins</div>
   </div>
 
   <div class="carousel-item">
-    <img src="{{URL('images/productMen.jpg')}}" alt="On Sale" style= "width: 50%; height:450px">
+    <img class="img-thumbnail" src="{{URL('images/productMen.jpg')}}" alt="On Sale" style= "width: 50%; height:450px">
     <div class="text">Men's Joggers</div>
   </div>
 
   <div class="carousel-item">
-    <img src="{{URL('images/productWomen1.jpg')}}" alt="On Sale" style= "width: 50%; height:450px">
+    <img class="img-thumbnail" src="{{URL('images/productWomen1.jpg')}}" alt="On Sale" style= "width: 50%; height:450px">
     <div class="text">Women's crop top and leggins</div>
   </div>
 
-  <!--delete before submitting
-PROB: Only previous button works-->
+ 
+ 
+
+</div>
+
+ <!--delete before submitting
+PROB: Only previous button works
+idea: change previous to scroll through. there'll b only one button-->
 <!-- https://www.fundaofwebit.com/ecommerce-template/how-to-make-ecommerce-slider-design-using-html-css-and-bootstrap  -->
 
-  <button class="carousel-control-prev" type="button" role="button" data-bs-target="#carouselExampleCaptions"
+<button class="carousel-control-prev" type="button" role="button" data-bs-target="#carouselProducts"
             data-bs-slide="prev" >
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
             <span class="sr-only">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" role="button" data-bs-target="#carouselExampleCaptions"
-            data-bs-slide="next">
+        </button> 
+        
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselProducts"
+            data-bs-slide="next" >
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="sr-only">Next</span>
-        </button>
-</div>
+            <span class="visually-hidden">Next</span>
+        </button> 
+
+
+        <!--
+        <a class="carousel-control-prev" href="#carouselProducts" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselProducts" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a> -->
+
+        <!--
+        <a class="carousel-control right" href="#carouselProducts" data-slide="next">&rsaquo;</a> -->
+
+
+        <!--
+        <div class="carousel slide" style="width:450px">
+          
+    <a class="carousel-control left" href="#carouselProducts" data-slide="prev">&lsaquo;</a>
+    <a class="carousel-control right" href="#carouselProducts" data-slide="next">&rsaquo;</a>
+</div> -->
+        
+<!--
+<ul class="pager" data-bs-target="#carouselProducts" >
+    <li><a href="#carousel-item"  data-bs-slide="prev">Previous</a></li>
+    <li><a href="#">Next</a></li>
+  </ul> -->
+
+
 
   <!-- Next and previous buttons 
   <a class="previous" onclick="plusSlides(-1)">&#10094;</a>
@@ -62,7 +100,7 @@ PROB: Only previous button works-->
 
 
 <!-- put in a separate js file then link-->
-<!--it doesnt work when I put it in a separate page
+<!--it doesnt work when I put it in a separate page 
 
 <script>
 let Index = 1;
@@ -76,7 +114,7 @@ function plusSlides(n) {
 
 
 function displaySlides(n) {
-  let slides = document.getElementsByClassName("Products");
+  let slides = document.getElementsByClassName("carousel-item");
   if (n > slides.length) {Index = 1}
   if (n < 1) {Index = slides.length}
   for (let index = 0; index < slides.length; index++) {
@@ -122,11 +160,12 @@ function displaySlides(n) {
   reason y I put those href: web.php line 33 + 34 -->
 </section>
 
+<!--
 <footer>
  
   <a href=" https://www.instagram.com/capitano.clothing_/"> Instagram</a>
   <a href="//twitter.com/CapitanoCloth"> Twitter </a>
    <img src="{{URL('images/copyright.jpg')}}"  alt="copyright" style="width:150px" /> 
-</footer>
+</footer> -->
 
 @endsection
