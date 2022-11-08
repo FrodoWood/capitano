@@ -2,8 +2,9 @@
 
 @section('content')
 
-    <div class="container center">
-        <div class="card-group">
+<h1 class="text-center text-bold text-black-50">Men</h1>
+    <div class="container">
+        <div class="card-group justify-content-center">
                 <div class="row">
                     @foreach ($products as $product)
                         <div class="col-4">
