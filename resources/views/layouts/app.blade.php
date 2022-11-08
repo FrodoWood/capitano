@@ -114,11 +114,11 @@
     <div class="col">
     <h4>Navigate to other pages</h4>
     <ul class="nav flex-column">
-     <li><a class="nav-link p-0 text-muted" href="{{ url('/women') }}">Shop Women's Clothing</a></li>
-     <li><a class="nav-link p-0 text-muted" href="{{ url('/women') }}">Shop Women's Clothing</a></li>
-     <li><a class="nav-link p-0 text-muted" href="{{ url('/men') }}">Shop Men's Clothing</a></li>                   
-     <li><a class="nav-link p-0 text-muted" href="{{ url('/contact') }}">Contact us</a></li>       
-     <li><a class="nav-link p-0 text-muted" href="{{ url('/about') }}">About us</a></li>
+     <li><a style="color:white; text-decoration: none" href="{{ url('/women') }}">Shop Women's Clothing</a></li>
+     <li><a style="color:white; text-decoration: none" href="{{ url('/women') }}">Shop Women's Clothing</a></li>
+     <li><a style="color:white; text-decoration: none" href="{{ url('/men') }}">Shop Men's Clothing</a></li>                   
+     <li><a style="color:white; text-decoration: none" href="{{ url('/contact') }}">Contact us</a></li>       
+     <li><a style="color:white; text-decoration: none" href="{{ url('/about') }}">About us</a></li>
 
     </ul>
  </div>
@@ -128,7 +128,7 @@
     <h6> Get exclusive discounts.</h6>
     <h6>And many more...</h6>
     
-    <input type="email" id="email" name="email" placeholder="Your email" style="border-radius: 10px; height:40px; width:350px;">
+    <input type="email"  name="email" placeholder="Your email" style="border-radius: 10px; height:40px; width:350px;">
     <button class="btn btn-primary" type="button">Subscribe</button>
    
  </div>
