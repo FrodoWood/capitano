@@ -17,8 +17,8 @@
 
 
 <div  id="carouselProducts"  class="carousel slide">
-<div class="carousel-inner">
 
+<div class="carousel-inner">
  <div class="carousel-item active">
  <div class="text-center">
   <img class="img-thumbnail" src="{{url('images/sale.jpg')}}" alt="On Sale" style= "width: 50%; height:350px">
@@ -53,10 +53,7 @@
 
 </div>
 
- <!--delete before submitting
-PROB: Only previous button works
-idea: change previous to scroll through. there'll b only one button-->
-<!-- https://www.fundaofwebit.com/ecommerce-template/how-to-make-ecommerce-slider-design-using-html-css-and-bootstrap  -->
+ <!--next and previous buttons-->
 
 <button class="carousel-control-prev" type="button" role="button" data-bs-target="#carouselProducts"
             data-bs-slide="prev" >
