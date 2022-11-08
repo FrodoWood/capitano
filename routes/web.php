@@ -30,8 +30,8 @@ Route::get('/contact', function () {
     return view('contact');
 });
 
-Route::get('/products/men', [ProductController::class, 'menProducts']);
-Route::get('/products/women', [ProductController::class, 'womenProducts']);
+Route::get('/men', [ProductController::class, 'menProducts']);
+Route::get('/women', [ProductController::class, 'womenProducts']);
 Route::get('/products/{product}/show', [ProductController::class, 'show'])->name('showProduct');
 
 // Route::prefix('admin')->middleware('auth', 'isAdmin')->group(function () {
