@@ -138,7 +138,7 @@ function displaySlides(n) {
 <section class="linkToShop" style=" position: relative; text-align: center;color: white;">
 
 
-<img src="{{URL('images/barbell.jpg')}}" class="rounded float-left" alt="Shop" style= "width: 95%; height:450px">
+<img src="{{URL('images/barbell.jpg')}}" class="rounded float-left" alt="Shop" style= "width: 100%; height:550px">
 <div style="position: absolute;top: 8px;left: 60px;color:white; font-size:50px">Step Up Capitano</div>
 <div style="position: absolute;top: 70px;left: 60px;color:white; font-size:30px">Always providing the best!</div>
 <button type="button" class="btn btn-light"  style="position: absolute;top: 130px;left: 90px;"> <a href="/men">Shop Men</a></button>

@@ -145,7 +145,7 @@
         <i class="bi bi-instagram" style="font-size: 2rem;"></i>
     </a>
  </li>
- <li class="ms-2"><a href="twitter.com/CapitanoCloth">
+ <li class="ms-2"><a href="https://twitter.com/CapitanoCloth">
     <i class="bi bi-twitter" style="font-size: 2rem;"></i>
     </a>
  </li>
