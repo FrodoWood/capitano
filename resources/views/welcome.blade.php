@@ -68,62 +68,31 @@
         </button> 
 
 
-       
-  <!-- Next and previous buttons 
-  <a class="previous" onclick="plusSlides(-1)">&#10094;</a>
-  <a class="next" onclick="plusSlides(1)">&#10095;</a> -->
-
-  
-  
-
-
-<!-- put in a separate js file then link-->
-<!--it doesnt work when I put it in a separate page 
-
-<script>
-let Index = 1;
-displaySlides(Index);
-
-// Next& previous controls
-function plusSlides(n) {
-  displaySlides(Index += n);
-}
-
-
-
-function displaySlides(n) {
-  let slides = document.getElementsByClassName("carousel-item");
-  if (n > slides.length) {Index = 1}
-  if (n < 1) {Index = slides.length}
-  for (let index = 0; index < slides.length; index++) {
-    slides[index].style.display = "none";
-  }
-  slides[Index-1].style.display = "block";
-  
-}
-
-</script> -->
-
 </section>
 
 <br><br>
 
 
 <section class="companyNews">
-  <h2>Company News</h2>
+  <h2 style="text-align:center">Company News</h2> <br>
 <div class="container-fluid">
   <div class="row">
    <div class="col-md-6">
-     <h3 class="text-center">New Launch</h3>
-     <p>Capitano Clothing launches a brand new collection in collaboration with award winning designer Regina Geller. 
+    <div class="card">
+   <div class="card-body">
+     <h3 class="card-title" style="text-align:center">New Launch</h3>
+     <p class="card-text" >Capitano Clothing launches a brand new collection in collaboration with award winning designer Regina Geller. 
      Behind every design is an entire story and a purpose, and we love sharing what makes each one so special!
      Our new collection added small touches to your favorite staples to make them even more special, while mixing in something new as well.
      Additionally, YOU requested more leggings and neutrals, so we started there.
      Our collection is designed to give you a luxurious workout experience.</p>
-
+   </div>
+    </div>
    </div>
    <div class="col-md-6">
-     <h3 class="text-center">Giving back to the community</h3>
+   <div class="card">
+   <div class="card-body">
+     <h3 class="card-text" style="text-align:center">Giving back to the community</h3>
      <p>To celebrate its four year anniversary since opening, Capitano Clothing orgarnised a charity fair. The company raised £100 thousand pounds 
       for the Youth Sport Trust which is the UK's leading charity, improving every young person's education and development through sport and play.
       In addition, Capitano Clothing gave out vouchers for people to spend on its website. We also hosted a free webinar. 

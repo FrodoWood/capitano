@@ -86,6 +86,37 @@
         to launch collections. </p>
     <br><br>
 
+    <div class="card text-white bg-secondary mb-3">
+  <div class="card-body">
+  <div class="container">
+  <div class="row">
+    <div class="col-sm">
+        <h4 style="color:blanchedalmond; text-align:center; size:50px">£2,000,000</h4>
+      <p style="text-align:center">Revenue</p>
+    </div>
+    <div class="col-sm">
+    <h4 style="color:blanchedalmond; text-align:center; size:50px">45%</h4>
+      <p style="text-align:center">UK Market Share</p>
+    </div>
+    <div class="col-sm">
+    <h4 style="color:blanchedalmond; text-align:center; size:50px">30%</h4>
+      <p style="text-align:center">Global Market Share</p>
+    </div>
+    <div class="col-sm">
+    <h4 style="color:blanchedalmond; text-align:center; size:50px">95%</h4>
+      <p style="text-align:center">Customer satisfaction rate</p>
+    </div>
+  </div>
+</div>
+            
+        </div>
+        
+     
+    </div>
+  </div>
+</div>
+<br><br>
+
     <h3 class="text-center" style="font-size:50px">Our Founders</h3>
     <div class="container">
      <div class="row">
