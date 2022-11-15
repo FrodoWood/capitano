@@ -6,3 +6,26 @@
 
 // Bootstrap
 @import 'bootstrap/scss/bootstrap';
+
+
+.card-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+.product-card{
+    width: 18rem;
+}
+
+.card-footer {
+    padding: var(--bs-card-cap-padding-y) var(--bs-card-cap-padding-x);
+    color: var(--bs-card-cap-color);
+    background-color: white;
+    border-top: none;
+    
+}
+
+.text-align-end{
+    text-align: end;
+}
