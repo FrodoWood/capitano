@@ -24,6 +24,6 @@ class DatabaseSeeder extends Seeder
             'role' => 1,
 
         ]);
-        Product::factory(10)->create();
+        Product::factory(12)->create();
     }
 }

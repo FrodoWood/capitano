@@ -19,8 +19,8 @@ class ProductFactory extends Factory
         return [
             'title' => $this->faker->word,
             'description' => $this->faker->sentence,
-            'price' => $this->faker->numberBetween(0, 100),
-            'image' => $this->faker->imageUrl($width = 400, $height = 520),
+            'price' => $this->faker->numberBetween(10, 100),
+            'image' => 'https://placeimg.com/400/520/nature?' . rand(1, 100),
         ];
     }
 }
