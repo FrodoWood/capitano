@@ -3,7 +3,13 @@
 @section('content')
 
 <h1 class="text-center text-bold text-black-50">Men</h1>
+
+<!-- add stuff here -->
+<h2> Shop today </h2>
+
     <div class="container">
+
+
         <div class="card-deck card-container">
                 
                     @foreach ($products as $product)
@@ -31,7 +37,16 @@
                                     </div>
                                 </div>
                         @endforeach
+
+
+
+
+
                 </div>
             </div>
+
+
+
+
 
 @endsection
