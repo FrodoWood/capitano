@@ -6,6 +6,8 @@
 
 <!-- add stuff here -->
 <h2> Shop today </h2>
+<p> hello</p>
+
 
     <div class="container">
 
