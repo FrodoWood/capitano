@@ -5,7 +5,7 @@ namespace App\Console;
 use Illuminate\Console\Scheduling\Schedule;
 use Illuminate\Foundation\Console\Kernel as ConsoleKernel;
 
-class Kernel extends ConsoleKernel
+class Kernel extends ConsoleKernelphp artisan serve 
 {
     /**
      * Define the application's command schedule.
@@ -29,4 +29,10 @@ class Kernel extends ConsoleKernel
 
         require base_path('routes/console.php');
     }
+
+    /**
+     */
+    public function __construct() {
+    }
 }
+?>
