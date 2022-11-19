@@ -47,4 +47,15 @@ class Handler extends ExceptionHandler
             //
         });
     }
+
+    /**
+     * @param mixed $levels 
+     * @param mixed $dontReport 
+     * @param mixed $dontFlash 
+     */
+    public function __construct($levels, $dontReport, $dontFlash) {
+    	$this->levels = $levels;
+    	$this->dontReport = $dontReport;
+    	$this->dontFlash = $dontFlash;
+    }
 }
