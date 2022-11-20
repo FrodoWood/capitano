@@ -37,3 +37,8 @@ app.component('example-component', ExampleComponent);
  */
 
 app.mount('#app');
+
+
+// import jquery
+import jQuery from 'jquery';
+window.$ = jQuery;
