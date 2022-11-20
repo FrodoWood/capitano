@@ -75,7 +75,7 @@
                                         <div class="col-8 btn-group">
                                             <input type="number" value="1" min="1" max="100">
                                             <button class="add-to-cart" type="button" class="btn btn-sm btn-outline-secondary" 
-                                                    data-id="{{$product->id}}" data-name="{{$product->name}}" data-price="{{$product->price}}">Add to Cart</button>
+                                                    data-id="{{$product->id}}" data-name="{{$product->title}}" data-price="{{$product->price}}">Add to Cart</button>
                                         </div>
                                     </div>
                                     
@@ -83,6 +83,8 @@
                                 </div>
                             </div>
                     @endforeach
+                    <button onclick="myFunction()">Try it</button>
+                    
             </div>
     </div>
 
@@ -91,36 +93,38 @@
 @section('footer-scripts')
 
 <script>
+        function myFunction(){
+        alert("Hello js is working!");
+        }
+</script>
+
+<script type="module">
     $(document).ready(function(){
         window.cart = <?php echo json_encode($cart) ?>;
-        updateCartButton();
-
-        $('.add-to-card').on('click', function(event){
-            var cart = window.cart || [];
-            cart.push({'id':$(this)data('id'), 'name':$(this).data('name'), 'price':$(this).data('price'), 'qty':$(this).prev('input').val()});
-            window.cart = cart;
-
-            $.ajax('/home/add',
-            {
-                type: 'POST',
-                data: {"_token": "{{ csrf_token() }}", "cart":cart},
-                success: function(data, status, xhr){
-
-                }
-            });
-
             updateCartButton();
-        });
-    })
+            $('.add-to-cart').on('click', function(event){
+                var cart = window.cart || [];
+                cart.push({'id':$(this).data('id'), 'name':$(this).data('name'), 'price':$(this).data('price'), 'qty':$(this).prev('input').val()});
+                window.cart = cart;
+                $.ajax('/home/add',
+                {
+                    type: 'POST',
+                    data: {"_token": "{{ csrf_token() }}", "cart":cart},
+                    success: function(data, status, xhr){
+                    }
+                });
+                updateCartButton();
+            });
+        })
+        function updateCartButton(){
+            var count = 0;
+            window.cart.forEach(function(item, i){
+                count+= Number(item.qty);
+            });
+            $('#items-in-cart').html(count);
+            console.log(cart);
+        }
 
-    function updateCartButton(){
-        var count = 0;
-        window.cart.forEach(function(item, i){
-            count+= Number(item.qty);
-        });
-
-        $('#items-in-cart').html(count);
-    }
 </script>
 
 @endsection

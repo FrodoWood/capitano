@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\Product;
 use Illuminate\Http\Request;
+use Illuminate\Routing\Controller;
+use Illuminate\Support\Facades\Storage;
 
 class ProductController extends Controller
 {
@@ -19,7 +21,7 @@ class ProductController extends Controller
         return view('home', ['products' => $products, 'cart' => $cart]);
     }
 
-    public function addToCard(Request $request)
+    public function addToCart(Request $request)
     {
         session()->put('cart', $request->post('cart'));
         return response()->json([

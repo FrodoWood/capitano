@@ -1,3 +1,6 @@
+// import jquery
+import jQuery from 'jquery';
+window.$ = jQuery;
 /**
  * First we will load all of this project's JavaScript dependencies which
  * includes Vue and other libraries. It is a great starting point when
@@ -39,6 +42,3 @@ app.component('example-component', ExampleComponent);
 app.mount('#app');
 
 
-// import jquery
-import jQuery from 'jquery';
-window.$ = jQuery;
