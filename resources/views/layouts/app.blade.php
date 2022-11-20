@@ -154,4 +154,7 @@
 </div>
 
 </footer>
+
+
+@yield('footer-scripts')
 </html>
