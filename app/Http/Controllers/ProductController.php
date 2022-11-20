@@ -4,16 +4,32 @@ namespace App\Http\Controllers;
 
 use App\Models\Product;
 use Illuminate\Http\Request;
+use Illuminate\Routing\Controller;
+use Illuminate\Support\Facades\Storage;
 
 class ProductController extends Controller
 {
+    // dashboard page
     public function index()
     {
         $products = Product::all();
+        $cart = session()->get('cart');
 
-        return view('show', ['products' => $products]);
+        if ($cart == null) {
+            $cart = [];
+        }
+        return view('home', ['products' => $products, 'cart' => $cart]);
     }
 
+    public function addToCart(Request $request)
+    {
+        session()->put('cart', $request->post('cart'));
+        return response()->json([
+            'status' => 'added'
+        ]);
+    }
+
+    // Single product page
     public function show(Product $product)
     {
         return view('products.show', ['product' => $product]);

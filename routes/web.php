@@ -16,7 +16,8 @@ use App\Http\Controllers\ProductController;
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/home', [ProductController::class, 'index'])->name('home');
+Route::post('/home/add',[ProductController::class, 'addToCart']);
 
 Route::get('/', function () {
     return view('welcome');
