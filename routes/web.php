@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CartController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProductController;
@@ -17,7 +18,8 @@ use App\Http\Controllers\ProductController;
 Auth::routes();
 
 Route::get('/home', [ProductController::class, 'index'])->name('home');
-Route::post('/home/add',[ProductController::class, 'addToCart']);
+Route::post('/home/add', [ProductController::class, 'addToCart']);
+Route::get('cart', [CartController::class, 'index'])->name('cart');
 
 Route::get('/', function () {
     return view('welcome');
