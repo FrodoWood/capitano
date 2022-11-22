@@ -38,6 +38,8 @@
                        <li class="nav-item"><a class="nav-link" href="{{ url('/men') }}">Men </a></li>
                        <li class="nav-item"><a class="nav-link" href="{{ url('/contact') }}">Contact</a></li>
                        <li class="nav-item"><a class="nav-link" href="{{ url('/about') }}">About</a></li>
+                       <li class="nav-item"><a class="nav-link" href="{{ url('/') }}">Store</a></li>
+                      
 
                        <div class="input-group">
                         <input class="form-control mr-sm-2" type="search" class="form-control rounded" placeholder="Search" style="width:10%" />
@@ -52,7 +54,9 @@
 
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ms-auto">
+                    
                         <!-- Authentication Links -->
+                        
                         @guest
                             @if (Route::has('login'))
                                 <li class="nav-item">
@@ -67,7 +71,7 @@
                             @endif
                         @else
 
-                        <!--Should I put dropdown here? It doesn't work when I put code on line 38-48 here-->
+                        
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     {{ Auth::user()->name }}
@@ -84,9 +88,13 @@
                                         @csrf
                                     </form>
                                 </div>
+                                
                             </li>
                         @endguest
+                        
+                        
                     </ul>
+                    <a class="navbar-brand" href="{{url('/cart')}}"><i class="bi bi-cart-fill"></i></a>
                 </div>
             </div>
         </nav>
@@ -109,6 +117,7 @@
      <li><a style="color:white; text-decoration: none" href="{{ url('/men') }}">Shop Men's Clothing</a></li>                   
      <li><a style="color:white; text-decoration: none" href="{{ url('/contact') }}">Contact us</a></li>       
      <li><a style="color:white; text-decoration: none" href="{{ url('/about') }}">About us</a></li>
+     
 
     </ul>
  </div>
@@ -128,7 +137,7 @@
  <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
  <p>© 2022 Capitano Clothing, All rights reserved. </p>
 
- NOTE: LOGO IN THE MIDDLE
+ <img src="{{url('images/CapitanoLogo.png')}}" style="height:60px; width:50px">
 
 <ul class="list-unstyled d-flex">
  <li class="ms-2"><a href="https://www.instagram.com/capitano.clothing_/" >
