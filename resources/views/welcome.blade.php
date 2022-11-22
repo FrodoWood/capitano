@@ -2,7 +2,7 @@
 
 @section('content')
 <head>
-    <h1> Capitano Clothing</h1>
+    <h1 style="font:bolder; font-size:70px; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;"> Capitano Clothing</h1>
   <img src="{{URL('images/banner.gif')}}"  alt="Banner Image" style="width:100%; height:400px" data-mdb-toggle="animation"/>
   
   
