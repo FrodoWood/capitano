@@ -19,14 +19,11 @@
 </head>
 <body>
     <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
+        <nav class="navbar navbar-light bg-white sticky-top navbar-expand-md shadow-sm">
             <div class="container">
                
-            <img src="{{url('images/CapitanoLogo.png')}}" style="height:30px; width:30px; position:absolute; left: 50px;">
-            <span>Capitano</span> <br>
-            
                 <a class="navbar-brand" href="{{ url('/') }}">
-                 <i class="bi bi-house-fill"></i> 
+                    <img class="me-5" width="30" src="{{url('images/CapitanoLogo.png')}}">
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
@@ -34,7 +31,7 @@
 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
-                    <ul class="navbar-nav me-auto">
+                    <ul class="navbar-nav me-auto nav-page-links">
                     
                 
                        <li class="nav-item"><a class="nav-link" href="{{ url('/women') }}">Women</a></li>
@@ -42,14 +39,13 @@
                        <li class="nav-item"><a class="nav-link" href="{{ url('/contact') }}">Contact</a></li>
                        <li class="nav-item"><a class="nav-link" href="{{ url('/about') }}">About</a></li>
                        <li class="nav-item"><a class="nav-link" href="{{ url('home') }}">Store</a></li>
-                      
+                       
+                       <div class="ms-5 d-flex">
+                           <input class="form-control" type="search" placeholder="Search" style="width:100%" />
+                           <button type="button" class="btn btn-outline-success ms-2">Search</button>
+                       </div>
+                    </ul>
 
-                       <div class="input-group">
-                        <input class="form-control mr-sm-2" type="search" class="form-control rounded" placeholder="Search" style="width:10%" />
-                        <button type="button" class="btn btn-outline-primary">search</button>
-                    </div>
-                    </ul>
-                    </ul>
 
                     
                    
@@ -97,7 +93,7 @@
                         
                         
                     </ul>
-                    <a class="navbar-brand" href="{{url('cart')}}"><i class="bi bi-cart-fill"></i></a>
+                    <a class="navbar-brand " href="{{url('cart')}}"><i class="bi bi-cart-fill ms-5"></i></a>
                 </div>
             </div>
         </nav>
