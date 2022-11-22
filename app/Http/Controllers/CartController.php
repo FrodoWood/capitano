@@ -15,13 +15,14 @@ class CartController extends Controller
             $cart = [];
         }
 
-        if(Auth::check()){
-            $input =[
-                'user_id'=>Auth::id(),
-                'data'=>$cart,
-            ];
-            $item = CartItem::create($input);
+        if (Auth::check()) {
+            CartItem::updateOrCreate([
+                'user_id' => Auth::id()
+            ], [
+                'data' => $cart,
+            ]);
         }
+
         return view('cart.cart')->with('cart', $cart);
     }
 }

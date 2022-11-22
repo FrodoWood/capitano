@@ -3,8 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\Models\Product;
+use App\Models\CartItem;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Storage;
 
 class ProductController extends Controller
@@ -18,12 +20,34 @@ class ProductController extends Controller
         if ($cart == null) {
             $cart = [];
         }
+
+        if (Auth::check()) {
+            CartItem::updateOrCreate([
+                'user_id' => Auth::id()
+            ], [
+                'data' => $cart,
+            ]);
+        }
+
         return view('home', ['products' => $products, 'cart' => $cart]);
     }
 
     public function addToCart(Request $request)
     {
         session()->put('cart', $request->post('cart'));
+
+        $cart = session()->get('cart');
+        if ($cart == null) {
+            $cart = [];
+        }
+
+        if (Auth::check()) {
+            CartItem::updateOrCreate([
+                'user_id' => Auth::id()
+            ], [
+                'data' => $cart,
+            ]);
+        }
         return response()->json([
             'status' => 'added'
         ]);
