@@ -10,6 +10,7 @@
                 <th scope="col">Product</th>
                 <th scope="col">Price</th>
                 <th scope="col">Quantity</th>
+                <th scope="col"></th>
             </tr>
         </thead>
     
@@ -26,6 +27,10 @@
                     <td>{{$item['name']}}</td>
                     <td>{{$item['price']}}</td>
                     <td>{{$item['qty']}}</td>
+                    <td>
+                        <button class="btn btn-danger remove-from-cart" type="button" 
+                                                    data-id="{{$item['id']}}" data-name="{{$item['name']}}" data-price="{{$item['price']}}">Remove</button>
+                    </td>
                 </tr>
             @endforeach
         </tbody>
@@ -41,4 +46,16 @@
         Checkout</a>
     </p>
 </div>
+@endsection
+
+@section('footer-scripts')
+<script type="module">
+    $(document).ready(function(){
+        window.cart = <?php echo json_encode($cart) ?>;
+        $('.remove-from-cart').on('click', function(event){
+            var cart = window.cart;
+            console.log(cart)
+        })
+    })
+</script>
 @endsection
