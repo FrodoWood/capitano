@@ -2,10 +2,10 @@
 
 @section('content')
 <div class="container">
-  <form class="col-xs-6">
-  <div class="container mt-4">
-    <h1 class = "h1- responsive text-center mx-auto mb-2">Get In Touch</h1>
-    <p class ="text-center w-responsive mx-auto mb-4"> Enter your details below about your query and we will contact you back as soon as possible!</p>
+  <form class="container">
+  <div class="container form-control-lg  mt-4">
+    <h1 class = "h1- responsive text-center mx-auto">Get In Touch</h1>
+    <p class ="text-center responsive mx-auto mb-4"> Enter your details below about your query and we will contact you back as soon as possible!</p>
     <form action="/action_page.php">
       <div class="mb-4">
         <label for="name">Name:</label>
@@ -15,12 +15,18 @@
         <label for="email">Email:</label>
         <input type="email" class="form-control" id="email" placeholder="Enter email" name="email" required>
       </div>
+      <div class = "mb-4">
+        <label for= "number">Phone number</label>
+        <input type="phone number" class="form-control" id="number" placeholder="Enter phone number" name="number" required>
+      </div>
       <div class="mb-4">
         <label for ="text area">Comments:</label>
-        <input type ="text" class ="form-control" id="text area" placeholder="Please enter reason for contacting us" required>
+        <textarea class ="form-control" id="text area" rows= "3"placeholder="Please enter reason for contacting us" required></textarea>
       </div>
       </div>
+      <div class ="container">
       <button type="submit" class="btn btn-primary">Send</button>
+      </div>
     </form>
   </div>
 </div>
