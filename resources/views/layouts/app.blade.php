@@ -21,6 +21,9 @@
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
+                
+            <img src="{{url('images/CapitanoLogo.png')}}" style="height:30px; width:30px; position:absolute; left: 50px;">
+            <span>Capitano</span>
                 <!--can change to logo-->
                 <a class="navbar-brand" href="{{ url('/') }}">
                  <i class="bi bi-house-fill"></i> 
@@ -44,7 +47,7 @@
                        <div class="input-group">
                         <input class="form-control mr-sm-2" type="search" class="form-control rounded" placeholder="Search" style="width:10%" />
                         <button type="button" class="btn btn-outline-primary">search</button>
-                    </div> 
+                    </div>
                     </ul>
                     </ul>
 
