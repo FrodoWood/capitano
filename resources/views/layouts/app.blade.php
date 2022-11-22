@@ -41,7 +41,7 @@
                        <li class="nav-item"><a class="nav-link" href="{{ url('/men') }}">Men </a></li>
                        <li class="nav-item"><a class="nav-link" href="{{ url('/contact') }}">Contact</a></li>
                        <li class="nav-item"><a class="nav-link" href="{{ url('/about') }}">About</a></li>
-                       <li class="nav-item"><a class="nav-link" href="{{ url('/') }}">Store</a></li>
+                       <li class="nav-item"><a class="nav-link" href="{{ url('home') }}">Store</a></li>
                       
 
                        <div class="input-group">
@@ -97,7 +97,7 @@
                         
                         
                     </ul>
-                    <a class="navbar-brand" href="{{url('/cart')}}"><i class="bi bi-cart-fill"></i></a>
+                    <a class="navbar-brand" href="{{url('cart')}}"><i class="bi bi-cart-fill"></i></a>
                 </div>
             </div>
         </nav>
@@ -109,10 +109,13 @@
 </body>
 <br><br>
 <!--footer-->
-<footer class="text-bg-secondary p-3">
+<footer class="text-light pt-5">
 <div class="container">
- <div class="row">
-    <div class="col">
+ <div class="row d-flex justify-content-between">
+    <div class="col-2 ">
+        <img width="100" src="{{url('images/CapitanoLogo.png')}}">
+    </div>
+    <div class="col-4">
     <h4>Navigate to other pages</h4>
     <ul class="nav flex-column">
      <li><a style="color:white; text-decoration: none" href="{{ url('/women') }}">Shop Women's Clothing</a></li>
@@ -124,36 +127,43 @@
 
     </ul>
  </div>
- <div class="col">
+ <div class="col-5">
  <h5>  Subscribe to our mail list!</h5>
     <h6>Be the first one to know when new product drops.</h6>
     <h6> Get exclusive discounts.</h6>
     <h6>And many more...</h6>
-    
-    <input type="email"  name="email" placeholder="Your email" style="border-radius: 10px; height:40px; width:350px;">
-    <button class="btn btn-primary" type="button">Subscribe</button>
+    <div class="row mt-3">
+        <div class="col-8"><input type="email"  name="email" placeholder="Your email" class="form-control"></div>
+        <div class="col-4"><button class="btn btn-dark" type="button">Subscribe</button></div>
+    </div>
    
  </div>
  </div>
  </div>
 
- <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
- <p>© 2022 Capitano Clothing, All rights reserved. </p>
+ <div class="container mt-5">
+     <div class="row d-flex justify-content-center">
+         <div class="col-2 d-flex justify-content-evenly">
+             <a class="link-light" href="https://www.instagram.com/capitano.clothing_/" >
+                <i class="bi bi-instagram" style="font-size: 2rem;"></i>
+            </a>
+            
+            <a class="link-light" href="https://twitter.com/CapitanoCloth">
+                <i class="bi bi-twitter" style="font-size: 2rem;"></i>
+            </a>
+            
+            <a class="link-light" href="https://twitter.com/CapitanoCloth">
+                <i class="bi bi-youtube" style="font-size: 2rem;"></i>
+            </a>
+        </div>
+     </div>
 
- <img src="{{url('images/CapitanoLogo.png')}}" style="height:60px; width:50px">
-
-<ul class="list-unstyled d-flex">
- <li class="ms-2"><a href="https://www.instagram.com/capitano.clothing_/" >
-        <i class="bi bi-instagram" style="font-size: 2rem;"></i>
-    </a>
- </li>
- <li class="ms-2"><a href="https://twitter.com/CapitanoCloth">
-    <i class="bi bi-twitter" style="font-size: 2rem;"></i>
-    </a>
- </li>
-</ul>
-
-</div>
+     <div class="row">
+        <div class="col-12 text-center">
+            <p class="my-4">© 2022 Capitano Clothing, All rights reserved. </p>
+        </div>
+     </div>
+ </div>
 
 </footer>
 
