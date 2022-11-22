@@ -137,6 +137,5 @@
     <br> <br>
     
 
-    <h3>FAQs (optional)</h3>
     </div>
 @endsection

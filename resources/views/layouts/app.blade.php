@@ -33,28 +33,17 @@
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav me-auto">
                     
-                    <li class="nav-item dropdown">
-                    <div class="dropdown"> 
-                    <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >
-                        Dropdown</button>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="{{ url('/women') }}">Shop Women's Clothing</a></li>
-                            <div class="dropdown-divider"></div>
-                            <li><a class="dropdown-item" href="{{ url('/men') }}">Shop Men's Clothing</a></li>
-                            <div class="dropdown-divider"></div>
-                            <li><a class="dropdown-item" href="{{ url('/contact') }}">Contact us</a></li>
-                            <div class="dropdown-divider"></div>
-                            <li><a class="dropdown-item" href="{{ url('/about') }}">About us</a></li>
-                        </ul>
-                     </div>
-                    </li>
-                    
+                
+                       <li class="nav-item"><a class="nav-link" href="{{ url('/women') }}">Women</a></li>
+                       <li class="nav-item"><a class="nav-link" href="{{ url('/men') }}">Men </a></li>
+                       <li class="nav-item"><a class="nav-link" href="{{ url('/contact') }}">Contact</a></li>
+                       <li class="nav-item"><a class="nav-link" href="{{ url('/about') }}">About</a></li>
 
-                    <div class="input-group">
-                        <input type="search" class="form-control rounded" placeholder="Search"  />
+                       <div class="input-group">
+                        <input class="form-control mr-sm-2" type="search" class="form-control rounded" placeholder="Search" style="width:10%" />
                         <button type="button" class="btn btn-outline-primary">search</button>
-                    </div>      
-                   
+                    </div> 
+                    </ul>
                     </ul>
 
                     
@@ -108,6 +97,7 @@
     </div>
 </body>
 <br><br>
+<!--footer-->
 <footer class="text-bg-secondary p-3">
 <div class="container">
  <div class="row">
