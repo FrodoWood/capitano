@@ -21,10 +21,10 @@
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
-                
+               
             <img src="{{url('images/CapitanoLogo.png')}}" style="height:30px; width:30px; position:absolute; left: 50px;">
-            <span>Capitano</span>
-                <!--can change to logo-->
+            <span>Capitano</span> <br>
+            
                 <a class="navbar-brand" href="{{ url('/') }}">
                  <i class="bi bi-house-fill"></i> 
                 </a>
