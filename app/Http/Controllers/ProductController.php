@@ -15,7 +15,14 @@ class ProductController extends Controller
     public function index()
     {
         $products = Product::all();
-        $cart = session()->get('cart');
+
+        if (Auth::check()) {
+            $item = CartItem::where('user_id', '=', Auth::id())->firstOrFail();
+            $dbcart = $item->data;
+            $cart = $dbcart;
+        } else {
+            $cart = session()->get('cart');
+        }
 
         if ($cart == null) {
             $cart = [];

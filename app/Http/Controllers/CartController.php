@@ -11,28 +11,17 @@ class CartController extends Controller
 {
     public function index()
     {
-        $cart = session()->get('cart');
-        // var_dump($cart);
-        //$dbcart = json_encode($dbcart);
-        //var_dump($dbcart);
-        $item = CartItem::where('user_id', '=', Auth::id())->firstOrFail();
-        $dbcart = $item->data;
-        //var_dump($dbcart);
+        if (Auth::check()) {
+            $item = CartItem::where('user_id', '=', Auth::id())->firstOrFail();
+            $dbcart = $item->data;
+            $cart = $dbcart;
+        } else {
+            $cart = session()->get('cart');
+        }
 
-
-
-        // Setting to empty array if cart is null
         if ($cart == null) {
             $cart = [];
         }
-        if ($dbcart == null) {
-            $dbcart = [];
-        }
-
-        $combinedCart = array_merge($dbcart, $cart);
-        //var_dump($combinedCart);
-        //var_dump($cart);
-        //var_dump($dbcart);
 
         // Uploading cart to database
         if (Auth::check()) {
