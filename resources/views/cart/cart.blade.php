@@ -53,10 +53,9 @@
         window.cart = <?php echo json_encode($cart) ?>;
         $('.remove-from-cart').on('click', function(event){
             var index = $(this).data("id");
-            console.log(index);
             var cart = window.cart;
             $(this).closest("tr").remove();
-            // cart.splice(index,1);
+            cart.splice(index,1);
 
 
             $.ajax('/cart/delete',

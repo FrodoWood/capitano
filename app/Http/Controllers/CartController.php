@@ -31,13 +31,14 @@ class CartController extends Controller
         //session()->put('cart', $request->post('cart'));
         //session()->remove('cart', $request->post('index'));
 
-        $cart = session()->get('cart');
+        // $cart = session()->get('cart');
+        $cart = $request->post('cart');
         if ($cart == null) {
             $cart = [];
         }
 
         $index = $request->post('index');
-        array_splice($cart, $index, 1);
+        //array_splice($cart, $index, 1);
         session()->put('cart', $cart);
 
         if (Auth::check()) {
