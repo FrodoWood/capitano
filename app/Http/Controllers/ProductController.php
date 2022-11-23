@@ -21,13 +21,13 @@ class ProductController extends Controller
             $cart = [];
         }
 
-        if (Auth::check()) {
-            CartItem::updateOrCreate([
-                'user_id' => Auth::id()
-            ], [
-                'data' => $cart,
-            ]);
-        }
+        // if (Auth::check()) {
+        //     CartItem::updateOrCreate([
+        //         'user_id' => Auth::id()
+        //     ], [
+        //         'data' => $cart,
+        //     ]);
+        // }
 
         return view('home', ['products' => $products, 'cart' => $cart]);
     }
