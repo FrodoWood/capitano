@@ -19,10 +19,24 @@ class ProductController extends Controller
 
         if (Auth::check()) {
             $item = CartItem::where('user_id', '=', Auth::id())->first();
+            $sessionCart = session()->get('cart');
+            if ($cart == null) {
+                $cart = [];
+            }
+            if ($sessionCart == null) {
+                $sessionCart = [];
+            }
             if ($item != null) {
                 $dbcart = $item->data;
                 $cart = $dbcart;
             }
+            $cart = array_merge($cart, $sessionCart);
+            session()->forget('cart');
+            CartItem::updateOrCreate([
+                'user_id' => Auth::id()
+            ], [
+                'data' => $cart,
+            ]);
         } else {
             $cart = session()->get('cart');
         }
