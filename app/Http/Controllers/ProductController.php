@@ -44,20 +44,26 @@ class ProductController extends Controller
 
     public function addToCart(Request $request)
     {
-        session()->put('cart', $request->post('cart'));
 
-        $cart = session()->get('cart');
-        if ($cart == null) {
-            $cart = [];
-        }
 
         if (Auth::check()) {
+            $cart = $request->post('cart');
+            if ($cart == null) {
+                $cart = [];
+            }
             CartItem::updateOrCreate([
                 'user_id' => Auth::id()
             ], [
                 'data' => $cart,
             ]);
+            return;
         }
+
+
+        session()->put('cart', $request->post('cart'));
+        $cart = session()->get('cart');
+
+
         return response()->json([
             'status' => 'added'
         ]);

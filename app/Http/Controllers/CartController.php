@@ -37,25 +37,18 @@ class CartController extends Controller
 
     public function removeFromCart(Request $request)
     {
-        //session()->put('cart', $request->post('cart'));
-        //session()->remove('cart', $request->post('index'));
-
-        // $cart = session()->get('cart');
         $cart = $request->post('cart');
         if ($cart == null) {
             $cart = [];
         }
-
-        $index = $request->post('index');
-        //array_splice($cart, $index, 1);
-        //session()->put('cart', $cart);
-
         if (Auth::check()) {
             CartItem::updateOrCreate([
                 'user_id' => Auth::id()
             ], [
                 'data' => $cart,
             ]);
+        } else {
+            session()->put('cart', $cart);
         }
     }
 }
