@@ -20,6 +20,7 @@ Auth::routes();
 Route::get('/home', [ProductController::class, 'index'])->name('home');
 Route::post('/home/add', [ProductController::class, 'addToCart']);
 Route::get('cart', [CartController::class, 'index'])->name('cart');
+Route::post('cart/delete', [CartController::class, 'removeFromCart']);
 
 Route::get('/', function () {
     return view('welcome');

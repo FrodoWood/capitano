@@ -28,8 +28,7 @@
                     <td>{{$item['price']}}</td>
                     <td>{{$item['qty']}}</td>
                     <td>
-                        <button class="btn btn-danger remove-from-cart" type="button" 
-                                                    data-id="{{$item['id']}}" data-name="{{$item['name']}}" data-price="{{$item['price']}}">Remove</button>
+                        <button class="btn btn-danger remove-from-cart" type="button" data-id="{{$index = $loop->index }}">Remove</button>
                     </td>
                 </tr>
             @endforeach
@@ -53,8 +52,23 @@
     $(document).ready(function(){
         window.cart = <?php echo json_encode($cart) ?>;
         $('.remove-from-cart').on('click', function(event){
+            var index = $(this).data("id");
+            console.log(index);
             var cart = window.cart;
-            console.log(cart)
+            $(this).closest("tr").remove();
+            // cart.splice(index,1);
+
+
+            $.ajax('/cart/delete',
+                {
+                    type: 'POST',
+                    data: {"_token": "{{ csrf_token() }}", "cart":cart, "index": index},
+                    success:function(){
+                        console.log("Item deleted correctly");
+                         window.location.href = "cart";
+                    }
+                }
+            )
         })
     })
 </script>
