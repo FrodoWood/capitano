@@ -48,7 +48,7 @@ class CartController extends Controller
 
         $index = $request->post('index');
         //array_splice($cart, $index, 1);
-        session()->put('cart', $cart);
+        //session()->put('cart', $cart);
 
         if (Auth::check()) {
             CartItem::updateOrCreate([

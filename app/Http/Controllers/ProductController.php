@@ -15,11 +15,14 @@ class ProductController extends Controller
     public function index()
     {
         $products = Product::all();
+        $cart = [];
 
         if (Auth::check()) {
-            $item = CartItem::where('user_id', '=', Auth::id())->firstOrFail();
-            $dbcart = $item->data;
-            $cart = $dbcart;
+            $item = CartItem::where('user_id', '=', Auth::id())->first();
+            if ($item != null) {
+                $dbcart = $item->data;
+                $cart = $dbcart;
+            }
         } else {
             $cart = session()->get('cart');
         }
