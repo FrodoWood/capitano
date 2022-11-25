@@ -1,11 +1,24 @@
 @extends('layouts.app')
 
+<head>
+<style>
+  body{
+    background-image: url('https://images.pexels.com/photos/715134/pexels-photo-715134.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1') ;
+  }
+ /* #form-container{
+    background-image: url('https://img.freepik.com/free-vector/royal-watercolor-valentine-red-background_1340-4006.jpg?w=360') ;
+    
+  } */
+  </style>
+</head>
+
 @section('content')
+
 <div class="container">
-  <form class="container form-control center">
+  <form class="container form-control center" id="form-container">
   <div class="container form-control-lg  mt-4">
     <h1 class = "h1- responsive text-center mx-auto">Get In Touch</h1>
-    <p class ="text-center responsive mx-auto mb-4"> Enter your details below about your query and we will contact you back as soon as possible!</p>
+    <p class ="text-center responsive mx-auto mb-4"> Enter your details below along with your query and we will contact you back as soon as possible!</p>
     <form action="/action_page.php">
       <div class="mb-4">
         <label for="name">Name:</label>
