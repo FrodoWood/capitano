@@ -15,7 +15,7 @@
 @section('content')
 
 <div class="container">
-  <form class="container form-control center" id="form-container">
+  <form class="container form-control center contactForm" id="form-container">
   <div class="container form-control-lg  mt-4">
     <h1 class = "h1- responsive text-center mx-auto">Get In Touch</h1>
     <p class ="text-center responsive mx-auto mb-4"> Enter your details below along with your query and we will contact you back as soon as possible!</p>
