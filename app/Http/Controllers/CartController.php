@@ -51,4 +51,14 @@ class CartController extends Controller
             session()->put('cart', $cart);
         }
     }
+
+    public function checkout()
+    {
+        $item = CartItem::where('user_id', '=', Auth::id())->firstOrFail();
+        $dbcart = $item->data;
+        if ($dbcart == null) {
+            $dbcart = [];
+        }
+        return view('cart.checkout')->with('cartItems', $dbcart);
+    }
 }

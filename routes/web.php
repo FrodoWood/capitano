@@ -21,6 +21,8 @@ Route::get('/home', [ProductController::class, 'index'])->name('home');
 Route::post('/home/add', [ProductController::class, 'addToCart']);
 Route::get('cart', [CartController::class, 'index'])->name('cart');
 Route::post('cart/delete', [CartController::class, 'removeFromCart']);
+Route::get('cart/checkout', [CartController::class, 'checkout'])->name('checkout')->middleware('auth');
+
 
 Route::get('/', function () {
     return view('welcome');
@@ -38,12 +40,8 @@ Route::get('/men', [ProductController::class, 'menProducts']);
 Route::get('/women', [ProductController::class, 'womenProducts']);
 Route::get('/products/{product}/show', [ProductController::class, 'show'])->name('showProduct');
 
-// Route::prefix('admin')->middleware('auth', 'isAdmin')->group(function () {
-//     Route::get('/admin', function () {
-//         return view('admin');
-//     });
-// });
 
+//Admin
 Route::get('/admin', function () {
     return view('admin');
 })->middleware('auth', 'isAdmin');

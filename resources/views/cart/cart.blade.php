@@ -40,7 +40,7 @@
     </p>
     
     <p>
-        <a class="btn btn-success" href="">
+        <a class="btn btn-success" href="{{route('checkout')}}">
             <i class="bi bi-lock-fill"></i>
         Checkout</a>
     </p>
