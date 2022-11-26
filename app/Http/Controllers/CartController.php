@@ -80,29 +80,29 @@ class CartController extends Controller
         //     'address' => 'required',
         //     'postcode' => 'required',
         // ]);
-        Order::create([
+        $order = Order::create([
             'user_id' => Auth::id(),
             'order_items' => $dbcart,
             'price' => request('price'),
         ]);
 
-        // OrderAddress::create([
-        //     'order_id' => request(),
-        //     'firstname' => request('firstName'),
-        //     'lastname' => request('lastName'),
-        //     'email' => request('email'),
-        //     'country' => request('country'),
-        //     'address1' => request('address1'),
-        //     'address2' => request('address2'),
-        //     'county' => request('county'),
-        //     'postcode' => request('postcode')
-        // ]);
+        OrderAddress::create([
+            'order_id' => $order->id,
+            'firstname' => request('firstName'),
+            'lastname' => request('lastName'),
+            'email' => request('email'),
+            'country' => request('country'),
+            'address1' => request('address1'),
+            'address2' => request('address2'),
+            'county' => request('county'),
+            'postcode' => request('postcode')
+        ]);
 
-        // CartItem::updateOrCreate([
-        //     'user_id' => Auth::id()
-        // ], [
-        //     'data' => [],
-        // ]);
+        CartItem::updateOrCreate([
+            'user_id' => Auth::id()
+        ], [
+            'data' => [],
+        ]);
         return redirect('/home');
     }
 }
