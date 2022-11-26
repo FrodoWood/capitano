@@ -1,6 +1,6 @@
 @extends('layouts.app')
 @section('content')
-<div class="container">
+<div class="container mt-4">
     @php
         $totalItems = 0;
     @endphp
