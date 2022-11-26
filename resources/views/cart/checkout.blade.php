@@ -84,7 +84,7 @@
     
               <div class="col-12">
                 <label for="email" class="form-label">Email</label>
-                <input type="email" class="form-control" id="email" name="email" placeholder="name@example.com" value="retrieved from database">
+                <input type="email" class="form-control" id="email" name="email" placeholder="name@example.com" value="{{auth()->user()->email}}">
                 <div class="invalid-feedback">
                   Please enter a valid email address for Delivery updates.
                 </div>
@@ -423,6 +423,7 @@
                     </div>
                   </div>
                 <hr class="my-4">
+                <input type="hidden" name="price" value="{{$total}}">
                 <button class="w-100 btn btn-success btn-lg" type="submit">Place order</button>
             </div>
           </form>

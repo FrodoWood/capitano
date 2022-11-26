@@ -83,7 +83,7 @@ class CartController extends Controller
         Order::create([
             'user_id' => Auth::id(),
             'order_items' => $dbcart,
-            'price' => 0,
+            'price' => request('price'),
         ]);
 
         // OrderAddress::create([
