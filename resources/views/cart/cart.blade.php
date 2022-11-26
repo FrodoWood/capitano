@@ -42,7 +42,7 @@
     <p>
         <a class="btn btn-success" href="{{route('checkout')}}">
             <i class="bi bi-lock-fill"></i>
-        Checkout</a>
+            Checkout Securely</a>
     </p>
 </div>
 @endsection

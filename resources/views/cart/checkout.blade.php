@@ -51,22 +51,23 @@
                 <strong>£{{$total}}</strong>
             </li>
             <li class="list-group-item d-flex justify-content-between py-3">
-                <button class="w-100 btn btn-secondary btn-lg disabled" role="button" type="submit">Checkout Securely</button>
+                <button class="w-100 btn btn-secondary btn-lg disabled" role="button" type="submit">Place order</button>
             </li>
           </ul>
 
         </div>
 
 
-
         {{-- Left column --}}
         <div class="col-md-7 col-lg-8  py-3">
-            <form class="needs-validation" novalidate="">
+            <form class="needs-validation" method="POST" action="{{route('placeOrder')}}" novalidate="">
+                @csrf
+
               <div class="row g-3 px-4 pb-5">
               <h4 class="mb-3">Billing address</h4>
               <div class="col-sm-6">
                 <label for="firstName" class="form-label">First name</label>
-                <input type="text" class="form-control" id="firstName" placeholder="" value="" required="">
+                <input type="text" class="form-control" id="firstName" name="firstName" placeholder=""  required="">
                 <div class="invalid-feedback">
                   Valid first name is required.
                 </div>
@@ -74,7 +75,7 @@
     
               <div class="col-sm-6">
                 <label for="lastName" class="form-label">Last name</label>
-                <input type="text" class="form-control" id="lastName" placeholder="" value="" required="">
+                <input type="text" class="form-control" id="lastName" name="lastName" placeholder=""  required="">
                 <div class="invalid-feedback">
                   Valid last name is required.
                 </div>
@@ -82,7 +83,7 @@
     
               <div class="col-12">
                 <label for="email" class="form-label">Email</label>
-                <input type="email" class="form-control" id="email" placeholder="name@example.com" value="retrieved from database">
+                <input type="email" class="form-control" id="email" name="email" placeholder="name@example.com" value="retrieved from database">
                 <div class="invalid-feedback">
                   Please enter a valid email address for Delivery updates.
                 </div>
@@ -90,7 +91,7 @@
     
               <div class="col-12">
                 <label for="country" class="form-label">Country</label>
-                <select class="form-select" id="country" required="">
+                <select class="form-select" id="country" name="country" required="">
                     <option value="United Kingdom">United Kingdom</option>
                     <option value="Afghanistan">Afghanistan</option>
                     <option value="Åland Islands">Åland Islands</option>
@@ -343,8 +344,8 @@
               </div>
 
               <div class="col-12">
-                <label for="address" class="form-label">Address line 1</label>
-                <input type="text" class="form-control" id="address" placeholder="" required="">
+                <label for="address1" class="form-label">Address line 1</label>
+                <input type="text" class="form-control" id="address1" name="address1" placeholder="" required="">
                 <div class="invalid-feedback">
                   Please enter your Delivery address.
                 </div>
@@ -352,17 +353,17 @@
     
               <div class="col-12">
                 <label for="address2" class="form-label">Address line 2 (optional)</label>
-                <input type="text" class="form-control" id="address2" placeholder="">
+                <input type="text" class="form-control" id="address2" name="address2" placeholder="">
               </div>
               
               <div class="col-12">
                 <label for="county" class="form-label">County (optional)</label>
-                <input type="text" class="form-control" id="county" placeholder="">
+                <input type="text" class="form-control" id="county" name="county" placeholder="">
               </div>
     
               <div class="col-12">
                 <label for="postcode" class="form-label">Postcode</label>
-                <input type="text" class="form-control" id="postcode" placeholder="" required="">
+                <input type="text" class="form-control" id="postcode" name="postcode" placeholder="" required="">
                 <div class="invalid-feedback">
                   Postcode required.
                 </div>
@@ -421,7 +422,8 @@
                     </div>
                   </div>
                 <hr class="my-4">
-                <button class="w-100 btn btn-success btn-lg" type="submit">Checkout Securely</button>
+                <input type="text" type="hidden" name="price" value="{{$total}}">
+                <button class="w-100 btn btn-success btn-lg" type="submit">Place order</button>
             </div>
           </form>
         </div>

@@ -22,6 +22,7 @@ Route::post('/home/add', [ProductController::class, 'addToCart']);
 Route::get('cart', [CartController::class, 'index'])->name('cart');
 Route::post('cart/delete', [CartController::class, 'removeFromCart']);
 Route::get('cart/checkout', [CartController::class, 'checkout'])->name('checkout')->middleware('auth');
+Route::post('/home', [CartController::class, 'placeOrder'])->name('placeOrder')->middleware('auth');
 
 
 Route::get('/', function () {
