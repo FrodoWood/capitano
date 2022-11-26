@@ -115,7 +115,6 @@
     <h4>Navigate to other pages</h4>
     <ul class="nav flex-column">
      <li><a style="color:white; text-decoration: none" href="{{ url('/women') }}">Shop Women's Clothing</a></li>
-     <li><a style="color:white; text-decoration: none" href="{{ url('/women') }}">Shop Women's Clothing</a></li>
      <li><a style="color:white; text-decoration: none" href="{{ url('/men') }}">Shop Men's Clothing</a></li>                   
      <li><a style="color:white; text-decoration: none" href="{{ url('/contact') }}">Contact us</a></li>       
      <li><a style="color:white; text-decoration: none" href="{{ url('/about') }}">About us</a></li>
