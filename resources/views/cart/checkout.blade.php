@@ -59,40 +59,48 @@
 
         {{-- Left column --}}
         <div class="col-md-7 col-lg-8  py-3">
-            <form class="needs-validation" method="POST" action="{{route('placeOrder')}}" novalidate="">
-                @csrf
-
-                
+            <form  method="POST" action="{{route('placeOrder')}}" novalidate>
+              @csrf
 
               <div class="row g-3 px-4 pb-5">
               <h4 class="mb-3">Billing address</h4>
+
               <div class="col-sm-6">
                 <label for="firstName" class="form-label">First name</label>
-                <input type="text" class="form-control" id="firstName" name="firstName" placeholder=""  required="">
-                <div class="invalid-feedback">
-                  Valid first name is required.
-                </div>
+                <input type="text"  class="form-control" id="firstName" name="firstName" value="{{old('firstName')}}" />
               </div>
     
               <div class="col-sm-6">
                 <label for="lastName" class="form-label">Last name</label>
-                <input type="text" class="form-control" id="lastName" name="lastName" placeholder=""  required="">
-                <div class="invalid-feedback">
-                  Valid last name is required.
-                </div>
+                <input type="text"  class="form-control" id="lastName" name="lastName" value="{{old('lastName')}}"/>
               </div>
+
+              @error('firstName')
+              <div class="col-sm-6 g-3">
+                <span class="text-danger">*{{$message}}</span>
+              </div>
+              @enderror
+
+              @error('lastName')
+              <div class="col-sm-6 g-3">
+                <span class="text-danger">*{{$message}}</span>
+              </div>
+              @enderror
     
               <div class="col-12">
                 <label for="email" class="form-label">Email</label>
-                <input type="email" class="form-control" id="email" name="email" placeholder="name@example.com" value="{{auth()->user()->email}}">
-                <div class="invalid-feedback">
-                  Please enter a valid email address for Delivery updates.
-                </div>
+                <input type="email" class="form-control" id="email" name="email" placeholder="name@example.com" value="{{auth()->user()->email}}"/>
               </div>
+
+              @error('email')
+              <div class="col-12 g-3">
+                <span class="text-danger">*{{$message}}</span>
+              </div>
+              @enderror
     
               <div class="col-12">
                 <label for="country" class="form-label">Country</label>
-                <select class="form-select" id="country" name="country" required="">
+                <select class="form-select" id="country" name="country" value="{{old('country')}}" />
                     <option value="United Kingdom">United Kingdom</option>
                     <option value="Afghanistan">Afghanistan</option>
                     <option value="Åland Islands">Åland Islands</option>
@@ -339,36 +347,46 @@
                     <option value="Zambia">Zambia</option>
                     <option value="Zimbabwe">Zimbabwe</option>
                 </select>
-                <div class="invalid-feedback">
-                  Please select a valid country.
-                </div>
               </div>
+
+              @error('country')
+              <div class="col-12 g-3">
+                <span class="text-danger">*{{$message}}</span>
+              </div>
+              @enderror
 
               <div class="col-12">
                 <label for="address1" class="form-label">Address line 1</label>
-                <input type="text" class="form-control" id="address1" name="address1" placeholder="" required="">
-                <div class="invalid-feedback">
-                  Please enter your Delivery address.
-                </div>
+                <input type="text" class="form-control" id="address1" name="address1" value="{{old('address1')}}" />
               </div>
+
+              @error('address1')
+              <div class="col-12 g-3">
+                <span class="text-danger">*{{$message}}</span>
+              </div>
+              @enderror
     
               <div class="col-12">
                 <label for="address2" class="form-label">Address line 2 (optional)</label>
-                <input type="text" class="form-control" id="address2" name="address2" placeholder="">
+                <input type="text" class="form-control" id="address2" name="address2" >
               </div>
               
               <div class="col-12">
                 <label for="county" class="form-label">County (optional)</label>
-                <input type="text" class="form-control" id="county" name="county" placeholder="">
+                <input type="text" class="form-control" id="county" name="county" >
               </div>
     
               <div class="col-12">
                 <label for="postcode" class="form-label">Postcode</label>
-                <input type="text" class="form-control" id="postcode" name="postcode" placeholder="" required="">
-                <div class="invalid-feedback">
-                  Postcode required.
-                </div>
+                <input type="text" class="form-control" id="postcode" name="postcode" value="{{old('postcode')}}"/>
               </div>
+
+              @error('postcode')
+              <div class="col-12 g-3">
+                <span class="text-danger">*{{$message}}</span>
+              </div>
+              @enderror
+
             </div>
     
             <hr class="my-4">
@@ -383,49 +401,66 @@
             <hr class="my-4">
     
 
-            <div class="row px-4 pb-5">
+            <div class="row px-4 g-3 pb-5">
                 <h4 class="mb-3">Payment</h4>
                 <div class="my-3 ">
 
                   <div class="form-check">
-                    <input id="credit" name="paymentMethod" type="radio" class="form-check-input" checked="" required="">
+                    <input id="credit" name="paymentMethod" type="radio" class="form-check-input" checked="" required/>
                     <label class="form-check-label" for="credit">Credit / Debit Card</label>
                   </div>
 
                 </div>
                 
-                  <div class="col-md-12 pb-4">
-                    <label for="cc-name" class="form-label">Name on Card</label>
-                    <input type="text" class="form-control" id="cc-name" placeholder="" required="">
+                  <div class="col-12">
+                    <label for="nameOnCard" class="form-label">Name on Card</label>
+                    <input type="text" class="form-control" id="nameOnCard" name="nameOnCard" placeholder="" value="{{old('nameOnCard')}}" required/>
                     <small class="text-muted">Full name as displayed on Card</small>
-                    <div class="invalid-feedback">
-                      Name on Card is required
-                    </div>
                   </div>
-                  <div class="col-md-12 pb-4">
-                    <label for="cc-number" class="form-label">Card Number</label>
-                    <input type="text" class="form-control" id="cc-number" placeholder="1234 5678 9012 3456" required="">
-                    <div class="invalid-feedback">Card Number is required
-                    </div>
+
+                  @error('nameOnCard')
+                  <div class="col-12 g-3">
+                    <span class="text-danger">*{{$message}}</span>
                   </div>
-                  <div class="col-md-12 pb-4">
-                    <label for="cc-expiration" class="form-label">Expiry Date</label>
-                    <input type="text" class="form-control" id="cc-expiration" placeholder="MM/YY" required="">
-                    <div class="invalid-feedback">
-                      Expiration date required
-                    </div>
+                  @enderror
+
+                  <div class="col-12">
+                    <label for="cardNumber" class="form-label">Card Number</label>
+                    <input type="text" class="form-control" id="cardNumber" name="cardNumber" value="{{old('cardNumber')}}" placeholder="1234 5678 9012 3456" required/>
                   </div>
-                  <div class="col-md-2 pb-4">
-                    <label for="cc-cvv" class="form-label">CVV</label>
-                    <input type="text" class="form-control" id="cc-cvv" placeholder="123" required="">
-                    <div class="invalid-feedback">
-                      Security code required
-                    </div>
+
+                  @error('cardNumber')
+                  <div class="col-12 g-3">
+                    <span class="text-danger">*{{$message}}</span>
                   </div>
+                  @enderror
+
+                  <div class="col-12">
+                    <label for="expiryDate" class="form-label">Expiry Date</label>
+                    <input type="text" class="form-control" id="expiryDate" name="expiryDate" value="{{old('expiryDate')}}" placeholder="MM/YY" required/>
+                  </div>
+
+                  @error('expiryDate')
+                  <div class="col-12 g-3">
+                    <span class="text-danger">*{{$message}}</span>
+                  </div>
+                  @enderror
+
+                  <div class="col-md-2">
+                    <label for="CVV" class="form-label">CVV</label>
+                    <input type="text" class="form-control" id="CVV" name="CVV" placeholder="123" required/>
+                  </div>
+
+                  @error('CVV')
+                  <div class="col-12 g-3">
+                    <span class="text-danger">*{{$message}}</span>
+                  </div>
+                  @enderror
+
                 <hr class="my-4">
                 <input type="hidden" name="price" value="{{$total}}">
                 <button class="w-100 btn btn-success btn-lg" type="submit">Place order</button>
-            </div>
+              </div>
           </form>
         </div>
       </div>

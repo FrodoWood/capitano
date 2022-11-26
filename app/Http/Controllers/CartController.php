@@ -72,14 +72,25 @@ class CartController extends Controller
             $dbcart = [];
         }
 
-        // request()->validate([
-        //     'firstName' => 'required',
-        //     'lastName' => 'required',
-        //     'email' => 'required',
-        //     'country' => 'required',
-        //     'address' => 'required',
-        //     'postcode' => 'required',
-        // ]);
+        request()->validate(
+            [
+                'firstName' => 'required',
+                'lastName' => 'required',
+                'email' => 'required|email',
+                'country' => 'required',
+                'address1' => 'required',
+                'postcode' => 'required',
+                'nameOnCard' => 'required',
+                'cardNumber' => 'required|digits:16',
+                'expiryDate' => 'required',
+                'CVV' => 'required|digits:3',
+            ],
+            [
+                'CVV.required' => 'Enter the 3 digit CVV code',
+                'CVV.digits' => 'Invalid CVV'
+            ]
+        );
+
         $order = Order::create([
             'user_id' => Auth::id(),
             'order_items' => $dbcart,
