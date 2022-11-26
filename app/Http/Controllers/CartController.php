@@ -64,7 +64,7 @@ class CartController extends Controller
         return view('cart.checkout')->with('cartItems', $dbcart);
     }
 
-    public function placeOrder(Request $request)
+    public function placeOrder()
     {
         $item = CartItem::where('user_id', '=', Auth::id())->firstOrFail();
         $dbcart = $item->data;
@@ -72,36 +72,37 @@ class CartController extends Controller
             $dbcart = [];
         }
 
-        $request->validate([
-            'firstName' => 'required',
-            'lastName' => 'required',
-            'email' => 'required',
-            'country' => 'required',
-            'address' => 'required',
-            'postcode' => 'required',
-        ]);
+        // request()->validate([
+        //     'firstName' => 'required',
+        //     'lastName' => 'required',
+        //     'email' => 'required',
+        //     'country' => 'required',
+        //     'address' => 'required',
+        //     'postcode' => 'required',
+        // ]);
         Order::create([
             'user_id' => Auth::id(),
             'order_items' => $dbcart,
-            'price' =>  request('price'),
+            'price' => 0,
         ]);
 
-        OrderAddress::create([
-            'order_id' => request(),
-            'firstname' => request('firstName'),
-            'lastname' => request('lastName'),
-            'email' => request('email'),
-            'country' => request('country'),
-            'address1' => request('address1'),
-            'address2' => request('address2'),
-            'county' => request('county'),
-            'postcode' => request('postcode')
-        ]);
+        // OrderAddress::create([
+        //     'order_id' => request(),
+        //     'firstname' => request('firstName'),
+        //     'lastname' => request('lastName'),
+        //     'email' => request('email'),
+        //     'country' => request('country'),
+        //     'address1' => request('address1'),
+        //     'address2' => request('address2'),
+        //     'county' => request('county'),
+        //     'postcode' => request('postcode')
+        // ]);
 
-        CartItem::updateOrCreate([
-            'user_id' => Auth::id()
-        ], [
-            'data' => [],
-        ]);
+        // CartItem::updateOrCreate([
+        //     'user_id' => Auth::id()
+        // ], [
+        //     'data' => [],
+        // ]);
+        return redirect('/home');
     }
 }

@@ -57,11 +57,12 @@
 
         </div>
 
-
         {{-- Left column --}}
         <div class="col-md-7 col-lg-8  py-3">
             <form class="needs-validation" method="POST" action="{{route('placeOrder')}}" novalidate="">
                 @csrf
+
+                
 
               <div class="row g-3 px-4 pb-5">
               <h4 class="mb-3">Billing address</h4>
@@ -422,7 +423,6 @@
                     </div>
                   </div>
                 <hr class="my-4">
-                <input type="text" type="hidden" name="price" value="{{$total}}">
                 <button class="w-100 btn btn-success btn-lg" type="submit">Place order</button>
             </div>
           </form>

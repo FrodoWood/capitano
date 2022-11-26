@@ -11,4 +11,8 @@ class Order extends Model
     protected $casts = [
         'order_items' => 'array',
     ];
+
+    protected $fillable = [
+        'user_id', 'price', 'order_items',
+    ];
 }
