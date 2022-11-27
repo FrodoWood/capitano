@@ -7,10 +7,13 @@
         <div class="d-flex align-items-start p-4">
             {{-- Vertical nav buttons --}}
             <div class="nav flex-column nav-pills me-3" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-              <button class="nav-link mb-4 active" id="v-pills-orders-tab" data-bs-toggle="pill" data-bs-target="#v-pills-orders" type="button" role="tab" aria-controls="v-pills-orders" aria-selected="true">Orders</button>
-              <button class="nav-link mb-4" id="v-pills-products-tab" data-bs-toggle="pill" data-bs-target="#v-pills-products" type="button" role="tab" aria-controls="v-pills-products" aria-selected="false">Products</button>
+
+              <button class="nav-link mb-4 " id="v-pills-orders-tab" data-bs-toggle="pill" data-bs-target="#v-pills-orders" type="button" role="tab" aria-controls="v-pills-orders" aria-selected="true">Orders</button>
+
+              <button class="nav-link mb-4 active" id="v-pills-products-tab" data-bs-toggle="pill" data-bs-target="#v-pills-products" type="button" role="tab" aria-controls="v-pills-products" aria-selected="false">Products</button>
               
               <button class="nav-link mb-4" id="v-pills-customers-tab" data-bs-toggle="pill" data-bs-target="#v-pills-customers" type="button" role="tab" aria-controls="v-pills-customers" aria-selected="false">Customers</button>
+
               <button class="nav-link mb-4" id="v-pills-dashboard-tab" data-bs-toggle="pill" data-bs-target="#v-pills-dashboard" type="button" role="tab" aria-controls="v-pills-dashboard" aria-selected="false">Dashboard</button>
             </div>
 
@@ -74,7 +77,51 @@
 
               
               {{-- Products --}}
-              <div class="tab-pane fade" id="v-pills-products" role="tabpanel" aria-labelledby="v-pills-products-tab" tabindex="0">safasdf</div>
+              <div class="tab-pane fade active show" id="v-pills-products" role="tabpanel" aria-labelledby="v-pills-products-tab" tabindex="0">
+                <div class="container-fluid px-5">
+                  <div class="container-fluid px-5">
+                    <h2 class="text-center text-uppercase">All products</h2>
+                    <table class="table">
+                      <thead class="thead-dark">
+                          <tr>
+                              <th scope="col">#</th>
+                              <th scope="col">Product ID</th>
+                              <th scope="col">Product Image</th>
+                              <th scope="col">Product Name</th>
+                              <th scope="col">Description</th>
+                              <th scope="col">Price</th>
+                          </tr>
+                      </thead>
+                        <tbody>
+                          <tr>
+                                    @php
+                                      $productCount=0;
+                                    @endphp
+                            @foreach ($products as $product)
+                              {{-- @php
+                                  $order_items = $order->order_items;
+                                  $created_at = strtotime($order->created_at);
+                                  $converted_date = date("j/n/Y", $created_at);
+                                  $order_address = \App\Models\OrderAddress::where('order_id', '=', $order->id)->first();
+                              @endphp --}}
+                                    
+                                    @php
+                                      $productCount++;
+                                    @endphp
+                                            <th scope="row">{{$productCount}}</th>
+                                            <td>{{$product->id}}</td>
+                                            <td><img height="100" src="{{$product -> image}}" alt=""></td>
+                                            <td>{{$product->title}}</td>
+                                            <td>{{$product->description}}</td>
+                                            <td>£{{$product->price}}</td>
+                                        </tr>
+                                    
+                            @endforeach
+                          </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
 
               {{-- Customers --}}
               <div class="tab-pane fade" id="v-pills-customers" role="tabpanel" aria-labelledby="v-pills-customers-tab" tabindex="0">...</div>
