@@ -17,9 +17,9 @@
     <!-- Scripts -->
     @vite(['resources/sass/app.scss', 'resources/js/app.js' ])
 </head>
-<body>
+<body class="bg-white">
     <div id="app">
-        <nav class="navbar navbar-light bg-white sticky-top navbar-expand-md shadow-sm">
+        <nav class="navbar navbar-light bg-white sticky-top navbar-expand-lg border-bottom">
             <div class="container">
                
                 <a class="navbar-brand" href="{{ url('/') }}">
@@ -72,7 +72,7 @@
 
                         
                             <li class="nav-item dropdown">
-                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                <a id="navbarDropdown" class="nav-link dropdown-toggle text-capitalize" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     {{ Auth::user()->name }}
                                 </a>
 
@@ -88,6 +88,9 @@
                                     </form>
                                 </div>
                                 
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('profile') }}">Orders</a>
                             </li>
                         @endguest
                         
