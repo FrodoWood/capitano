@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
 
     <!-- Scripts -->
-    @vite(['resources/sass/app.scss', 'resources/js/app.js' ])
+    @vite(['resources/sass/app.scss', 'resources/js/app.js'])
 </head>
 <body class="bg-white">
     <div id="app">
@@ -96,7 +96,7 @@
                         
                         
                     </ul>
-                    <a class="navbar-brand mycart" href="{{url('cart')}}"><i class="bi bi-cart-fill ms-5"></i></a>
+                    <a class="navbar-brand " href="{{url('cart')}}"><i class="bi bi-cart-fill ms-5"></i></a>
                 </div>
             </div>
         </nav>

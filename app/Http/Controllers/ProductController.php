@@ -101,30 +101,4 @@ class ProductController extends Controller
         $products = Product::all();
         return view('products.women', ['products' => $products]);
     }
-    public function matching_sports_bra_and_leggins(){
-        return view('products.matching_sports_bra_and_leggins');
-    
-    }
-    public function mens_joggers(){
-        return view('products.mens_joggers');
-    
-    }
-    public function women_crop_top(){
-        return view('products.women_crop_top');
-    
-    }
-    public function men_shorts(){
-        return view('products.men_shorts');
-    
-    }
-    public function women_top(){
-        return view('products.women_top');
-    
-    }
-    public function mens_top(){
-        return view('products.mens_top');
-    
-    }
-
-
 }
