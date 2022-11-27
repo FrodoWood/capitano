@@ -1,9 +1,10 @@
 <?php
 
-use App\Http\Controllers\CartController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\CartController;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\ProfileController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -23,7 +24,7 @@ Route::get('cart', [CartController::class, 'index'])->name('cart');
 Route::post('cart/delete', [CartController::class, 'removeFromCart']);
 Route::get('cart/checkout', [CartController::class, 'checkout'])->name('checkout')->middleware('auth');
 Route::post('/home', [CartController::class, 'placeOrder'])->name('placeOrder')->middleware('auth');
-
+Route::get('/profile', [ProfileController::class, 'index'])->name('profile')->middleware('auth');
 
 Route::get('/', function () {
     return view('welcome');
