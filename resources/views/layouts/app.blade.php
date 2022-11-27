@@ -19,7 +19,7 @@
 </head>
 <body>
     <div id="app">
-        <nav class="navbar navbar-light bg-white sticky-top navbar-expand-lg">
+        <nav class="navbar navbar-light bg-white sticky-top navbar-expand-lg border-bottom">
             <div class="container">
                
                 <a class="navbar-brand" href="{{ url('/') }}">
