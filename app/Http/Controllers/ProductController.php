@@ -14,7 +14,8 @@ class ProductController extends Controller
     // dashboard page
     public function index()
     {
-        $products = Product::all();
+        $menProducts = Product::where('gender', '=', '0')->get();
+        $womenProducts = Product::where('gender', '=', '1')->get();
         $cart = [];
 
         if (Auth::check()) {
@@ -53,7 +54,7 @@ class ProductController extends Controller
         //     ]);
         // }
 
-        return view('home', ['products' => $products, 'cart' => $cart]);
+        return view('home', ['menProducts' => $menProducts, 'womenProducts' => $womenProducts, 'cart' => $cart]);
     }
 
     public function addToCart(Request $request)

@@ -19,6 +19,7 @@ return new class extends Migration
             $table->string('description');
             $table->decimal('price', $precision = 8, $scale = 2);
             $table->string('image');
+            $table->tinyInteger('gender')->default(0);
             $table->timestamps();
         });
     }
