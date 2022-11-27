@@ -6,6 +6,7 @@ use App\Models\Order;
 use App\Models\Product;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
+use Illuminate\Foundation\Auth\User;
 use Illuminate\Support\Facades\Auth;
 
 class AdminController extends Controller
@@ -20,7 +21,9 @@ class AdminController extends Controller
         if ($products == null) {
             $products = [];
         }
-        // var_dump($orders);
-        return view('admin')->with('orders', $orders)->with('products', $products);
+
+        $customers = User::where('role', '=', '0')->get();
+        // var_dump($customers);
+        return view('admin')->with('orders', $orders)->with('products', $products)->with('customers', $customers);
     }
 }

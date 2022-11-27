@@ -10,9 +10,9 @@
 
               <button class="nav-link mb-4 " id="v-pills-orders-tab" data-bs-toggle="pill" data-bs-target="#v-pills-orders" type="button" role="tab" aria-controls="v-pills-orders" aria-selected="true">Orders</button>
 
-              <button class="nav-link mb-4 active" id="v-pills-products-tab" data-bs-toggle="pill" data-bs-target="#v-pills-products" type="button" role="tab" aria-controls="v-pills-products" aria-selected="false">Products</button>
+              <button class="nav-link mb-4 " id="v-pills-products-tab" data-bs-toggle="pill" data-bs-target="#v-pills-products" type="button" role="tab" aria-controls="v-pills-products" aria-selected="false">Products</button>
               
-              <button class="nav-link mb-4" id="v-pills-customers-tab" data-bs-toggle="pill" data-bs-target="#v-pills-customers" type="button" role="tab" aria-controls="v-pills-customers" aria-selected="false">Customers</button>
+              <button class="nav-link mb-4 active" id="v-pills-customers-tab" data-bs-toggle="pill" data-bs-target="#v-pills-customers" type="button" role="tab" aria-controls="v-pills-customers" aria-selected="false">Customers</button>
 
               <button class="nav-link mb-4" id="v-pills-dashboard-tab" data-bs-toggle="pill" data-bs-target="#v-pills-dashboard" type="button" role="tab" aria-controls="v-pills-dashboard" aria-selected="false">Dashboard</button>
             </div>
@@ -77,8 +77,8 @@
 
               
               {{-- Products --}}
-              <div class="tab-pane fade active show" id="v-pills-products" role="tabpanel" aria-labelledby="v-pills-products-tab" tabindex="0">
-                <div class="container-fluid px-5">
+              <div class="tab-pane fade " id="v-pills-products" role="tabpanel" aria-labelledby="v-pills-products-tab" tabindex="0">
+
                   <div class="container-fluid px-5">
                     <h2 class="text-center text-uppercase">All products</h2>
                     <table class="table">
@@ -120,11 +120,50 @@
                           </tbody>
                     </table>
                   </div>
-                </div>
               </div>
 
               {{-- Customers --}}
-              <div class="tab-pane fade" id="v-pills-customers" role="tabpanel" aria-labelledby="v-pills-customers-tab" tabindex="0">...</div>
+              <div class="tab-pane fade active show" id="v-pills-customers" role="tabpanel" aria-labelledby="v-pills-customers-tab" tabindex="0">
+
+                <div class="container-fluid px-5">
+                  <h2 class="text-center text-uppercase">All customers</h2>
+                  <table class="table">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Customer ID</th>
+                            <th scope="col">Customer Name</th>
+                            <th scope="col">Email</th>
+                        </tr>
+                    </thead>
+                      <tbody>
+                        <tr>
+                                  @php
+                                    $customerCount=0;
+                                  @endphp
+                          @foreach ($customers as $customer)
+                            {{-- @php
+                                $order_items = $order->order_items;
+                                $created_at = strtotime($order->created_at);
+                                $converted_date = date("j/n/Y", $created_at);
+                                $order_address = \App\Models\OrderAddress::where('order_id', '=', $order->id)->first();
+                            @endphp --}}
+                                  
+                                  @php
+                                    $customerCount++;
+                                  @endphp
+                                          <th scope="row">{{$customerCount}}</th>
+                                          <td>{{$customer->id}}</td>
+                                          <td>{{$customer->name}}</td>
+                                          <td>{{$customer->email}}</td>
+                                      </tr>
+                                  
+                          @endforeach
+                        </tbody>
+                  </table>
+                </div>
+
+              </div>
 
               {{-- Dashboard --}}
               <div class="tab-pane fade" id="v-pills-dashboard" role="tabpanel" aria-labelledby="v-pills-dashboard-tab" tabindex="0">...</div>
