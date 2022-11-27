@@ -27,6 +27,15 @@ Route::get('cart/checkout', [CartController::class, 'checkout'])->name('checkout
 Route::post('/home', [CartController::class, 'placeOrder'])->name('placeOrder')->middleware('auth');
 Route::get('/profile', [ProfileController::class, 'index'])->name('profile')->middleware('auth');
 
+Route::get('/matching_sports_bra_and_leggins', [ProductController::class, 'matching_sports_bra_and_leggins']);
+Route::get('/mens_joggers', [ProductController::class, 'mens_joggers']);
+Route::get('/women_crop_top', [ProductController::class, 'women_crop_top']);
+Route::get('/mens_top', [ProductController::class, 'mens_top']);
+Route::get('/women_top', [ProductController::class, 'women_top']);
+Route::get('/men_shorts', [ProductController::class, 'men_shorts']);
+
+
+
 Route::get('/', function () {
     return view('welcome');
 });
@@ -46,3 +55,4 @@ Route::get('/products/{product}/show', [ProductController::class, 'show'])->name
 
 //Admin
 Route::get('/admin', [AdminController::class, 'index'])->middleware('auth', 'isAdmin');
+ 
