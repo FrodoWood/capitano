@@ -2,89 +2,87 @@
 
 @section('content')
 
-<body>
+
     
         <div class="d-flex align-items-start p-4">
             {{-- Vertical nav buttons --}}
             <div class="nav flex-column nav-pills me-3" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-              <button class="nav-link mb-4 active" id="v-pills-home-tab" data-bs-toggle="pill" data-bs-target="#v-pills-home" type="button" role="tab" aria-controls="v-pills-home" aria-selected="true">Home</button>
-              <button class="nav-link mb-4" id="v-pills-profile-tab" data-bs-toggle="pill" data-bs-target="#v-pills-profile" type="button" role="tab" aria-controls="v-pills-profile" aria-selected="false">Profile</button>
-              <button class="nav-link mb-4" id="v-pills-disabled-tab" data-bs-toggle="pill" data-bs-target="#v-pills-disabled" type="button" role="tab" aria-controls="v-pills-disabled" aria-selected="false" disabled>Disabled</button>
-              <button class="nav-link mb-4" id="v-pills-messages-tab" data-bs-toggle="pill" data-bs-target="#v-pills-messages" type="button" role="tab" aria-controls="v-pills-messages" aria-selected="false">Messages</button>
-              <button class="nav-link mb-4" id="v-pills-settings-tab" data-bs-toggle="pill" data-bs-target="#v-pills-settings" type="button" role="tab" aria-controls="v-pills-settings" aria-selected="false">Settings</button>
+              <button class="nav-link mb-4 active" id="v-pills-orders-tab" data-bs-toggle="pill" data-bs-target="#v-pills-orders" type="button" role="tab" aria-controls="v-pills-orders" aria-selected="true">Orders</button>
+              <button class="nav-link mb-4" id="v-pills-products-tab" data-bs-toggle="pill" data-bs-target="#v-pills-products" type="button" role="tab" aria-controls="v-pills-products" aria-selected="false">Products</button>
+              
+              <button class="nav-link mb-4" id="v-pills-customers-tab" data-bs-toggle="pill" data-bs-target="#v-pills-customers" type="button" role="tab" aria-controls="v-pills-customers" aria-selected="false">Customers</button>
+              <button class="nav-link mb-4" id="v-pills-dashboard-tab" data-bs-toggle="pill" data-bs-target="#v-pills-dashboard" type="button" role="tab" aria-controls="v-pills-dashboard" aria-selected="false">Dashboard</button>
             </div>
 
-            <div class="tab-content" id="v-pills-tabContent">
-                {{-- Orders vertical nav content --}}
-              <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab" tabindex="0">
-                <h1>Orders</h1>
-                {{-- Horizontal buttons --}}
-                <ul class="nav nav-pills mb-3 mt-3" id="pills-tab" role="tablist">
-                    <li class="nav-item" role="presentation">
-                      <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">Home</button>
-                    </li>
-                    <li class="nav-item" role="presentation">
-                      <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">Profile</button>
-                    </li>
-                    <li class="nav-item" role="presentation">
-                      <button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-contact" type="button" role="tab" aria-controls="pills-contact" aria-selected="false">Contact</button>
-                    </li>
-                    <li class="nav-item" role="presentation">
-                      <button class="nav-link" id="pills-disabled-tab" data-bs-toggle="pill" data-bs-target="#pills-disabled" type="button" role="tab" aria-controls="pills-disabled" aria-selected="false" disabled>Disabled</button>
-                    </li>
-                  </ul>
+            {{-- Content --}}
+            <div class="tab-content w-100 bg-body" id="v-pills-tabContent">
 
-                  {{-- horizontal nav content --}}
-                  <div class="tab-content" id="pills-tabContent">
 
-                    <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab" tabindex="0">
-                        {{-- All orders --}}
-                        <table class="table">
-                            <thead>
-                              <tr>
-                                <th scope="col">#</th>
-                                <th scope="col">First</th>
-                                <th scope="col">Last</th>
-                                <th scope="col">Handle</th>
-                              </tr>
-                            </thead>
-                            <tbody>
-                              <tr>
-                                <th scope="row">1</th>
-                                <td>Mark</td>
-                                <td>Otto</td>
-                                <td>@mdo</td>
-                              </tr>
-                              <tr>
-                                <th scope="row">2</th>
-                                <td>Jacob</td>
-                                <td>Thornton</td>
-                                <td>@fat</td>
-                              </tr>
-                              <tr>
-                                <th scope="row">3</th>
-                                <td colspan="2">Larry the Bird</td>
-                                <td>@twitter</td>
-                              </tr>
-                            </tbody>
-                          </table>
-                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iure, voluptas corrupti? Aliquid in natus esse, cumque vitae dolore dicta mollitia sed dolores voluptatum suscipit quisquam totam sit corporis quaerat laborum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Error sint eos minus nostrum. Iure esse ad nihil fuga vitae temporibus, ipsum dignissimos repellendus officia vel minus consectetur id similique assumenda!
-                    </div>
-                    <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab" tabindex="0">...</div>
-                    <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab" tabindex="0">...</div>
-                    <div class="tab-pane fade" id="pills-disabled" role="tabpanel" aria-labelledby="pills-disabled-tab" tabindex="0">...</div>
 
-                  </div>
-
+              {{-- Orders --}}
+              <div class="tab-pane fade" id="v-pills-orders" role="tabpanel" aria-labelledby="v-pills-orders-tab" tabindex="0">
+                @php
+                  $productCount = 0;
+                @endphp
+                <div class="container-fluid px-5">
+                  <h2 class="text-center text-uppercase">All orders</h2>
+                  <table class="table">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Order ID</th>
+                            <th scope="col">Product Name</th>
+                            <th scope="col">Product ID</th>
+                            <th scope="col">Customer Name</th>
+                            <th scope="col">Address</th>
+                            <th scope="col">Email</th>
+                            <th scope="col">Order Date</th>
+                            <th scope="col">Quantity</th>
+                            <th scope="col">Price</th>
+                        </tr>
+                    </thead>
+                      <tbody>
+                        <tr>
+                          @foreach ($orders as $order)
+                            @php
+                                $order_items = $order->order_items;
+                                $created_at = strtotime($order->created_at);
+                                $converted_date = date("j/n/Y", $created_at);
+                                $order_address = \App\Models\OrderAddress::where('order_id', '=', $order->id)->first();
+                                @endphp
+                                  @foreach ($order_items as $item)
+                                  @php
+                                    $productCount++;
+                                  @endphp
+                                          <th scope="row">{{$productCount}}</th>
+                                          <td>{{$order->id}}</td>
+                                          <td>{{$item['name']}}</td>
+                                          <td>{{$item['id']}}</td>
+                                          <td>{{$order_address->firstname." ".$order_address->lastname}}</td>
+                                          <td>{{$order_address->address1.", ".$order_address->postcode.", ".$order_address->country}}</td>
+                                          <td>{{$order_address->email}}</td>
+                                          <td>{{$converted_date}}</td>
+                                          <td>{{$item['qty']}}</td>
+                                          <td>£{{$item['price']}}</td>
+                                      </tr>
+                                  @endforeach
+                          @endforeach
+                        </tbody>
+                  </table>
+                </div>
               </div>
 
+              
+              {{-- Products --}}
+              <div class="tab-pane fade" id="v-pills-products" role="tabpanel" aria-labelledby="v-pills-products-tab" tabindex="0">safasdf</div>
 
-              <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab" tabindex="0">...</div>
-              <div class="tab-pane fade" id="v-pills-disabled" role="tabpanel" aria-labelledby="v-pills-disabled-tab" tabindex="0">...</div>
-              <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab" tabindex="0">...</div>
-              <div class="tab-pane fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab" tabindex="0">...</div>
+              {{-- Customers --}}
+              <div class="tab-pane fade" id="v-pills-customers" role="tabpanel" aria-labelledby="v-pills-customers-tab" tabindex="0">...</div>
+
+              {{-- Dashboard --}}
+              <div class="tab-pane fade" id="v-pills-dashboard" role="tabpanel" aria-labelledby="v-pills-dashboard-tab" tabindex="0">...</div>
             </div>
           </div>
-</body>
+
 
 @endsection

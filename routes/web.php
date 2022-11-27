@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AdminController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CartController;
@@ -44,6 +45,4 @@ Route::get('/products/{product}/show', [ProductController::class, 'show'])->name
 
 
 //Admin
-Route::get('/admin', function () {
-    return view('admin');
-})->middleware('auth', 'isAdmin');
+Route::get('/admin', [AdminController::class, 'index'])->middleware('auth', 'isAdmin');
