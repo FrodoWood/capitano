@@ -55,11 +55,11 @@
             
                 @foreach ($womenProducts as $womenProduct)
                     
-                        <a href="{{route('showProduct', ['product' => $womenProduct])}}">
-
-                            <div class="card product-card mb-5 m-4 ">
+                
+                <div class="card product-card mb-5 m-4 ">
+                                <a href="{{route('showProduct', ['product' => $womenProduct])}}">
                                 <img class="card-img-top" src="{{$womenProduct -> image}}" alt="Card image cap">
-                        </a>
+                                </a>
                                 <div class="card-body">
                                     <h5 class="card-title">{{$womenProduct-> title}}</h5>
                                     <p class="card-text">{{$womenProduct-> description}}</p>
@@ -78,7 +78,7 @@
                                     
                                     
                                 </div>
-                            </div>
+                    </div>
                     @endforeach
                     
             </div>
