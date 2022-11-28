@@ -84,6 +84,9 @@ class CartController extends Controller
         if ($dbcart == null) {
             $dbcart = [];
         }
+        if($dbcart == []){
+            return redirect('cart');
+        }
         return view('cart.checkout')->with('cartItems', $dbcart);
     }
 
