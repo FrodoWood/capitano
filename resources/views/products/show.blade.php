@@ -62,6 +62,7 @@
                     type: 'POST',
                     data: {"_token": "{{ csrf_token() }}", "cart":cart},
                     success: function(data, status, xhr){
+                      window.location.href = "/cart";
                     }
                 });
                 updateCartButton();
