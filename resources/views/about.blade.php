@@ -1,5 +1,14 @@
 @extends('layouts.app')
 
+<!-- <head>
+<style>
+  body{
+    background-image: url('https://images.unsplash.com/photo-1567360425618-1594206637d2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8cmVkJTIwYmFja2dyb3VuZHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=1000&q=60') ;
+  }
+  </style>
+</head> -->
+
+
 @section('content')
     <h1>About us</h1>
     <br>
