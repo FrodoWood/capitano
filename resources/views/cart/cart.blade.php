@@ -21,10 +21,20 @@
             @endphp
             @foreach ($cart as $item)
             @php
-                $total += $item['price']*$item['qty']
+                $total += $item['price']*$item['qty'];
+                $imageURL = \App\Models\Product::where('id','=', $item['id'])->first()->image;
             @endphp
                 <tr>
-                    <td>{{$item['name']}}</td>
+                    <td>
+                        <div class="row">
+                            <div class="col-2">
+                                <img height="100" src="{{$imageURL}}" alt="">
+                            </div>
+                            <div class="col-4">
+                                {{$item['name']}}
+                            </div>
+                        </div>
+                    </td>
                     <td>{{$item['price']}}</td>
                     <td>{{$item['qty']}}</td>
                     <td>
