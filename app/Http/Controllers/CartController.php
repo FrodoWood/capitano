@@ -56,6 +56,16 @@ class CartController extends Controller
 
     public function checkout()
     {
+        $sessionCart = session()->get('cart');
+        if ($sessionCart == null) {
+            $sessionCart = [];
+        }
+        CartItem::updateOrCreate([
+            'user_id' => Auth::id()
+        ], [
+            'data' => $sessionCart,
+        ]);
+
         $item = CartItem::where('user_id', '=', Auth::id())->firstOrFail();
         $dbcart = $item->data;
         if ($dbcart == null) {
