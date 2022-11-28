@@ -133,7 +133,7 @@
 </body>
 <br><br>
 <!--footer-->
-<footer class="text-light pt-5">
+<footer class="pt-5 border-top">
 <div class="container">
  <div class="row d-flex justify-content-between">
     <div class="col-2 ">
@@ -142,10 +142,10 @@
     <div class="col-4">
     <h4>Navigate to other pages</h4>
     <ul class="nav flex-column">
-     <li><a style="color:white; text-decoration: none" href="{{ url('/women') }}">Shop Women's Clothing</a></li>
-     <li><a style="color:white; text-decoration: none" href="{{ url('/men') }}">Shop Men's Clothing</a></li>                   
-     <li><a style="color:white; text-decoration: none" href="{{ url('/contact') }}">Contact us</a></li>       
-     <li><a style="color:white; text-decoration: none" href="{{ url('/about') }}">About us</a></li>
+     <li class="pb-2"><a class="text-decoration-none text-dark" href="{{ url('/women') }}">Shop Women's Clothing</a></li>
+     <li class="pb-2"><a class="text-decoration-none text-dark" href="{{ url('/men') }}">Shop Men's Clothing</a></li>                   
+     <li class="pb-2"><a class="text-decoration-none text-dark" href="{{ url('/contact') }}">Contact us</a></li>       
+     <li class="pb-2"><a class="text-decoration-none text-dark" href="{{ url('/about') }}">About us</a></li>
      
 
     </ul>
@@ -167,15 +167,15 @@
  <div class="container mt-5">
      <div class="row d-flex justify-content-center">
          <div class="col-2 d-flex justify-content-evenly">
-             <a class="link-light" href="https://www.instagram.com/capitano.clothing_/" >
+             <a class="link-dark" href="https://www.instagram.com/capitano.clothing_/" >
                 <i class="bi bi-instagram" style="font-size: 2rem;"></i>
             </a>
             
-            <a class="link-light" href="https://twitter.com/CapitanoCloth">
+            <a class="link-dark" href="https://twitter.com/CapitanoCloth">
                 <i class="bi bi-twitter" style="font-size: 2rem;"></i>
             </a>
             
-            <a class="link-light" href="https://twitter.com/CapitanoCloth">
+            <a class="link-dark" href="https://twitter.com/CapitanoCloth">
                 <i class="bi bi-youtube" style="font-size: 2rem;"></i>
             </a>
         </div>

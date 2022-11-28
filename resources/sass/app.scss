@@ -8,14 +8,14 @@
 @import 'bootstrap/scss/bootstrap';
 
 
-.card-container{
+.card-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    
-  }
-  
-.product-card{
+
+}
+
+.product-card {
     width: 18rem;
 }
 
@@ -24,50 +24,43 @@
     color: var(--bs-card-cap-color);
     background-color: white;
     border-top: none;
-    
+
 }
 
-.text-align-end{
+.text-align-end {
     text-align: end;
 }
 
-body{
+body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
 
-.tab-content{
+.tab-content {
     padding-left: 4rem;
     background-color: #f2f2f2;
-    padding-top:2rem;
-    padding-bottom:2rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
 }
 
-footer{
-    background-color: white;
+footer {
+    background-color: ghostwhite;
 }
 
-.nav-page-links{
+.nav-page-links {
     font-size: 1rem;
 }
 
-.contactForm{
+.contactForm {
     background-color: #ffffff9e;
     padding: 2rem;
     box-shadow: 1 1 1 0;
     box-shadow: 0px 14px 20px 0px #0000007d;
 }
 
-
-
-
-
-
-
-
-.items-amount-pill{
-    font-size: 1rem; 
-    align-self:baseline;
+.items-amount-pill {
+    font-size: 1rem;
+    align-self: baseline;
 }
