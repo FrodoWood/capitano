@@ -87,44 +87,55 @@ class ProductController extends Controller
     // Single product page
     public function show(Product $product)
     {
-        return view('products.show', ['product' => $product]);
+        $womenProducts = Product::where('gender', '=', '1')->get();
+        $menProducts = Product::where('gender', '=', '0')->get();
+        $cart = [];
+
+        if (Auth::check()) {
+            $item = CartItem::where('user_id', '=', Auth::id())->first();
+            $sessionCart = session()->get('cart');
+            if ($cart == null) {
+                $cart = [];
+            }
+            if ($sessionCart == null) {
+                $sessionCart = [];
+            }
+            if ($item != null) {
+                $dbcart = $item->data;
+                $cart = $dbcart;
+            }
+            $cart = array_merge($cart, $sessionCart);
+            session()->forget('cart');
+            CartItem::updateOrCreate([
+                'user_id' => Auth::id()
+            ], [
+                'data' => $cart,
+            ]);
+        } else {
+            $cart = session()->get('cart');
+        }
+
+        if ($cart == null) {
+            $cart = [];
+        }
+
+        // Pass men or women products depending on the selected product's gender, thus I can show more women's products if the current $product belongs to the women category and viceversa for men.
+        if ($product->gender == 0) {
+            return view('products.show', ['product' => $product, 'menProducts' => $menProducts, 'cart' => $cart]);
+        } else {
+            return view('products.show', ['product' => $product, 'womenProducts' => $womenProducts, 'cart' => $cart]);
+        }
     }
 
     public function menProducts()
     {
-        $products = Product::all();
-        return view('products.men', ['products' => $products]);
+        $menProducts = Product::where('gender', '=', '0')->get();
+        return view('products.men', ['menProducts' => $menProducts]);
     }
 
     public function womenProducts()
     {
-        $products = Product::all();
-        return view('products.women', ['products' => $products]);
+        $womenProducts = Product::where('gender', '=', '1')->get();
+        return view('products.women', ['womenProducts' => $womenProducts]);
     }
-    public function matching_sports_bra_and_leggins(){
-        return view('products.matching_sports_bra_and_leggins');
-    
-    }
-    public function mens_joggers(){
-        return view('products.mens_joggers');
-    
-    }
-    public function women_crop_top(){
-        return view('products.women_crop_top');
-    
-    }
-    public function men_shorts(){
-        return view('products.men_shorts');
-    
-    }
-    public function women_top(){
-        return view('products.women_top');
-    
-    }
-    public function mens_top(){
-        return view('products.mens_top');
-    
-    }
-
-
 }

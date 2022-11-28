@@ -56,10 +56,39 @@ class CartController extends Controller
 
     public function checkout()
     {
+        //Combine session cart and db cart and update database
+        $cart = [];
+        $item = CartItem::where('user_id', '=', Auth::id())->first();
+        $sessionCart = session()->get('cart');
+        if ($cart == null) {
+            $cart = [];
+        }
+        if ($sessionCart == null) {
+            $sessionCart = [];
+        }
+        if ($item != null) {
+            $dbcart = $item->data;
+            $cart = $dbcart;
+        }
+        $cart = array_merge($cart, $sessionCart);
+        session()->forget('cart');
+        CartItem::updateOrCreate([
+            'user_id' => Auth::id()
+        ], [
+            'data' => $cart,
+        ]);
+
+        /////////////////////
         $item = CartItem::where('user_id', '=', Auth::id())->firstOrFail();
         $dbcart = $item->data;
         if ($dbcart == null) {
             $dbcart = [];
+        }
+        if($dbcart == []){
+            return redirect('cart');
+        }
+        if(Auth::user()->role == 1){
+            return redirect('home');
         }
         return view('cart.checkout')->with('cartItems', $dbcart);
     }

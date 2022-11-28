@@ -29,48 +29,27 @@
 
   <div class="carousel-item">
   <div class="text-center">
-  <a href="<?php echo url('matching_sports_bra_and_leggins');?>" style="color:black; text-decoration:none;">
-    <img class="img-thumbnail" src="{{URL('images/productWomen.jpg')}}" alt="On Sale" style= "width: 50%; height:450px"></a>
+    <img class="img-thumbnail" src="{{URL('images/productWomen.jpg')}}" alt="On Sale" style= "width: 50%; height:450px">
     <div class="text"><p>Women's matching sports bra and leggins-£30</p>NOTE: WHEN CUSTOMER CLICKS ON PRODUCT, IT LEADS TO THE SINGLE PRODUCT'S PAGE</div>
   </div>
 </div>
 
   <div class="carousel-item">
   <div class="text-center">
-  <a href="<?php echo url('mens_joggers');?>" style="color:black; text-decoration:none;">
-    <img class="img-thumbnail" src="{{URL('images/productMen.jpg')}}" alt="On Sale" style= "width: 50%; height:450px"></a>
+    <img class="img-thumbnail" src="{{URL('images/productMen.jpg')}}" alt="On Sale" style= "width: 50%; height:450px">
     <div class="text"><p>Men's Joggers-£15</p></div>
   </div>
 </div>
 
   <div class="carousel-item">
   <div class="text-center">
-  <a href="<?php echo url('women_crop_top');?>" style="color:black; text-decoration:none;">
-    <img class="img-thumbnail" src="{{URL('images/productWomen1.jpg')}}" alt="On Sale" style= "width: 50%; height:450px"></a>
+    <img class="img-thumbnail" src="{{URL('images/productWomen1.jpg')}}" alt="On Sale" style= "width: 50%; height:450px">
     <div class="text"><p>Women's crop top and leggins-£30<p></div>
   </div>
   </div>
-  <div class="carousel-item">
-  <div class="text-center">
-  <a href="<?php echo url('mens_top');?>" style="color:black; text-decoration:none;">
-    <img class="img-thumbnail" src="{{URL('images/Men\'s top 1.png')}}" alt="On Sale" style= "width: 50%; height:450px"></a>
-    <div class="text"><p>Men's top-£15<p></div>
-  </div>
-  </div>
-  <div class="carousel-item">
-  <div class="text-center">
-  <a href="<?php echo url('women_top');?>" style="color:black; text-decoration:none;">
-    <img class="img-thumbnail" src="{{URL('images/Women\'s top 1.png')}}" alt="On Sale" style= "width: 50%; height:450px"></a>
-    <div class="text"><p>Women's top-£30<p></div>
-  </div>
-  </div>
-  <div class="carousel-item">
-  <div class="text-center">
-  <a href="<?php echo url('men_shorts');?>" style="color:black; text-decoration:none;">
-    <img class="img-thumbnail" src="{{URL('images/Men\'s shorts 1.png')}}" alt="On Sale" style= "width: 50%; height:450px"></a>
-    <div class="text"><p>Men's Shorts-£15<p></div>
-  </div>
-  </div>
+
+ 
+ 
 
 </div>
 

@@ -35,15 +35,6 @@
 </div> 
 {{-- end dashboard container --}}
 
-{{-- Cart button and text --}}
-<div class="container pt-4">
-    <a class="btn btn-success" href="">
-    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
-      <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
-    </svg>
-        <span id="items-in-cart">0</span> items in cart
-    </a>
-</div>
     
     <h1 class="text-center">Store</h1>
 
@@ -55,11 +46,11 @@
             
                 @foreach ($womenProducts as $womenProduct)
                     
-                        <a href="{{route('showProduct', ['product' => $womenProduct])}}">
-
-                            <div class="card product-card mb-5 m-4 ">
+                
+                <div class="card product-card mb-5 m-4 ">
+                                <a href="{{route('showProduct', ['product' => $womenProduct])}}">
                                 <img class="card-img-top" src="{{$womenProduct -> image}}" alt="Card image cap">
-                        </a>
+                                </a>
                                 <div class="card-body">
                                     <h5 class="card-title">{{$womenProduct-> title}}</h5>
                                     <p class="card-text">{{$womenProduct-> description}}</p>
@@ -78,7 +69,7 @@
                                     
                                     
                                 </div>
-                            </div>
+                    </div>
                     @endforeach
                     
             </div>
@@ -118,6 +109,7 @@
                 count+= Number(item.qty);
             });
             $('#items-in-cart').html(count);
+            $('.cart-amount-nav').html(count);
             console.log(cart);
         }
 
