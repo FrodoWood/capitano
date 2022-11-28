@@ -414,7 +414,7 @@
                 
                   <div class="col-12">
                     <label for="nameOnCard" class="form-label">Name on Card</label>
-                    <input type="text" class="form-control" id="nameOnCard" name="nameOnCard" placeholder="" value="{{old('nameOnCard')}}" required/>
+                    <input type="text" class="form-control" id="nameOnCard" name="nameOnCard" placeholder="" value="" required/>
                     <small class="text-muted">Full name as displayed on Card</small>
                   </div>
 
@@ -426,7 +426,7 @@
 
                   <div class="col-12">
                     <label for="cardNumber" class="form-label">Card Number</label>
-                    <input type="text" class="form-control" id="cardNumber" name="cardNumber" value="{{old('cardNumber')}}" placeholder="1234 5678 9012 3456" required/>
+                    <input type="text" class="form-control" id="cardNumber" name="cardNumber" value="" placeholder="Enter your 16-digit Card Number" required/>
                   </div>
 
                   @error('cardNumber')
@@ -437,7 +437,7 @@
 
                   <div class="col-12">
                     <label for="expiryDate" class="form-label">Expiry Date</label>
-                    <input type="text" class="form-control" id="expiryDate" name="expiryDate" value="{{old('expiryDate')}}" placeholder="MM/YY" required/>
+                    <input type="text" class="form-control" id="expiryDate" name="expiryDate" value="" placeholder="MM/YY" required/>
                   </div>
 
                   @error('expiryDate')
