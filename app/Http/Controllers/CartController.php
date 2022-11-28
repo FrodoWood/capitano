@@ -87,6 +87,9 @@ class CartController extends Controller
         if($dbcart == []){
             return redirect('cart');
         }
+        if(Auth::user()->role == 1){
+            return redirect('home');
+        }
         return view('cart.checkout')->with('cartItems', $dbcart);
     }
 
