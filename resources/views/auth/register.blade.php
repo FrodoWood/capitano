@@ -3,7 +3,7 @@
 @section('content')
 <div class="container">
   <div class="row">
-    <div class="col-9" style="background:aliceblue; padding:30px;margin-left:17%;padding-bottom:0px;">
+    <div class="col-9" style="padding:30px;margin-left:17%;padding-bottom:0px;">
     <div class="col-5" style="float:left">
     <div class="img" > <img src="{{ URL('images/image_6487327.JPG')}}" height="400"/> </div>
   </div>
