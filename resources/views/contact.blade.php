@@ -5,10 +5,6 @@
   body{
     background-image: url('https://images.unsplash.com/photo-1567360425618-1594206637d2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8cmVkJTIwYmFja2dyb3VuZHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=1000&q=60') ;
   }
- /* #form-container{
-    background-image: url('https://img.freepik.com/free-vector/royal-watercolor-valentine-red-background_1340-4006.jpg?w=360') ;
-    
-  } */
   </style>
 </head>
 
@@ -46,7 +42,7 @@
       </div>
       </div>
       <div class ="container">
-      <button type="submit" class="btn btn-primary">Send</button>
+      <button type="submit" class="btn btn-dark">Send</button>
       </div>
     </form>
   </div>
