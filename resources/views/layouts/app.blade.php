@@ -144,40 +144,47 @@
 <!--footer-->
 <footer class="pt-5 border-top">
 <div class="container">
- <div class="row d-flex justify-content-between">
-    <div class="col-2 ">
-        <img width="100" src="{{url('images/CapitanoLogo.png')}}">
+ <div class="row d-flex justify-content-between g-4">
+
+    <div class="col-12 col-md-3 px-md-0 px-5">
+        <div class="row">
+            <div class="col-6">
+                <img width="100" src="{{url('images/CapitanoLogo.png')}}">
+            </div>
+        </div>
+        <div class="row">
         <span class="me-5 logoText">Capitano</span>
-
+        </div>
+        
     </div>
-    <div class="col-4">
-    <h4>Navigate to other pages</h4>
-    <ul class="nav flex-column">
-     <li class="pb-2"><a class="text-decoration-none text-dark" href="{{ url('/women') }}">Shop Women's Clothing</a></li>
-     <li class="pb-2"><a class="text-decoration-none text-dark" href="{{ url('/men') }}">Shop Men's Clothing</a></li>                   
-     <li class="pb-2"><a class="text-decoration-none text-dark" href="{{ url('/contact') }}">Contact us</a></li>       
-     <li class="pb-2"><a class="text-decoration-none text-dark" href="{{ url('/about') }}">About us</a></li>
-     
 
-    </ul>
- </div>
- <div class="col-5">
- <h5>  Subscribe to our mail list!</h5>
-    <h6>Be the first one to know when new product drops.</h6>
-    <h6> Get exclusive discounts.</h6>
-    <h6>And many more...</h6>
-    <div class="row mt-3">
-        <div class="col-8"><input type="email"  name="email" placeholder="Your email" class="form-control"></div>
-        <div class="col-4"><button class="btn btn-dark" type="button">Subscribe</button></div>
+    <div class="col-12 col-md-4 px-md-0 px-5">
+        <h4>Navigate to other pages</h4>
+        <ul class="nav flex-column">
+            <li class="pb-2"><a class="text-decoration-none text-dark" href="{{ url('/women') }}">Shop Women's Clothing</a></li>
+            <li class="pb-2"><a class="text-decoration-none text-dark" href="{{ url('/men') }}">Shop Men's Clothing</a></li>                   
+            <li class="pb-2"><a class="text-decoration-none text-dark" href="{{ url('/contact') }}">Contact us</a></li>       
+            <li class="pb-2"><a class="text-decoration-none text-dark" href="{{ url('/about') }}">About us</a></li>
+        </ul>
     </div>
-   
+
+    <div class="col-12 col-md-5 px-md-0 px-5">
+        <h5>Subscribe to our mail list!</h5>
+        <h6>Be the first one to know when new product drops.</h6>
+        <h6> Get exclusive discounts.</h6>
+        <h6>And many more...</h6>
+        <div class="row mt-3">
+            <div class="col-8"><input type="email"  name="email" placeholder="Your email" class="form-control rounded-0"></div>
+            <div class="col-4"><button class="btn btn-dark rounded-0" type="button">Subscribe</button></div>
+        </div>
+    </div>
+
  </div>
- </div>
- </div>
+</div>
 
  <div class="container mt-5">
      <div class="row d-flex justify-content-center">
-         <div class="col-2 d-flex justify-content-evenly">
+         <div class="col-4 col-sm-4 col-lg-2 d-flex justify-content-evenly">
              <a class="link-dark" href="https://www.instagram.com/capitano.clothing_/" >
                 <i class="bi bi-instagram" style="font-size: 2rem;"></i>
             </a>
