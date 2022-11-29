@@ -121,9 +121,9 @@ class ProductController extends Controller
 
         // Pass men or women products depending on the selected product's gender, thus I can show more women's products if the current $product belongs to the women category and viceversa for men.
         if ($product->gender == 0) {
-            return view('products.show', ['product' => $product, 'menProducts' => $menProducts, 'cart' => $cart]);
+            return view('products.show', ['product' => $product, 'products' => $menProducts, 'cart' => $cart]);
         } else {
-            return view('products.show', ['product' => $product, 'womenProducts' => $womenProducts, 'cart' => $cart]);
+            return view('products.show', ['product' => $product, 'products' => $womenProducts, 'cart' => $cart]);
         }
     }
 
@@ -142,13 +142,14 @@ class ProductController extends Controller
     public function searchProduct(Request $request)
     {
         $search_text = $request->get('searchQuery');
+        $products = Product::all();
 
-        $products = Product::query()
+        $searchProducts = Product::query()
             ->where('title', 'LIKE', "%{$search_text}%")
             ->orWhere('description', 'LIKE', "%{$search_text}%")
             ->orWhere('price', 'LIKE', "%{$search_text}%")
             ->get();
 
-        return view('products.search', compact('products'))->with('searchText', $search_text);
+        return view('products.search', compact('searchProducts'))->with('searchText', $search_text)->with('products', $products);
     }
 }
