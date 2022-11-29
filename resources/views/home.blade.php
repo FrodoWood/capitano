@@ -125,7 +125,7 @@
 <div class="container-fluid w-75 bg-danger my-5">
     <div class="row">
         <div class="col-12 p-0 m-0">
-            <a href="{{url('/women')}}"><img class="img w-100 banner-img" src="{{url('images/sale.jpg')}}" alt="On Sale"></a>
+            <a href="{{url('/women')}}"><img class="img w-100 banner-img" src="{{url('images/sales.jpg')}}" alt="On Sale"></a>
         </div>
     </div>
 </div>
