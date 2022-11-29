@@ -60,4 +60,18 @@
                         @endforeach
                 </div>
             </div>
+
+
+<div class="container text-center" >
+  <h2>Want to get 10% off your next order?</h2><br>
+  <h5>Sign up for the latest Capitano Clothing news, offers and products!</h5><br>
+  <div class="input-group mb-3">
+  <input type="text" class="form-control" placeholder="Enter email address" aria-label="Email" aria-describedby="basic-addon2">
+  <div class="input-group-append">
+    <span class="input-group-text" id="basic-addon2">Submit</span>
+  </div>
+</div>
+</div>
+
+
 @endsection
