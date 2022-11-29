@@ -23,7 +23,9 @@
             <div class="container">
                
                 <a class="navbar-brand" href="{{ url('/') }}">
+                   
                     <img class="me-5" width="30" src="{{url('images/CapitanoLogo.png')}}">
+                    <p class="nav-item" style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">Capitano</p>
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
@@ -139,6 +141,7 @@
  <div class="row d-flex justify-content-between">
     <div class="col-2 ">
         <img width="100" src="{{url('images/CapitanoLogo.png')}}">
+        <p style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; font-size:25px;">Capitano</p>
     </div>
     <div class="col-4">
     <h4>Navigate to other pages</h4>
