@@ -138,4 +138,17 @@ class ProductController extends Controller
         $womenProducts = Product::where('gender', '=', '1')->get();
         return view('products.women', ['womenProducts' => $womenProducts]);
     }
+
+    public function searchProduct(Request $request)
+    {
+        $search_text = $request->get('searchQuery');
+
+        $products = Product::query()
+            ->where('title', 'LIKE', "%{$search_text}%")
+            ->orWhere('description', 'LIKE', "%{$search_text}%")
+            ->orWhere('price', 'LIKE', "%{$search_text}%")
+            ->get();
+
+        return view('products.search', compact('products'))->with('searchText', $search_text);
+    }
 }

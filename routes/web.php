@@ -26,6 +26,7 @@ Route::post('cart/delete', [CartController::class, 'updateCart']);
 Route::get('cart/checkout', [CartController::class, 'checkout'])->name('checkout')->middleware('auth');
 Route::post('/home', [CartController::class, 'placeOrder'])->name('placeOrder')->middleware('auth');
 Route::get('/profile', [ProfileController::class, 'index'])->name('profile')->middleware('auth');
+Route::get('/searchProduct', [ProductController::class, 'searchProduct'])->name('searchProduct');
 
 Route::get('/', function () {
     return view('welcome');

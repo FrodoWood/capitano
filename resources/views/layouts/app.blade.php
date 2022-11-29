@@ -47,8 +47,10 @@
                       
                        
                        <div class="ms-5 d-flex">
-                           <input class="form-control rounded-0" type="search" placeholder="Search"/>
-                           <button type="button" class="btn btn-outline-dark ms-2 rounded-0"><i class="bi bi-search"></i></button>
+                           <form method="GET" action="{{route('searchProduct')}}" class="form-inline my-2 my-lg-0 d-flex">
+                               <input name="searchQuery" id="searchQuery" class="form-control rounded-0" type="search" placeholder="Search"/>
+                               <button type="submit" class="btn btn-outline-dark ms-2 rounded-0"><i class="bi bi-search"></i></button>
+                           </form>
                        </div>
                     </ul>
 
