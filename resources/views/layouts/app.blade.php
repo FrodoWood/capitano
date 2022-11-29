@@ -33,7 +33,7 @@
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav me-auto nav-page-links">
                     
-                
+                       
                        <li class="nav-item"><a class="nav-link" href="{{ url('/women') }}">Women</a></li>
                        <li class="nav-item"><a class="nav-link" href="{{ url('/men') }}">Men </a></li>
                        <li class="nav-item"><a class="nav-link" href="{{ url('/contact') }}">Contact</a></li>
