@@ -22,7 +22,7 @@
         <nav class="navbar sticky-top navbar-expand-lg">
             <div class="container">
                
-                <a class="navbar-brand" href="{{ url('/') }}">
+                <a class="navbar-brand" href="{{ url('/home') }}">
                    
                     <img class="me-5" width="30" src="{{url('images/CapitanoLogo.png')}}">
                     <p class="nav-item" style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">Capitano</p>
@@ -40,7 +40,7 @@
                        <li class="nav-item"><a class="nav-link" href="{{ url('/men') }}">Men </a></li>
                        <li class="nav-item"><a class="nav-link" href="{{ url('/contact') }}">Contact</a></li>
                        <li class="nav-item"><a class="nav-link" href="{{ url('/about') }}">About</a></li>
-                       <li class="nav-item"><a class="nav-link" href="{{ url('home') }}">Store</a></li>
+                      
                        
                        <div class="ms-5 d-flex">
                            <input class="form-control" type="search" placeholder="Search" style="width:100%" />
