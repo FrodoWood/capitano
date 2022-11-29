@@ -11,8 +11,12 @@
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700;900&display=swap" rel="stylesheet">
     <link href="https://fonts.bunny.net/css?family=Nunito" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@700&family=Playfair+Display:wght@500;700;900&display=swap" rel="stylesheet">
 
     <!-- Scripts -->
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
@@ -24,8 +28,8 @@
                
                 <a class="navbar-brand" href="{{ url('/home') }}">
                    
-                    <img class="me-5" width="30" src="{{url('images/CapitanoLogo.png')}}">
-                    <p class="ms-2 pe-4" style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; position:absolute; left:141px; top:19px">Capitano</p>
+                    <img class="me-2 pb-2" width="30" src="{{url('images/CapitanoLogo.png')}}">
+                    <span class="me-5 logoText">Capitano</span>
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
@@ -43,8 +47,8 @@
                       
                        
                        <div class="ms-5 d-flex">
-                           <input class="form-control" type="search" placeholder="Search" style="width:100%" />
-                           <button type="button" class="btn btn-outline-success ms-2">Search</button>
+                           <input class="form-control rounded-0" type="search" placeholder="Search"/>
+                           <button type="button" class="btn btn-outline-dark ms-2 rounded-0"><i class="bi bi-search"></i></button>
                        </div>
                     </ul>
 
@@ -141,7 +145,8 @@
  <div class="row d-flex justify-content-between">
     <div class="col-2 ">
         <img width="100" src="{{url('images/CapitanoLogo.png')}}">
-        <p style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; font-size:25px;">Capitano</p>
+        <span class="me-5 logoText">Capitano</span>
+
     </div>
     <div class="col-4">
     <h4>Navigate to other pages</h4>
