@@ -2,7 +2,7 @@
 
 @section('content')
 
-<div class="container">
+{{-- <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
@@ -32,11 +32,32 @@
             </div>
         </div>
     </div>
-</div> 
+</div>  --}}
 {{-- end dashboard container --}}
 
-    
-    <h1 class="text-center">Store</h1>
+{{-- Banner --}}
+
+<div id="banner-carousel" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="{{URL('images/barbell.jpg')}}" class="d-block w-100 carousel-banner-img" alt="{{URL('images/barbell.jpg')}}">
+      </div>
+      <div class="carousel-item">
+        <img src="{{URL('images/barbell.jpg')}}" class="d-block w-100 carousel-banner-img" alt="{{URL('images/barbell.jpg')}}">
+      </div>
+      <div class="carousel-item">
+        <img src="{{URL('images/barbell.jpg')}}" class="d-block w-100 carousel-banner-img" alt="{{URL('images/barbell.jpg')}}">
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#banner-carousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#banner-carousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
 
 {{-- Products section --}}
 <div class="container">
@@ -78,12 +99,6 @@
 @endsection
 
 @section('footer-scripts')
-
-<script>
-        function myFunction(){
-        alert("Hello js is working!");
-        }
-</script>
 
 <script type="module">
     $(document).ready(function(){
