@@ -25,7 +25,7 @@
                 <a class="navbar-brand" href="{{ url('/home') }}">
                    
                     <img class="me-5" width="30" src="{{url('images/CapitanoLogo.png')}}">
-                    <p class="nav-item" style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">Capitano</p>
+                    <p class="ms-2 pe-4" style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; position:absolute; left:141px; top:19px">Capitano</p>
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
