@@ -11,7 +11,7 @@
 @section('content')
 
 <div class="container">
-  <form class="container form-control center contactForm" id="form-container">
+  <form class="container form-control center contactForm rounded-0" id="form-container">
   <div class="container form-control-lg  mt-4">
     <h1 class = "h1- responsive text-center mx-auto">Get In Touch</h1>
     <p class ="text-center responsive mx-auto mb-4"> Enter your details below along with your query and we will contact you back as soon as possible!</p>
@@ -42,8 +42,8 @@
       </div>
       </div>
       <div class=" mb-4 text-center ">
-        <label>If you require immediate assistance please contact us on our 24/7 helpline on: </label>
-        <span class ="contact-more-highlight">+01902 839 929</span>
+        <label>If you require immediate assistance please contact us on our 24/7 helpline on:  </label>
+        <span class ="contact-more-highlight"> +01902 839 929</span>
 
       </div>
       <div class ="container">
