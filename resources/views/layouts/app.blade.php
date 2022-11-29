@@ -40,7 +40,7 @@
                        <li class="nav-item"><a class="nav-link" href="{{ url('/men') }}">Men </a></li>
                        <li class="nav-item"><a class="nav-link" href="{{ url('/contact') }}">Contact</a></li>
                        <li class="nav-item"><a class="nav-link" href="{{ url('/about') }}">About</a></li>
-
+                      
                        
                        <div class="ms-5 d-flex">
                            <input class="form-control" type="search" placeholder="Search" style="width:100%" />
