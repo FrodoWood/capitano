@@ -37,7 +37,7 @@
 
 {{-- Banner --}}
 
-<div id="banner-carousel" class="carousel slide" data-bs-ride="carousel">
+<div id="banner-carousel" class="homepage-banner-carousel carousel slide" data-bs-ride="carousel">
     <div class="carousel-inner">
 
       <div class="carousel-item">

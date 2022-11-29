@@ -2,9 +2,7 @@
 
 @section('content')
 
-<h1 class="text-center text-bold text-black-50">Men's</h1><br><br><br><br>
-
-
+<h1 class="text-center text-bold text-dark page-title">Men's</h1>
 
 <div id="banner-carousel" class="carousel slide" data-bs-ride="carousel">
     <div class="carousel-inner">
@@ -31,46 +29,7 @@
   </div>
 
 
-
-
-    <div class="container">
-
-
-        <div class="card-deck card-container">
-                
-                    @foreach ($menProducts as $menProduct)
-                        
-                            <a href="{{route('showProduct', ['product' => $menProduct])}}">
-
-                                <div class="card product-card mb-5 m-4 ">
-                                    <img class="card-img-top" src="{{$menProduct -> image}}" alt="Card image cap">
-                            </a>
-                                    <div class="card-body">
-                                        <h5 class="card-title">{{$menProduct-> title}}</h5>
-                                        <p class="card-text">{{$menProduct-> description}}</p>
-                                    </div>
-                                    <div class="card-footer mb-2">
-                                        <div class="row align-items-center">
-                                            <div class="col-4">
-                                                <p class="card-text h5 ">£{{$menProduct-> price}}</p>
-                                            </div>
-                                            <div class="col-8 text-align-end">
-                                                <a href="#" class="btn btn-success">Add to Basket</a>
-                                            </div>
-                                        </div>
-                                        
-                                        
-                                    </div>
-                                </div>
-                        @endforeach
-
-
-
-
-
-                </div>
-            </div>
-
+  @include('layouts.productCards');
 
 
 <div class="container text-center" >
@@ -84,6 +43,8 @@
 </div>
 </div>
 
+@endsection
 
-
+@section('footer-scripts')
+  @include('addToCart')
 @endsection

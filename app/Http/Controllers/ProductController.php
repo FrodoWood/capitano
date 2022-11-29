@@ -129,14 +129,74 @@ class ProductController extends Controller
 
     public function menProducts()
     {
+        $cart = [];
+
+        if (Auth::check()) {
+            $item = CartItem::where('user_id', '=', Auth::id())->first();
+            $sessionCart = session()->get('cart');
+            if ($cart == null) {
+                $cart = [];
+            }
+            if ($sessionCart == null) {
+                $sessionCart = [];
+            }
+            if ($item != null) {
+                $dbcart = $item->data;
+                $cart = $dbcart;
+            }
+            $cart = array_merge($cart, $sessionCart);
+            session()->forget('cart');
+            CartItem::updateOrCreate([
+                'user_id' => Auth::id()
+            ], [
+                'data' => $cart,
+            ]);
+        } else {
+            $cart = session()->get('cart');
+        }
+
+        if ($cart == null) {
+            $cart = [];
+        }
+
         $menProducts = Product::where('gender', '=', '0')->get();
-        return view('products.men', ['menProducts' => $menProducts]);
+        return view('products.men', ['products' => $menProducts, 'cart' => $cart]);
     }
 
     public function womenProducts()
     {
+        $cart = [];
+
+        if (Auth::check()) {
+            $item = CartItem::where('user_id', '=', Auth::id())->first();
+            $sessionCart = session()->get('cart');
+            if ($cart == null) {
+                $cart = [];
+            }
+            if ($sessionCart == null) {
+                $sessionCart = [];
+            }
+            if ($item != null) {
+                $dbcart = $item->data;
+                $cart = $dbcart;
+            }
+            $cart = array_merge($cart, $sessionCart);
+            session()->forget('cart');
+            CartItem::updateOrCreate([
+                'user_id' => Auth::id()
+            ], [
+                'data' => $cart,
+            ]);
+        } else {
+            $cart = session()->get('cart');
+        }
+
+        if ($cart == null) {
+            $cart = [];
+        }
+
         $womenProducts = Product::where('gender', '=', '1')->get();
-        return view('products.women', ['womenProducts' => $womenProducts]);
+        return view('products.women', ['products' => $womenProducts,  'cart' => $cart]);
     }
 
     public function searchProduct(Request $request)
