@@ -92,9 +92,9 @@
                 @foreach ($womenProducts as $womenProduct)
                     
                 
-                <div class="card product-card mb-5 m-4 ">
+                <div class="card product-card mb-5 m-4 rounded-0">
                                 <a href="{{route('showProduct', ['product' => $womenProduct])}}">
-                                <img class="card-img-top" src="{{$womenProduct -> image}}" alt="Card image cap">
+                                <img class="card-img-top rounded-0" src="{{$womenProduct -> image}}" alt="Card image cap">
                                 </a>
                                 <div class="card-body">
                                     <h5 class="card-title">{{$womenProduct-> title}}</h5>
@@ -106,8 +106,8 @@
                                             <p class="card-text h5 ">£{{$womenProduct-> price}}</p>
                                         </div>
                                         <div class="col-8 btn-group">
-                                            <input type="number" value="1" min="1" max="100">
-                                            <button class="add-to-cart" type="button" class="btn btn-sm btn-outline-secondary" 
+                                            
+                                            <button class="add-to-cart btn btn-outline-dark rounded-0" type="button" class="btn btn-sm btn-outline-secondary" 
                                                     data-id="{{$womenProduct->id}}" data-name="{{$womenProduct->title}}" data-price="{{$womenProduct->price}}">Add to Cart</button>
                                         </div>
                                     </div>
@@ -127,10 +127,16 @@
 <script type="module">
     $(document).ready(function(){
         window.cart = <?php echo json_encode($cart) ?>;
-            updateCartButton();
-            $('.add-to-cart').on('click', function(event){
+        updateCartButton();
+        $('.add-to-cart').on('click', function(event){
+                var quantity = 0;
                 var cart = window.cart || [];
-                cart.push({'id':$(this).data('id'), 'name':$(this).data('name'), 'price':$(this).data('price'), 'qty':$(this).prev('input').val()});
+                if($('.quantity').val() == null){
+                    quantity = 1;
+                }else{
+                    quantity = $('.quantity').val();
+                }
+                cart.push({'id':$(this).data('id'), 'name':$(this).data('name'), 'price':$(this).data('price'), 'qty':quantity});
                 window.cart = cart;
                 $.ajax('/home/add',
                 {

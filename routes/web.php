@@ -22,7 +22,7 @@ Auth::routes();
 Route::get('/home', [ProductController::class, 'index'])->name('home');
 Route::post('/home/add', [ProductController::class, 'addToCart']);
 Route::get('cart', [CartController::class, 'index'])->name('cart');
-Route::post('cart/delete', [CartController::class, 'removeFromCart']);
+Route::post('cart/delete', [CartController::class, 'updateCart']);
 Route::get('cart/checkout', [CartController::class, 'checkout'])->name('checkout')->middleware('auth');
 Route::post('/home', [CartController::class, 'placeOrder'])->name('placeOrder')->middleware('auth');
 Route::get('/profile', [ProfileController::class, 'index'])->name('profile')->middleware('auth');

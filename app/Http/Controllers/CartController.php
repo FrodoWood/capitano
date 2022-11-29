@@ -37,7 +37,7 @@ class CartController extends Controller
         return view('cart.cart')->with('cart', $cart);
     }
 
-    public function removeFromCart(Request $request)
+    public function updateCart(Request $request)
     {
         $cart = $request->post('cart');
         if ($cart == null) {
@@ -84,10 +84,10 @@ class CartController extends Controller
         if ($dbcart == null) {
             $dbcart = [];
         }
-        if($dbcart == []){
+        if ($dbcart == []) {
             return redirect('cart');
         }
-        if(Auth::user()->role == 1){
+        if (Auth::user()->role == 1) {
             return redirect('home');
         }
         return view('cart.checkout')->with('cartItems', $dbcart);
