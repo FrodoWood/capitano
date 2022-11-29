@@ -19,7 +19,7 @@
 </head>
 <body class="bg-white">
     <div id="app">
-        <nav class="navbar navbar-light bg-white sticky-top navbar-expand-lg border-bottom">
+        <nav class="navbar sticky-top navbar-expand-lg">
             <div class="container">
                
                 <a class="navbar-brand" href="{{ url('/') }}">
@@ -126,10 +126,11 @@
             </div>
         </nav>
 
-        <main class="py-4">
+        <main class="pb-4">
             @yield('content')
         </main>
     </div>
+    
 </body>
 <br><br>
 <!--footer-->
@@ -190,6 +191,24 @@
 
 </footer>
 
+<script type="module">
+    // $(function(){
+    //     $(document).scroll(function(){
+    //         var $navbar = $("fixed-top");
+    //         $navbar.toggleClass('navColour', $(this).scrollTop() > $navbar.height());
+    //     });
+    // });
+
+    $(document).ready(function(){
+        $(document).scroll(function(){
+           if($(window).scrollTop() > 30){
+                $('.navbar').addClass('navColour');
+            }else{
+                $('.navbar').removeClass('navColour');
+            }
+        })
+    })
+</script>
 
 @yield('footer-scripts')
 </html>
