@@ -12,6 +12,7 @@
                         <form method="POST" action="{{ route('login') }}">
                           @csrf
                           <div class="row mb-3">
+                            <h2>Log in</h2>
                               <label for="email" class="col-lg-12 form-label ">{{ __('Email Address') }}</label>
                               <div class="col-lg-12">
                                   <input id="email" type="email" class="form-control rounded-0 @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
@@ -43,23 +44,26 @@
                           </div>
                           <div class="row mb-0">
                               <div class="col-lg-12 ">
-                                  <button type="submit" class="btn btn-primary bg-dark rounded-0 w-25">
+                                  <button type="submit" class="btn btn-primary bg-dark rounded-0 w-50">
                                       {{ __('Login') }}
                                   </button>
                               </div>
-                              <div class="col-lg-12">
-                                @if (Route::has('password.request'))
-                                      <a class="btn btn-link p-0 mt-2" href="">
-                                          {{ __('Forgot Your Password?') }}
+                              <div class="col-lg-12 mt-3 mb-1">
+                                      <a class="btn btn-link p-0 mt-2 link-dark text-decoration-none" href="/register">
+                                          Not registered?
                                       </a>
-                                  @endif
+                              </div>
+                              <div class="col-lg-12">
+                                <a class="btn btn-outline-dark rounded-0 w-50" href="/register">
+                                    Sign up now
+                                </a>
                               </div>
                           </div>
                       </form>
                       </div>
                       
                       <div class=" col-sm-12 col-md-6 col-lg-6 order-first">
-                          <div class="row" > <img class="img-fluid" src="{{ URL('images/image_6487327.JPG')}}" style="height: 331px;" /> </div>
+                          <div class="row" > <img class="img-fluid" src="{{ URL('images/woman_matching_sports_bra_and_leggings_2.png')}}"/> </div>
                       </div>
                     </div>
                 </div>
