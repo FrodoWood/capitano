@@ -95,3 +95,25 @@ footer {
     font-family: 'Montserrat Alternates', sans-serif;
     font-weight: 900;
 }
+
+#searchQuery {
+    background-color: #ffffff31;
+    border-color: #00000069;
+    padding-right: 50px;
+    // border-radius: 30px;
+}
+
+#searchQuery::placeholder {
+    color: #2d2d2d97;
+}
+
+.searchBtn {
+    transform: translate(-50px);
+}
+
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+    display: none;
+}
