@@ -16,7 +16,11 @@
         </thead>
     
         <tbody>
-            
+
+            <element class = "text-center align-middle">
+                
+            </element>
+
             @php
                 $total = 0;
             @endphp
