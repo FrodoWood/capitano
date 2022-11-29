@@ -58,7 +58,7 @@
                         </div>
                         
                         <div class="col-sm-12 col-md-7 col-lg-7 order-first">
-                            <div class="row" > <img class="img-fluid" src="{{ URL('images/image_6487327.JPG')}}" /> </div>
+                            <div class="row" > <img class="img-fluid" src="{{ URL('images/image_6487327.JPG')}}" style="height: 331px;" /> </div>
                         </div>
 
                     </div>
