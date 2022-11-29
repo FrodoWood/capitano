@@ -184,6 +184,34 @@
 </div>
 </div>
 
+<div class="container-fluid w-75 px-0 my-5">
+  <h2 style="text-align:center">Company News</h2> <br>
+<div class="container-fluid">
+  <div class="row">
+   <div class="col-md-6">
+    <div class="card">
+   <div class="card-body">
+     <h3 class="card-title" style="text-align:center">New Launch</h3>
+     <p class="card-text" >Capitano Clothing launches a brand new collection in collaboration with award winning designer Regina Geller. 
+     Behind every design is an entire story and a purpose, and we love sharing what makes each one so special!
+     Our new collection added small touches to your favorite staples to make them even more special, while mixing in something new as well.
+     Additionally, YOU requested more leggings and neutrals, so we started there.
+     Our collection is designed to give you a luxurious workout experience.</p>
+   </div>
+    </div>
+   </div>
+   <div class="col-md-6">
+   <div class="card">
+   <div class="card-body">
+     <h3 class="card-text" style="text-align:center">Giving back to the community</h3>
+     <p>To celebrate its four year anniversary since opening, Capitano Clothing orgarnised a charity fair. The company raised £100 thousand pounds 
+      for the Youth Sport Trust which is the UK's leading charity, improving every young person's education and development through sport and play.
+      In addition, Capitano Clothing gave out vouchers for people to spend on its website. We also hosted a free webinar. 
+    </p>
+   </div>
+ </div>
+</div>
+
 @endsection
 
 @section('footer-scripts')
