@@ -9,7 +9,13 @@
 <div class="container-fluid w-50 px-0 mt-4">
     <div class="row">
         <div class="col-6"><h2 class="text-bold font-weight-bold text-secondary h4">Search results for: '<span class="h3 text-dark">{{$searchText}}</span>' </h2></div>
-        <div class="col-6 text-end h5"><span class="">{{$count}} Products:</span></div>
+        <div class="col-6 text-end h5"><span class="">{{$count}}
+            @if ($count > 1)
+            Products:
+            @else
+            Product:
+            @endif
+            </span></div>
     </div>
     <hr class="my-4">
 </div>
