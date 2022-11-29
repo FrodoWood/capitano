@@ -4,7 +4,6 @@
 
 <h1 class="text-center text-bold text-black-50">Women</h1>
 
-<!-- add stuff here -->
 
 
 <div id="banner-carousel" class="carousel slide" data-bs-ride="carousel">
