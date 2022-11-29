@@ -1,28 +1,11 @@
 @extends('layouts.app')
 
-<!-- <head>
-<style>
-  body{
-    background-image: url('https://images.unsplash.com/photo-1567360425618-1594206637d2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8cmVkJTIwYmFja2dyb3VuZHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=1000&q=60') ;
-  }
-  </style>
-</head> -->
 
 
 @section('content')
     <h1>About us</h1>
     <br>
-    <!--
-     <p> ideas: use banners for vision/mission. Have pictures related to working out and motivating people.
-        check other sport websites for  inspiration </p>
-
-        -Links to partner charities and brands (encourage people to donate to sport charities)
-        -Communicate the story of your business and why you started it.
-        -Describe the customers or the cause that your business serves.
-        -Explain your business model or how your products are made.
-        -Put a face to your business, featuring the founders or the people on your team.
-        -Incorporate persuasive content (e.g., an explainer video, data visualizations, links to blog posts) that might otherwise clutter your homepage.
--->
+  
 
 <div class="container">
 <div class="row">
@@ -35,11 +18,11 @@
         <h3 class="text-center" style="font-size:50px">Values</h3>
        
     <ul  class="text-center">
-        <li class="list-group-item list-group-item-primary" style="font-size:30px" >Integrity</li> 
-        <li class="list-group-item list-group-item-success" style="font-size:30px">Team Spirit</li>
+        <li class="list-group-item list-group-item-danger" style="font-size:30px" >Integrity</li> 
+        <li class="list-group-item list-group-item-secondary" style="font-size:30px">Team Spirit</li>
         <li class="list-group-item list-group-item-danger" style="font-size:30px">Be ethical</li>
-        <li class="list-group-item list-group-item-warning" style="font-size:30px">Diversity</li>
-        <li class="list-group-item list-group-item-secondary" style="font-size:30px">Inclusivity</li>
+        <li class="list-group-item list-group-item-secondary" style="font-size:30px">Diversity</li>
+        <li class="list-group-item list-group-item-danger" style="font-size:30px">Inclusivity</li>
     </ul>   
 </div>
 
