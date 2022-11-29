@@ -51,7 +51,7 @@
                 <strong>£{{$total}}</strong>
             </li>
             <li class="list-group-item d-flex justify-content-between py-3">
-                <button class="w-100 btn btn-secondary btn-lg disabled" role="button" type="submit">Place order</button>
+                <button form="checkoutForm" class="w-100 btn btn-success btn-lg rounded-0" role="button" type="submit">Place order</button>
             </li>
           </ul>
 
@@ -59,7 +59,7 @@
 
         {{-- Left column --}}
         <div class="col-md-7 col-lg-8  py-3">
-            <form  method="POST" action="{{route('placeOrder')}}" novalidate>
+            <form autocomplete="off" id="checkoutForm"  method="POST" action="{{route('placeOrder')}}" novalidate>
               @csrf
 
               <div class="row g-3 px-4 pb-5">
@@ -67,12 +67,12 @@
 
               <div class="col-sm-6">
                 <label for="firstName" class="form-label">First name</label>
-                <input type="text"  class="form-control" id="firstName" name="firstName" value="{{old('firstName')}}" />
+                <input type="text"  class="form-control rounded-0" id="firstName" name="firstName" value="{{old('firstName')}}" />
               </div>
     
               <div class="col-sm-6">
                 <label for="lastName" class="form-label">Last name</label>
-                <input type="text"  class="form-control" id="lastName" name="lastName" value="{{old('lastName')}}"/>
+                <input type="text"  class="form-control rounded-0" id="lastName" name="lastName" value="{{old('lastName')}}"/>
               </div>
 
               @error('firstName')
@@ -89,7 +89,7 @@
     
               <div class="col-12">
                 <label for="email" class="form-label">Email</label>
-                <input type="email" class="form-control" id="email" name="email" placeholder="name@example.com" value="{{auth()->user()->email}}"/>
+                <input type="email" class="form-control rounded-0" id="email" name="email" placeholder="name@example.com" value="{{auth()->user()->email}}"/>
               </div>
 
               @error('email')
@@ -100,7 +100,7 @@
     
               <div class="col-12">
                 <label for="country" class="form-label">Country</label>
-                <select class="form-select" id="country" name="country" value="{{old('country')}}" />
+                <select class="form-select rounded-0" id="country" name="country" value="{{old('country')}}" />
                     <option value="United Kingdom">United Kingdom</option>
                     <option value="Afghanistan">Afghanistan</option>
                     <option value="Åland Islands">Åland Islands</option>
@@ -357,7 +357,7 @@
 
               <div class="col-12">
                 <label for="address1" class="form-label">Address line 1</label>
-                <input type="text" class="form-control" id="address1" name="address1" value="{{old('address1')}}" />
+                <input type="text" class="form-control rounded-0" id="address1" name="address1" value="{{old('address1')}}" />
               </div>
 
               @error('address1')
@@ -368,17 +368,17 @@
     
               <div class="col-12">
                 <label for="address2" class="form-label">Address line 2 (optional)</label>
-                <input type="text" class="form-control" id="address2" name="address2" >
+                <input type="text" class="form-control rounded-0" id="address2" name="address2" >
               </div>
               
               <div class="col-12">
                 <label for="county" class="form-label">County (optional)</label>
-                <input type="text" class="form-control" id="county" name="county" >
+                <input type="text" class="form-control rounded-0" id="county" name="county" >
               </div>
     
               <div class="col-12">
                 <label for="postcode" class="form-label">Postcode</label>
-                <input type="text" class="form-control" id="postcode" name="postcode" value="{{old('postcode')}}"/>
+                <input type="text" class="form-control rounded-0" id="postcode" name="postcode" value="{{old('postcode')}}"/>
               </div>
 
               @error('postcode')
@@ -414,7 +414,7 @@
                 
                   <div class="col-12">
                     <label for="nameOnCard" class="form-label">Name on Card</label>
-                    <input type="text" class="form-control" id="nameOnCard" name="nameOnCard" placeholder="" value="" required/>
+                    <input type="text" class="form-control rounded-0" id="nameOnCard" name="nameOnCard" placeholder="" value="" required/>
                     <small class="text-muted">Full name as displayed on Card</small>
                   </div>
 
@@ -426,7 +426,7 @@
 
                   <div class="col-12">
                     <label for="cardNumber" class="form-label">Card Number</label>
-                    <input type="text" class="form-control" id="cardNumber" name="cardNumber" value="" placeholder="Enter your 16-digit Card Number" required/>
+                    <input type="text" class="form-control rounded-0" id="cardNumber" name="cardNumber" value="" placeholder="Enter your 16-digit Card Number" required/>
                   </div>
 
                   @error('cardNumber')
@@ -437,7 +437,7 @@
 
                   <div class="col-12">
                     <label for="expiryDate" class="form-label">Expiry Date</label>
-                    <input type="text" class="form-control" id="expiryDate" name="expiryDate" value="" placeholder="MM/YY" required/>
+                    <input type="text" class="form-control rounded-0" id="expiryDate" name="expiryDate" value="" placeholder="MM/YY" required/>
                   </div>
 
                   @error('expiryDate')
@@ -448,7 +448,7 @@
 
                   <div class="col-md-2">
                     <label for="CVV" class="form-label">CVV</label>
-                    <input type="text" class="form-control" id="CVV" name="CVV" placeholder="123" required/>
+                    <input type="text" class="form-control rounded-0" id="CVV" name="CVV" placeholder="123" required/>
                   </div>
 
                   @error('CVV')
@@ -459,7 +459,7 @@
 
                 <hr class="my-4">
                 <input type="hidden" name="price" value="{{$total}}">
-                <button class="w-100 btn btn-success btn-lg" type="submit">Place order</button>
+                <button class="w-100 btn btn-success btn-lg rounded-0" type="submit">Place order</button>
               </div>
           </form>
         </div>
