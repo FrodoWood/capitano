@@ -117,6 +117,10 @@
 @endsection
 
 @section('footer-scripts')
+
+@include('addToCart')
+
+
 <script type="module">
     $(document).ready(function(){
         window.cart = <?php echo json_encode($cart) ?>;

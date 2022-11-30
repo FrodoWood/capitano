@@ -23,7 +23,37 @@ class ProfileController extends Controller
                 $orders = [];
             }
         }
+
+        $cart = [];
+
+        if (Auth::check()) {
+            $item = CartItem::where('user_id', '=', Auth::id())->first();
+            $sessionCart = session()->get('cart');
+            if ($cart == null) {
+                $cart = [];
+            }
+            if ($sessionCart == null) {
+                $sessionCart = [];
+            }
+            if ($item != null) {
+                $dbcart = $item->data;
+                $cart = $dbcart;
+            }
+            $cart = array_merge($cart, $sessionCart);
+            session()->forget('cart');
+            CartItem::updateOrCreate([
+                'user_id' => Auth::id()
+            ], [
+                'data' => $cart,
+            ]);
+        } else {
+            $cart = session()->get('cart');
+        }
+
+        if ($cart == null) {
+            $cart = [];
+        }
         // var_dump($orders_details);
-        return view('profile')->with('orders', $orders)->with('products', $products);
+        return view('profile')->with('orders', $orders)->with('products', $products)->with('cart', $cart);
     }
 }

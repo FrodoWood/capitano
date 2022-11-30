@@ -182,6 +182,9 @@
 @endsection
 
 @section('footer-scripts')
+
+@include('addToCart')
+
 <script type="module">
     $(document).ready(function(){
         $('.cancel-order').on('click', function(event){
