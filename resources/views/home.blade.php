@@ -56,13 +56,7 @@
         <img src="{{URL('images/banner/woman_pose_wide_2.jpg')}}" class="d-block w-100 carousel-banner-img" alt="">
       </div>
       <div class="carousel-item">
-        <img src="{{URL('images/banner/woman_running_wide_2.jpg')}}" class="d-block w-100 carousel-banner-img" alt="">
-      </div>
-      <div class="carousel-item">
         <img src="{{URL('images/banner/woman_exercise_wide.jpg')}}" class="d-block w-100 carousel-banner-img" alt="">
-      </div>
-      <div class="carousel-item">
-        <img src="{{URL('images/banner/woman_bicycle_wide.jpg')}}" class="d-block w-100 carousel-banner-img" alt="">
       </div>
       <div class="carousel-item">
         <img src="{{URL('images/banner/man_woman_exercise_wide.jpg')}}" class="d-block w-100 carousel-banner-img" alt="">
@@ -174,7 +168,7 @@
     </div>
 <div class="row">
     <div class="col-6 order-first">
-        <a href="{{url('/women')}}"><img class="img w-100 carousel-banner-img" src="{{URL('images/woman_matching_sports_bra_and_leggings_2.png')}}" alt="Women" ></a>
+        <a href="{{url('/women')}}"><img class="img w-100 carousel-banner-img" src="{{URL('images/woman_standing_tall_1.jpg')}}" alt="Women" ></a>
     </div>
     <div class="col-6">
         <a href="{{url('/men')}}"><img class="img w-100 carousel-banner-img" src="{{URL('images/productMen.jpg')}}" alt="Men" ></a>

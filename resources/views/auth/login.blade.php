@@ -63,7 +63,7 @@
                       </div>
                       
                       <div class=" col-sm-12 col-md-6 col-lg-6 order-first">
-                          <div class="row" > <img class="img-fluid" src="{{ URL('images/woman_matching_sports_bra_and_leggings_2.png')}}"/> </div>
+                          <div class="row" > <img class="img-fluid" src="{{ URL('images/woman_standing_tall_3.jpg')}}"/> </div>
                       </div>
                     </div>
                 </div>
