@@ -8,7 +8,7 @@
     <div class="carousel-inner">
 
       <div class="carousel-item active">
-        <video autoplay loop src="{{URL('videos/woman_yoga_2.mp4')}}" class="d-block w-100 carousel-banner-img"></video>
+        <video autoplay muted loop src="{{URL('videos/woman_yoga_2.mp4')}}" class="d-block w-100 carousel-banner-img"></video>
       </div>
       <div class="carousel-item">
         <img src="{{URL('images/banner/woman_running_wide_2.jpg')}}" class="d-block w-100 carousel-banner-img" alt="">
