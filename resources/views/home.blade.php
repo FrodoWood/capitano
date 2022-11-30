@@ -40,30 +40,37 @@
 <div id="banner-carousel" class="homepage-banner-carousel carousel slide" data-bs-ride="carousel">
     <div class="carousel-inner">
 
-      <div class="carousel-item">
-        <img src="{{URL('images/banner/woman_yoga_wide.jpg')}}" class="d-block w-100 carousel-banner-img" alt="">
-      </div>
-      <div class="carousel-item">
-        <img src="{{URL('images/banner/woman_stretching_wide.jpg')}}" class="d-block w-100 carousel-banner-img" alt="">
-      </div>
-      <div class="carousel-item active">
+    <div class="carousel-item active">
+        <video autoplay loop src="{{URL('videos/woman_yoga_3.mp4')}}" class="d-block w-100 carousel-banner-img"></video>
+    </div>
+      <div class="carousel-item ">
         <img src="{{URL('images/banner/woman_sitting_wide.jpg')}}" class="d-block w-100 carousel-banner-img" alt="">
       </div>
       <div class="carousel-item">
         <img src="{{URL('images/banner/woman_running_wide.jpg')}}" class="d-block w-100 carousel-banner-img" alt="">
       </div>
       <div class="carousel-item">
-        <img src="{{URL('images/banner/woman_pose_wide_2.jpg')}}" class="d-block w-100 carousel-banner-img" alt="">
-      </div>
-      <div class="carousel-item">
+          <img src="{{URL('images/banner/woman_pose_wide_2.jpg')}}" class="d-block w-100 carousel-banner-img" alt="">
+        </div>
+        <div class="carousel-item">
+          <img src="{{URL('images/banner/man_pose_1.jpg')}}" class="d-block w-100 carousel-banner-img" alt="">
+        </div>
+        <div class="carousel-item">
+            <img src="{{URL('images/banner/man_woman_exercise_wide_2.jpg')}}" class="d-block w-100 carousel-banner-img" alt="">
+        </div>
+        <div class="carousel-item">
         <img src="{{URL('images/banner/woman_exercise_wide.jpg')}}" class="d-block w-100 carousel-banner-img" alt="">
-      </div>
+        </div>
       <div class="carousel-item">
         <img src="{{URL('images/banner/man_woman_exercise_wide.jpg')}}" class="d-block w-100 carousel-banner-img" alt="">
       </div>
       <div class="carousel-item">
-        <img src="{{URL('images/banner/man_woman_exercise_wide_2.jpg')}}" class="d-block w-100 carousel-banner-img" alt="">
+        <img src="{{URL('images/banner/woman_pose_6.jpg')}}" class="d-block w-100 carousel-banner-img" alt="">
       </div>
+      <div class="carousel-item">
+        <img src="{{URL('images/banner/woman_exercise_2.jpg')}}" class="d-block w-100 carousel-banner-img" alt="">
+      </div>
+      
       
 
     </div>

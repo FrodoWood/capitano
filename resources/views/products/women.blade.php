@@ -16,6 +16,21 @@
       <div class="carousel-item">
         <img src="{{URL('images/banner/woman_bicycle_wide.jpg')}}" class="d-block w-100 carousel-banner-img" alt="">
       </div>
+      <div class="carousel-item">
+        <img src="{{URL('images/banner/woman_sitting_1.jpg')}}" class="d-block w-100 carousel-banner-img" alt="">
+      </div>
+      <div class="carousel-item">
+        <img src="{{URL('images/banner/woman_standing_1.jpg')}}" class="d-block w-100 carousel-banner-img" alt="">
+      </div>
+      <div class="carousel-item">
+        <img src="{{URL('images/banner/woman_pose_3.jpg')}}" class="d-block w-100 carousel-banner-img" alt="">
+      </div>
+      <div class="carousel-item">
+        <img src="{{URL('images/banner/woman_sitting_2.jpg')}}" class="d-block w-100 carousel-banner-img" alt="">
+      </div>
+      <div class="carousel-item">
+        <img src="{{URL('images/banner/woman_exercise_1.jpg')}}" class="d-block w-100 carousel-banner-img" alt="">
+      </div>
 
     </div>
     <button class="carousel-control-prev" type="button" data-bs-target="#banner-carousel" data-bs-slide="prev">

@@ -8,13 +8,22 @@
     <div class="carousel-inner">
 
       <div class="carousel-item active">
-        <video autoplay loop src="{{URL('videos/man_exercise_3.mp4')}}" class="d-block w-100 carousel-banner-img"></video>
+        <video autoplay loop src="{{URL('videos/man_exercise_2.mp4')}}" class="d-block w-100 carousel-banner-img"></video>
       </div>
       <div class="carousel-item">
-        <img src="{{URL('images/banner/woman_stretching_wide.jpg')}}" class="d-block w-100 carousel-banner-img" alt="">
+        <img src="{{URL('images/banner/man_exercise_3.jpg')}}" class="d-block w-100 carousel-banner-img" alt="">
       </div>
       <div class="carousel-item ">
-        <img src="{{URL('images/banner/woman_sitting_wide.jpg')}}" class="d-block w-100 carousel-banner-img" alt="">
+        <img src="{{URL('images/banner/man_running_1.jpg')}}" class="d-block w-100 carousel-banner-img" alt="">
+      </div>
+      <div class="carousel-item ">
+        <img src="{{URL('images/banner/man_exercise_4.jpg')}}" class="d-block w-100 carousel-banner-img" alt="">
+      </div>
+      <div class="carousel-item ">
+        <img src="{{URL('images/banner/man_exercise_1.jpg')}}" class="d-block w-100 carousel-banner-img" alt="">
+      </div>
+      <div class="carousel-item ">
+        <img src="{{URL('images/banner/man_pose_2.jpg')}}" class="d-block w-100 carousel-banner-img" alt="">
       </div>
 
       </div>
