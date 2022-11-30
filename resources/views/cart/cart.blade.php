@@ -24,15 +24,20 @@
             @php
                 $total += $item['price']*$item['qty'];
                 $imageURL = \App\Models\Product::where('id','=', $item['id'])->first()->image;
+                $product = \App\Models\Product::where('id','=', $item['id'])->first();
             @endphp
                 <tr>
                     <td>
                         <div class="row">
                             <div class="col-2">
+                                <a href="{{route('showProduct', ['product' => $product])}}">
                                 <img height="100" src="{{$imageURL}}" alt="">
+                                </a>
                             </div>
                             <div class="col-4">
+                                <a class="text-decoration-none text-dark" href="{{route('showProduct', ['product' => $product])}}">
                                 {{$item['name']}}
+                                </a>
                             </div>
                         </div>
                     </td>
