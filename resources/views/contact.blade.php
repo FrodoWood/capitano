@@ -16,6 +16,7 @@
     <h1 class = "h1- responsive text-center mx-auto">Get In Touch</h1>
     <p class ="text-center responsive mx-auto mb-4"> Enter your details below along with your query and we will contact you back as soon as possible!</p>
     <form action="/action_page.php">
+      @csrf
       <div class="mb-4">
         <label for="name">Name:</label>
         <input type="text" class="form-control" id="name" placeholder="Enter name" name="name" required>
