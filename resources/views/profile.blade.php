@@ -110,14 +110,16 @@
                         <h5>Delivery</h5>
                         <h6 class="text-secondary">Address</h6>
                         <div class="row">
-                            <div class="col-6">
+                            <div class="col-lg-6">
                                 <p>
                                     {{$order_address->address1}} {{" ".$order_address->address2}} {{" ".$order_address->county}} {{" ".$order_address->postcode}} {{" ".$order_address->country}}
                                 </p>
                             </div>
-                            <div class="col-6">
-                                
+                            @if($order->status == 0)
+                            <div class="col-lg-6 text-end">
+                                <button class="btn btn-outline-danger cancel-order rounded-0" type="button" data-id="{{$order->id }}">Cancel Order</button>
                             </div>
+                            @endif
                         </div>
                     </div>
 
@@ -177,4 +179,25 @@
 
 @endif
 
+@endsection
+
+@section('footer-scripts')
+<script type="module">
+    $(document).ready(function(){
+        $('.cancel-order').on('click', function(event){
+            var index = $(this).data("id");
+            console.log('cancel order check')
+
+            $.ajax('/cancelOrder',
+                {
+                    type: 'POST',
+                    data: {"_token": "{{ csrf_token() }}","index": index},
+                    success:function(){
+                        console.log("Order cancelled correctly");
+                    }
+                }
+            )
+        })
+    })
+</script>
 @endsection

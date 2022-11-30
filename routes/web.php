@@ -25,6 +25,7 @@ Route::get('cart', [CartController::class, 'index'])->name('cart');
 Route::post('cart/delete', [CartController::class, 'updateCart']);
 Route::get('cart/checkout', [CartController::class, 'checkout'])->name('checkout')->middleware('auth');
 Route::post('/home', [CartController::class, 'placeOrder'])->name('placeOrder')->middleware('auth');
+Route::post('/cancelOrder', [CartController::class, 'cancelOrder'])->middleware('auth');
 Route::get('/profile', [ProfileController::class, 'index'])->name('profile')->middleware('auth');
 Route::get('/searchProduct', [ProductController::class, 'searchProduct'])->name('searchProduct');
 

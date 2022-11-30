@@ -147,4 +147,13 @@ class CartController extends Controller
         ]);
         return redirect('/profile');
     }
+
+    public function cancelOrder(Request $request)
+    {
+        Order::updateOrCreate([
+            'id' => $request->post('index')
+        ], [
+            'status' => 2,
+        ]);
+    }
 }
