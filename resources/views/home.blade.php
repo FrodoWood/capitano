@@ -135,15 +135,14 @@
 
 {{-- Men and women selection --}}
 <div class="container-fluid w-75 px-0 my-5">
-    <div class="row text-center text-uppercase h3">
-        <div class="col-6 order-first">Shop women's</div>
-        <div class="col-6">Shop men's</div>
-    </div>
+    
 <div class="row">
-    <div class="col-6 order-first">
+    <div class="col-lg-6 pt-4 order-first">
+        <h3 class="text-center text-uppercase h3">Shop women's</h3>
         <a href="{{url('/women')}}"><img class="img w-100 carousel-banner-img" src="{{URL('images/woman_standing_tall_1.jpg')}}" alt="Women" ></a>
     </div>
-    <div class="col-6">
+    <div class="col-lg-6 pt-4">
+        <h3 class="text-center text-uppercase h3">Shop men's</h3>
         <a href="{{url('/men')}}"><img class="img w-100 carousel-banner-img" src="{{URL('images/man_standing_tall_4.jpg')}}" alt="Men" ></a>
     </div>
 </div>

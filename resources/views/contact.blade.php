@@ -42,14 +42,16 @@
         </select>
       </div>
       </div>
-      <div class=" mb-4 text-center ">
+
+      <div class ="container">
+        <button type="submit" class="btn btn-dark rounded-0 w-25">Send</button>
+        </div>
+
+      <div class="container mt-4 ">
         <label>If you require immediate assistance please contact us on our 24/7 helpline on:  </label>
         <span class ="contact-more-highlight"> +01902 839 929</span>
-
       </div>
-      <div class ="container">
-      <button type="submit" class="btn btn-dark rounded-0 w-25">Send</button>
-      </div>
+      
     </form>
   </div>
 </div>
