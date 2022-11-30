@@ -145,6 +145,6 @@ class CartController extends Controller
         ], [
             'data' => [],
         ]);
-        return redirect('/home');
+        return redirect('/profile');
     }
 }

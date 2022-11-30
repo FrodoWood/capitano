@@ -29,24 +29,37 @@
         $created_at = strtotime($order->created_at);
         $converted_date = date("j F y, g:i a ", $created_at);
         $order_address = \App\Models\OrderAddress::where('order_id', '=', $order->id)->first();
+        $orderStatus = "In progress";
+        $badgeStatus = "bg-warning";
+        if($order->status == 0){
+            $orderStatus = "In progress";
+            $badgeStatus = "bg-warning";
+        }elseif ($order->status == 1) {
+            $orderStatus = "Completed";
+            $badgeStatus = "bg-success";
 
+        }else{
+            $orderStatus = "Canceled";
+            $badgeStatus = "bg-danger";
+        }
     @endphp
         <div class="row my-4 mb-5 pb-2 justify-content-center">
             <div class="col-md-12">
                 <div class="card rounded-0">
                     <div class="card-header"> 
                         <div class="row">
-                            <div class="col-12 px-2 col-lg-5 text-secondary text-uppercase">Order placed:
+                            <div class="col-12 px-2 col-xl-5 text-secondary text-uppercase">Order placed:
                                  <span class="text-dark px-1 text-capitalize">{{$converted_date}}</span>
                             </div>
-                            <div class="col-12 px-2 col-lg-2 text-secondary text-uppercase">Total
+                            <div class="col-12 px-2 col-xl-2 text-secondary text-uppercase">Total
                                 <span class="text-dark px-1 text-capitalize">{{" £".$order->price}}</span>
                             </div>
-                            <div class="col-12 px-2 col-lg-3 text-secondary">DELIVER TO 
+                            <div class="col-12 px-2 col-xl-3 text-secondary">DELIVER TO 
                                 <span class="text-primary h5 px-1">{{$order_address->firstname}}</span> 
                                 <span class="text-primary h5 ">{{$order_address->lastname}}</span>
                             </div>
-                            <div class="col-12 px-2 col-lg-2 text-end text-uppercase">Order #: {{$order->id}}</div>
+                            <div class="col-12 px-2 col-xl-2 text-end text-uppercase"><span class="badge {{$badgeStatus}}">{{$orderStatus}}</span></div>
+                            <div class="col-12 px-2 col-xl-2 text-uppercase">Order #: {{$order->id}}</div>
                         </div>
                     </div>
                     <ul class="list-group list-group-flush">
@@ -92,6 +105,22 @@
                         </li>
 
                     </ul>
+
+                    <div class="card-body">
+                        <h5>Delivery</h5>
+                        <h6 class="text-secondary">Address</h6>
+                        <div class="row">
+                            <div class="col-6">
+                                <p>
+                                    {{$order_address->address1}} {{" ".$order_address->address2}} {{" ".$order_address->county}} {{" ".$order_address->postcode}} {{" ".$order_address->country}}
+                                </p>
+                            </div>
+                            <div class="col-6">
+                                
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </div>
