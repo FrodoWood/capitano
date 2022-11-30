@@ -108,9 +108,12 @@
                     @php
                         $cartAmount = 0;
                         $cart = [];
+                        $dbcart = [];
                         if(Auth::check()){
                             $item = \App\Models\CartItem::where('user_id', '=', Auth::id())->first();
-                            $dbcart = $item->data;
+                            if($item != null){
+                                $dbcart = $item->data;
+                            }
                             if ($dbcart == null) {
                                 $dbcart = [];
                             }
