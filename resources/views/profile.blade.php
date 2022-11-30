@@ -194,6 +194,7 @@
                     data: {"_token": "{{ csrf_token() }}","index": index},
                     success:function(){
                         console.log("Order cancelled correctly");
+                        window.location.href = "profile";
                     }
                 }
             )

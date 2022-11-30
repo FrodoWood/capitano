@@ -26,7 +26,7 @@
         <nav class="navbar sticky-top navbar-expand-lg">
             <div class="container">
                
-                <a class="navbar-brand" href="{{ url('/home') }}">
+                <a class="navbar-brand" href="{{ url('/') }}">
                    
                     <img class="me-2 pb-2" width="30" src="{{url('images/CapitanoLogo.png')}}">
                     <span class="me-5 logoText">Capitano</span>
@@ -76,10 +76,15 @@
                                 <li class="nav-item">
                                     <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
                                 </li>
-                            @endif
-                        @else
-
-                        
+                                @endif
+                                @else
+                                
+                                @if (Auth::user()->role == 1)
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{{ route('admin') }}">Admin Dashboard</a>
+                                </li>
+                                @endif
+                                
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle text-capitalize" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     {{ Auth::user()->name }}

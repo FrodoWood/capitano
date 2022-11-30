@@ -45,6 +45,7 @@
                               <th scope="col">Order Date</th>
                               <th scope="col">Quantity</th>
                               <th scope="col">Price</th>
+                              <th scope="col">Status</th>
                           </tr>
                       </thead>
                         <tbody>
@@ -59,6 +60,19 @@
                                     @foreach ($order_items as $item)
                                     @php
                                       $orderCount++;
+                                      $orderStatus = $order->status;
+                                      $badgeStatus = "bg-warning";
+                                      
+                                      if($orderStatus == 0){
+                                        $orderStatus = "In Progress";
+                                        $badgeStatus = "bg-warning";
+                                      }elseif ($orderStatus == 1) {
+                                        $orderStatus = "Completed";
+                                        $badgeStatus = "bg-success";
+                                      }else{
+                                        $orderStatus = "Cancelled";
+                                        $badgeStatus = "bg-danger";
+                                      }
                                     @endphp
                                             <th scope="row">{{$orderCount}}</th>
                                             <td>{{$order->id}}</td>
@@ -70,6 +84,7 @@
                                             <td>{{$converted_date}}</td>
                                             <td>{{$item['qty']}}</td>
                                             <td>£{{$item['price']}}</td>
+                                            <td><span class="badge {{$badgeStatus}}">{{$orderStatus}}</span></td>
                                         </tr>
                                     @endforeach
                             @endforeach

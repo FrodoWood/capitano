@@ -43,4 +43,4 @@ Route::get('/products/{product}/show', [ProductController::class, 'show'])->name
 
 
 //Admin
-Route::get('/admin', [AdminController::class, 'index'])->middleware('auth', 'isAdmin');
+Route::get('/admin', [AdminController::class, 'index'])->middleware('auth', 'isAdmin')->name('admin');
