@@ -14,7 +14,7 @@ class CartController extends Controller
     public function index()
     {
         if (Auth::check()) {
-            $item = CartItem::where('user_id', '=', Auth::id())->firstOrFail();
+            $item = CartItem::where('user_id', '=', Auth::id())->first();
             $dbcart = $item->data;
             $cart = $dbcart;
         } else {
@@ -79,7 +79,7 @@ class CartController extends Controller
         ]);
 
         /////////////////////
-        $item = CartItem::where('user_id', '=', Auth::id())->firstOrFail();
+        $item = CartItem::where('user_id', '=', Auth::id())->first();
         $dbcart = $item->data;
         if ($dbcart == null) {
             $dbcart = [];
@@ -95,7 +95,7 @@ class CartController extends Controller
 
     public function placeOrder()
     {
-        $item = CartItem::where('user_id', '=', Auth::id())->firstOrFail();
+        $item = CartItem::where('user_id', '=', Auth::id())->first();
         $dbcart = $item->data;
         if ($dbcart == null) {
             $dbcart = [];

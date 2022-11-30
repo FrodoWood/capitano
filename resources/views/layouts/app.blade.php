@@ -108,7 +108,7 @@
                         $cartAmount = 0;
                         $cart = [];
                         if(Auth::check()){
-                            $item = \App\Models\CartItem::where('user_id', '=', Auth::id())->firstOrFail();
+                            $item = \App\Models\CartItem::where('user_id', '=', Auth::id())->first();
                             $dbcart = $item->data;
                             if ($dbcart == null) {
                                 $dbcart = [];

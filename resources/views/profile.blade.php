@@ -29,7 +29,7 @@
         $order_address = \App\Models\OrderAddress::where('order_id', '=', $order->id)->first();
 
     @endphp
-        <div class="row my-4 justify-content-center">
+        <div class="row my-4 mb-5 pb-2 justify-content-center">
             <div class="col-md-12">
                 <div class="card rounded-0">
                     <div class="card-header"> 

@@ -8,7 +8,7 @@
 
 <div class="container-fluid w-50 px-0 mt-4">
     <div class="row">
-        <div class="col-6"><h2 class="text-bold font-weight-bold text-secondary h4">Search results for: '<span class="h3 text-dark">{{$searchText}}</span>' </h2></div>
+        <div class="col-6"><h2 class="text-bold font-weight-bold text-secondary h4">Search results for: <span class="h2 text-dark">{{$searchText}}</span> </h2></div>
         <div class="col-6 text-end h5"><span class="">{{$count}}
             @if ($count > 1 or $count ==0)
             products
@@ -56,7 +56,7 @@
 <div class="container">
     <div class="row text-center w-100 mt-5">
         <div class="col-12 h3">
-            <i class="bi bi-search"></i> <span>We couldn't find anything for '{{$searchText}}'</span>
+            <i class="bi bi-search"></i> <span>We couldn't find anything for "{{$searchText}}"</span>
         </div>
         <div class="col-12">
             <a class="btn btn-dark rounded-0 mt-2" href="{{route('home')}}">Continue shopping</a>
@@ -104,4 +104,8 @@
 
 @endif
 
+@endsection
+
+@section('footer-scripts')
+  @include('addToCart')
 @endsection

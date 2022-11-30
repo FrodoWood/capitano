@@ -18,7 +18,7 @@ use App\Http\Controllers\ProfileController;
 */
 
 Auth::routes();
-
+Route::get('/', [ProductController::class, 'index'])->name('home');
 Route::get('/home', [ProductController::class, 'index'])->name('home');
 Route::post('/home/add', [ProductController::class, 'addToCart']);
 Route::get('cart', [CartController::class, 'index'])->name('cart');
@@ -27,10 +27,6 @@ Route::get('cart/checkout', [CartController::class, 'checkout'])->name('checkout
 Route::post('/home', [CartController::class, 'placeOrder'])->name('placeOrder')->middleware('auth');
 Route::get('/profile', [ProfileController::class, 'index'])->name('profile')->middleware('auth');
 Route::get('/searchProduct', [ProductController::class, 'searchProduct'])->name('searchProduct');
-
-Route::get('/', function () {
-    return view('welcome');
-});
 
 Route::get('/about', function () {
     return view('about');
