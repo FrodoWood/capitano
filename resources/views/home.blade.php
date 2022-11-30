@@ -178,19 +178,20 @@
         <a href="{{url('/women')}}"><img class="img w-100 carousel-banner-img" src="{{URL('images/woman_standing_tall_1.jpg')}}" alt="Women" ></a>
     </div>
     <div class="col-6">
-        <a href="{{url('/men')}}"><img class="img w-100 carousel-banner-img" src="{{URL('images/productMen.jpg')}}" alt="Men" ></a>
+        <a href="{{url('/men')}}"><img class="img w-100 carousel-banner-img" src="{{URL('images/man_standing_tall_4.jpg')}}" alt="Men" ></a>
     </div>
 </div>
 </div>
 
-<div class="container-fluid w-75 px-0 my-5">
-  <h2 style="text-align:center">Company News</h2> <br>
-<div class="container-fluid">
+
+<div class="container-fluid w-75 px-0 my-5 ">
+  <h2 class="text-center">Company News</h2>
+<div class="container-fluid mt-4">
   <div class="row">
-   <div class="col-md-6">
-    <div class="card">
+   <div class="col-md-6 mb-3">
+    <div class="card rounded-0">
    <div class="card-body">
-     <h3 class="card-title" style="text-align:center">New Launch</h3>
+     <h3 class="card-title text-center">New Launch</h3>
      <p class="card-text" >Capitano Clothing launches a brand new collection in collaboration with award winning designer Regina Geller. 
      Behind every design is an entire story and a purpose, and we love sharing what makes each one so special!
      Our new collection added small touches to your favorite staples to make them even more special, while mixing in something new as well.
@@ -199,14 +200,15 @@
    </div>
     </div>
    </div>
-   <div class="col-md-6">
-   <div class="card">
+   <div class="col-md-6 mb-3">
+   <div class="card rounded-0">
    <div class="card-body">
-     <h3 class="card-text" style="text-align:center">Giving back to the community</h3>
-     <p>To celebrate its four year anniversary since opening, Capitano Clothing orgarnised a charity fair. The company raised £100 thousand pounds 
+    <h3 class="card-title text-center">Giving back to the community</h3>
+     <div class="card-text">
+        To celebrate its four year anniversary since opening, Capitano Clothing orgarnised a charity fair. The company raised £100 thousand pounds 
       for the Youth Sport Trust which is the UK's leading charity, improving every young person's education and development through sport and play.
-      In addition, Capitano Clothing gave out vouchers for people to spend on its website. We also hosted a free webinar. 
-    </p>
+      In addition, Capitano Clothing gave out vouchers for people to spend on its website. We also hosted a free webinar.
+     </div>
    </div>
  </div>
 </div>
