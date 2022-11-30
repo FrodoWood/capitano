@@ -48,6 +48,7 @@
                        
                        <div class="ms-5 d-flex">
                            <form method="GET" action="{{route('searchProduct')}}" class="form-inline my-2 my-lg-0 d-flex">
+                            @csrf
                                <input name="searchQuery" id="searchQuery" class=" form-control rounded-5" type="search" placeholder="Search"/>
                                <button type="submit" class="searchBtn btn ms-2 border-0 rounded-5 "><i class="bi bi-search"></i></button>
                            </form>
