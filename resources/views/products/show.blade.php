@@ -4,8 +4,8 @@
 
 <div class="container d-flex justify-content-center w-75 mt-4">
   <div class="row">
-    <div class="col-6">
-      <img class="card-img-top" src="{{$product -> image}}" alt="Card image cap">
+    <div class="col-6 single-product-img-container">
+      <img class="card-img-top single-product-img" src="{{$product -> image}}" alt="Card image cap">
       </div>
       <div class="col-6 ps-5">
         <div class="row mb-3"><h5 class="">{{$product-> title}}</h5></div>

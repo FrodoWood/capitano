@@ -123,3 +123,23 @@ input[type="search"]::-webkit-search-results-decoration {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-weight: 700;
 }
+
+.product-card:hover {
+    border-style: solid;
+    border-color: grey;
+}
+
+
+.single-product-img-container {
+    overflow: hidden;
+}
+
+.single-product-img {
+    object-fit: cover;
+    transition: 0.4s cubic-bezier(0.44, 0.39, 0.34, 0.84);
+}
+
+.single-product-img:hover {
+    transition: 1s cubic-bezier(0.01, 0.95, 0.41, 1.02);
+    transform: scale(1.4);
+}
