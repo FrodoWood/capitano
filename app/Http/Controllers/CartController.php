@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Order;
+use App\Models\Product;
 use App\Models\CartItem;
 use App\Models\OrderAddress;
 use Illuminate\Http\Request;
@@ -13,6 +14,7 @@ class CartController extends Controller
 {
     public function index()
     {
+        $products = Product::all();
         if (Auth::check()) {
             $item = CartItem::where('user_id', '=', Auth::id())->first();
             $dbcart = $item->data;
@@ -34,7 +36,7 @@ class CartController extends Controller
             ]);
         }
 
-        return view('cart.cart')->with('cart', $cart);
+        return view('cart.cart')->with('cart', $cart)->with('products', $products);
     }
 
     public function updateCart(Request $request)

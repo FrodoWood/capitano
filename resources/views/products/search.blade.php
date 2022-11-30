@@ -53,7 +53,7 @@
 @else
 
 {{-- If search doesn't produce any result --}}
-<div class="container">
+
     <div class="row text-center w-100 mt-5">
         <div class="col-12 h3">
             <i class="bi bi-search"></i> <span>We couldn't find anything for "{{$searchText}}"</span>
@@ -62,12 +62,12 @@
             <a class="btn btn-dark rounded-0 mt-2" href="{{route('home')}}">Continue shopping</a>
         </div>
     </div>
-</div>
+
 
 
 
 {{-- More products --}}
-<div class="container-fluid w-100 px-0 mt-5 py-5">
+<div class="container w-100 px-0 mt-5 py-5">
     <h2 class="text-bold text-center font-weight-bold text-secondary">These popular items might interest you</h2>
     <div class="card-deck card-container justify-content-between">
                 @foreach ($products as $product)

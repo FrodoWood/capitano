@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Order;
+use App\Models\Product;
 use App\Models\CartItem;
 use App\Models\OrderAddress;
 use Illuminate\Http\Request;
@@ -13,6 +14,8 @@ class ProfileController extends Controller
 {
     public function index()
     {
+        $products = Product::all();
+
         if (Auth::check()) {
 
             $orders = Order::where('user_id', '=', Auth::id())->get();
@@ -21,6 +24,6 @@ class ProfileController extends Controller
             }
         }
         // var_dump($orders_details);
-        return view('profile')->with('orders', $orders);
+        return view('profile')->with('orders', $orders)->with('products', $products);
     }
 }
