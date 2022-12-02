@@ -6,7 +6,7 @@
 ## Email: admin@gmail.com
 ## Password: password
 
-# Group memebers
+## Group memebers
 * Jasraj Singh 210151813
 * Amariah Rigodon 210069828
 * Sunny Singh 210107681
@@ -14,8 +14,8 @@
 * Alisha Walters 210178500
 * Humzah Saeed 200105657
 
-# Notes
-## The .env and .end.example files are different than the ones on the web server, they contain the correct database credentials and have the debug set to false. Make sure to add your local database name and password to your .env or .env.example file.
+## Notes
+The .env and .end.example files are different than the ones on the web server, they contain the correct database credentials and have the debug set to false. Make sure to add your local database name and password to your .env or .env.example file.
 
 # How to run on Windows
 1. Download and install XAMPP
