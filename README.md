@@ -1,29 +1,23 @@
-# Aston University Computer Science Project
-# CS2TP - Group 6
-## Capitano website: https://210151813.cs2410-web01pvm.aston.ac.uk/
-## Trello: https://trello.com/b/0SWCD8El/team-project
+# Capitano
+
 ## Admin account:
+
 ## Email: admin@gmail.com
+
 ## Password: password
 
-## Group memebers
-* Jasraj Singh 210151813
-* Amariah Rigodon 210069828
-* Sunny Singh 210107681
-* Sajni Shah 210045442
-* Alisha Walters 210178500
-* Humzah Saeed 200105657
-
 ## Notes
+
 The .env and .end.example files are different than the ones on the web server, they contain the correct database credentials and have the debug set to false. Make sure to add your local database name and password to your .env or .env.example file.
 
 # How to run on Windows
+
 1. Download and install XAMPP
 1. Download and install NPM
 1. Download and install git
 1. Clone this repository
 1. Inside your project directory run:
-1. composer install 
+1. composer install
 1. cp .env.example .env
 1. php artisan key:generate
 1. php artisan migrate
