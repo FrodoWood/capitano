@@ -9,26 +9,13 @@ use Illuminate\Database\Eloquent\Casts\Attribute;
 class CartItem extends Model
 {
     use HasFactory;
+    public function cart()
+    {
+        return $this->belongsTo(Cart::class);
+    }
 
-    /**
-     * Write code on Method
-     *
-     * @return response()
-     */
-    protected $casts = [
-        'data' => 'array',
-    ];
-
-    protected $fillable = [
-        'data', 'user_id',
-    ];
-
-
-    // protected function data(): Attribute
-    // {
-    //     return Attribute::make(
-    //         get: fn ($value) => json_decode($value, true),
-    //         set: fn ($value) => json_encode($value),
-    //     );
-    // }
+    public function product()
+    {
+        return $this->belongsTo(Product::class);
+    }
 }
