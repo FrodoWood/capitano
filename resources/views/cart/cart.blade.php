@@ -120,28 +120,4 @@
 
 @include('addToCart')
 
-
-<script type="module">
-    $(document).ready(function(){
-        window.cart = <?php echo json_encode($cart) ?>;
-        $('.remove-from-cart').on('click', function(event){
-            var index = $(this).data("id");
-            var cart = window.cart;
-            $(this).closest("tr").remove();
-            cart.splice(index,1);
-
-
-            $.ajax('/cart/delete',
-                {
-                    type: 'POST',
-                    data: {"_token": "{{ csrf_token() }}", "cart":cart, "index": index},
-                    success:function(){
-                        console.log("Item deleted correctly");
-                         window.location.href = "cart";
-                    }
-                }
-            )
-        })
-    })
-</script>
 @endsection

@@ -110,34 +110,9 @@
                         
                         
                     </ul>
-                    @php
-                        $cartAmount = 0;
-                        $cart = [];
-                        $dbcart = [];
-                        if(Auth::check()){
-                            $item = \App\Models\CartItem::where('user_id', '=', Auth::id())->first();
-                            if($item != null){
-                                $dbcart = $item->data;
-                            }
-                            if ($dbcart == null) {
-                                $dbcart = [];
-                            }
-                            $cart = $dbcart;
-                        }else{
-                            $sessioncart = session()->get('cart');
-                            if ($sessioncart == null) {
-                                $sessioncart = [];
-                            }
-                            $cart = $sessioncart;
-                        }
-
-                        foreach($cart as $item){
-                            $cartAmount += $item['qty'];
-                        }
-
-                    @endphp
+                    
                     <a class="navbar-brand " href="{{url('cart')}}"><i class="bi bi-bag ms-5"></i></a>
-                    <span class="cart-amount-nav text-dark items-amount-pill">{{$cartAmount}}</span>
+                    {{-- <span class="cart-amount-nav text-dark items-amount-pill">{{$cartAmount}}</span> --}}
                     
                 </div>
             </div>
