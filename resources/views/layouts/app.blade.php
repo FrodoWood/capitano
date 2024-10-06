@@ -193,13 +193,7 @@
 </footer>
 
 <script type="module">
-    // $(function(){
-    //     $(document).scroll(function(){
-    //         var $navbar = $("fixed-top");
-    //         $navbar.toggleClass('navColour', $(this).scrollTop() > $navbar.height());
-    //     });
-    // });
-
+    
     $(document).ready(function(){
         $(document).scroll(function(){
            if($(window).scrollTop() > 30){

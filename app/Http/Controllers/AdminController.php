@@ -24,6 +24,6 @@ class AdminController extends Controller
 
         $customers = User::where('role', '=', '0')->get();
         // var_dump($customers);
-        return view('admin')->with('orders', $orders)->with('products', $products)->with('customers', $customers);
+        return view('admin.admin')->with('orders', $orders)->with('products', $products)->with('customers', $customers);
     }
 }
