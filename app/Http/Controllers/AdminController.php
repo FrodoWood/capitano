@@ -9,6 +9,7 @@ use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
 use Illuminate\Foundation\Auth\User;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 
 class AdminController extends Controller
 {
@@ -28,13 +29,30 @@ class AdminController extends Controller
         return view('admin.admin')->with('orders', $orders)->with('products', $products)->with('customers', $customers);
     }
 
-    public function getProducts(){
+    public function getProducts()
+    {
         $products = Product::all();
         return view('admin.adminProducts')->with('products', $products);
     }
 
-    public function getProductCategories(){
+    public function getProductCategories()
+    {
         $categories = Category::all();
+        // $categories = DB::table('categories as c1')->leftJoin('categories as c2', 'c1.parent_id', 'c2.id')
+        //     ->select('c1.id', 'c1.name', 'c2.name as parent_name')->get();
         return view('admin.adminProductCategories')->with('categories', $categories);
+    }
+
+    public function updateProductCategory(Request $request, $id)
+    {
+        $data = $request->validate([
+            'name' => 'required|string|max:255',
+            'parent_id' => 'nullable|exists:categories,id'
+        ]);
+
+        $category = Category::findOrFail($id);
+        $category->update($data);
+
+        return redirect()->route('adminProductCategories')->with('success', 'Category updated!');
     }
 }
