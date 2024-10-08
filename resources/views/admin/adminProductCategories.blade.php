@@ -26,12 +26,19 @@
                         <!-- Dropdown for Parent Category -->
                         <div class="form-group col-auto">
                             <label for="category-parent-{{ $category->id }}">Parent Category:</label>
-                            <select name="parent_id" id="category-parent-{{ $category->id }}" class="form-control">
+                            {{-- <select name="parent_id" id="category-parent-{{ $category->id }}" class="form-control">
                                 <option value="">No Parent</option>
                                 @foreach($categories as $parentCategory)
                                     <option value="{{ $parentCategory->id }}" {{ $category->parent_id == $parentCategory->id ? 'selected' : '' }}>
                                         {{ $parentCategory->name }}
                                     </option>
+                                @endforeach
+                            </select> --}}
+
+                            <select name="parent_id" id="category-parent-{{$category->id}}" class="form-control">
+                                <option value="">No Parent</option>
+                                @foreach ($categoriesTree as $categoryTree)
+                                    @include('admin.adminProductCategoriesPartialsOption', ['category' => $categoryTree, 'currentCategory'=> $category ,'level' => 0])
                                 @endforeach
                             </select>
                         </div>
@@ -41,6 +48,12 @@
                         </div>
                     </div>
                 </form>
+            @endforeach
+        </div>
+
+        <div class="container">
+            @foreach ($categoriesTree as $categoryTree2)
+                @include('admin.adminProductCategoriesPartials', ['category' => $categoryTree2, 'currentCategory'=> $category ,'level' => 0])
             @endforeach
         </div>
         

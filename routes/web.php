@@ -45,5 +45,5 @@ Route::get('/products/{product}/show', [ProductController::class, 'show'])->name
 //Admin
 Route::get('/admin', [AdminController::class, 'index'])->middleware('auth', 'isAdmin')->name('admin');
 Route::get('/admin/products', [AdminController::class, 'getProducts'])->middleware('auth', 'isAdmin')->name('adminProducts');
-Route::get('/admin/products/categories', [AdminController::class, 'getProductCategories'])->middleware('auth', 'isAdmin')->name('adminProductCategories');
+Route::get('/admin/products/categories', [AdminController::class, 'productCategories'])->middleware('auth', 'isAdmin')->name('adminProductCategories');
 Route::put('/admin/products/categories/{id}', [AdminController::class, 'updateProductCategory'])->middleware('auth', 'isAdmin')->name('updateProductCategory');

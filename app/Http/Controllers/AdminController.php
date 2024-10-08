@@ -35,12 +35,13 @@ class AdminController extends Controller
         return view('admin.adminProducts')->with('products', $products);
     }
 
-    public function getProductCategories()
+    public function productCategories()
     {
+        $categoriesTree = $this->getProductCategories();
         $categories = Category::all();
         // $categories = DB::table('categories as c1')->leftJoin('categories as c2', 'c1.parent_id', 'c2.id')
         //     ->select('c1.id', 'c1.name', 'c2.name as parent_name')->get();
-        return view('admin.adminProductCategories')->with('categories', $categories);
+        return view('admin.adminProductCategories')->with('categoriesTree', $categoriesTree)->with('categories', $categories);
     }
 
     public function updateProductCategory(Request $request, $id)
@@ -54,5 +55,29 @@ class AdminController extends Controller
         $category->update($data);
 
         return redirect()->route('adminProductCategories')->with('success', 'Category updated!');
+    }
+
+    public function getProductCategories()
+    {
+        $categories = Category::all();
+        $categoryTree = $this->buildTree($categories);
+        // dd($categoryTree);
+
+        return $categoryTree;
+    }
+
+    private function buildTree($categories, $parentId = null)
+    {
+        $branch = [];
+        foreach ($categories as $category) {
+            if ($category->parent_id == $parentId) {
+                $children = $this->buildTree($categories, $category->id);
+                if ($children) {
+                    $category['children'] = $children;
+                }
+                $branch[] = $category;
+            }
+        }
+        return $branch;
     }
 }
