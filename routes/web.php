@@ -46,4 +46,6 @@ Route::get('/products/{product}/show', [ProductController::class, 'show'])->name
 Route::get('/admin', [AdminController::class, 'index'])->middleware('auth', 'isAdmin')->name('admin');
 Route::get('/admin/products', [AdminController::class, 'getProducts'])->middleware('auth', 'isAdmin')->name('adminProducts');
 Route::get('/admin/products/categories', [AdminController::class, 'productCategories'])->middleware('auth', 'isAdmin')->name('adminProductCategories');
+Route::post('/admin/products/categories/create', [AdminController::class, 'createProductCategory'])->middleware('auth', 'isAdmin')->name('createProductCategory');
 Route::put('/admin/products/categories/{id}', [AdminController::class, 'updateProductCategory'])->middleware('auth', 'isAdmin')->name('updateProductCategory');
+Route::delete('/admin/products/categories/{id}', [AdminController::class, 'deleteProductCategory'])->middleware('auth', 'isAdmin')->name('deleteProductCategory');

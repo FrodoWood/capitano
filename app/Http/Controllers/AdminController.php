@@ -44,6 +44,20 @@ class AdminController extends Controller
         return view('admin.adminProductCategories')->with('categoriesTree', $categoriesTree)->with('categories', $categories);
     }
 
+    public function createProductCategory(Request $request){
+        $data = $request->validate([
+            'name' => 'required|string|max:255',
+            'parent_id' => 'nullable|exists:categories,id'
+        ]);
+
+        Category::create([
+            'name' => $data['name'],
+            'parent_id' => $data['parent_id']
+        ]);
+
+        return redirect()->route('adminProductCategories')->with('success', 'Category created successfully!');
+    }
+
     public function updateProductCategory(Request $request, $id)
     {
         $data = $request->validate([
@@ -57,21 +71,28 @@ class AdminController extends Controller
         return redirect()->route('adminProductCategories')->with('success', 'Category updated!');
     }
 
+    public function deleteProductCategory($id){
+        $category = Category::findOrFail($id);
+        $category->delete();
+
+        return redirect()->route('adminProductCategories')->with('success', 'Category deleted!');
+    }
+
     public function getProductCategories()
     {
         $categories = Category::all();
-        $categoryTree = $this->buildTree($categories);
+        $categoryTree = $this->buildCategoryTree($categories);
         // dd($categoryTree);
 
         return $categoryTree;
     }
 
-    private function buildTree($categories, $parentId = null)
+    private function buildCategoryTree($categories, $parentId = null)
     {
         $branch = [];
         foreach ($categories as $category) {
             if ($category->parent_id == $parentId) {
-                $children = $this->buildTree($categories, $category->id);
+                $children = $this->buildCategoryTree($categories, $category->id);
                 if ($children) {
                     $category['children'] = $children;
                 }

@@ -1,4 +1,4 @@
-<p style="padding-left: {{$level * 20}}px;">
+<p style="padding-left: {{$level * 30}}px;">
     {{$category->name}}
 </p>
 

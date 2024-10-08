@@ -1,6 +1,6 @@
-<option value="{{$category->id}}" {{ $currentCategory->parent_id == $category->id ? 'selected' : '' }}
-    {{$category->id == $currentCategory->id ? 'disabled' : ''}}>
-    {!! str_repeat("&nbsp;", $level) !!} {{$category->name}}
+<option value="{{$category->id}}" {{ $currentCategory != null && $currentCategory->parent_id == $category->id ? 'selected' : '' }}
+    {{$currentCategory != null && $category->id == $currentCategory->id ? 'disabled' : ''}}>
+    {!! str_repeat("&nbsp;", $level * 3) !!} {{$category->name}}
 </option>    
 
 @if (!empty($category['children']))
