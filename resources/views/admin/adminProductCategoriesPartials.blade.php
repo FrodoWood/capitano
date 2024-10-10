@@ -1,4 +1,4 @@
-<p style="padding-left: {{$level * 30}}px;">
+<p style="padding-left: {{$level * 30}}px;" class="mb-1">
     {{$category->name}}
 </p>
 
